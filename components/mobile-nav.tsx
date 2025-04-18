@@ -51,6 +51,13 @@ export function MobileNav() {
                 Resources
               </Link>
               <Link
+                href="/contribute"
+                className="block rounded-md px-4 py-2 text-sm font-medium hover:bg-muted"
+                onClick={() => setOpen(false)}
+              >
+                Contribute
+              </Link>
+              <Link
                 href="#"
                 className="block rounded-md px-4 py-2 text-sm font-medium hover:bg-muted"
                 onClick={() => setOpen(false)}

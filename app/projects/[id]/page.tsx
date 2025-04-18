@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { projectsMockData, toolsMockData } from "@/lib/mock-data"
 import { ToolLogo } from "@/components/tool-logo"
+import { ProjectPageStructuredData } from "@/components/structured-data"
 
 export default function ProjectOverviewPage({ params }: { params: { id: string } }) {
   // In a real app, we would fetch this data from an API
@@ -113,6 +114,7 @@ export default function ProjectOverviewPage({ params }: { params: { id: string }
           </div>
         </div>
       </div>
+      <ProjectPageStructuredData project={project} />
     </div>
   )
 }
