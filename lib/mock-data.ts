@@ -962,24 +962,24 @@ export const toolsMockData = [
     id: "bolt",
     name: "Bolt",
     description: "Fastest path to a working prototype",
-    linkPattern: "https://example.com/bolt",
+    linkPattern: "https://bolt.new/",
   },
   {
     id: "v0",
     name: "v0",
     description: "More polished interface design",
-    linkPattern: "https://example.com/v0",
+    linkPattern: "https://v0.dev/chat",
   },
   {
     id: "lovable",
     name: "Lovable",
     description: "Most beginner-friendly experience",
-    linkPattern: "https://example.com/lovable",
+    linkPattern: "https://lovable.dev/",
   },
   {
     id: "replit",
     name: "Replit",
     description: "Best for adding more complex functionality later",
-    linkPattern: "https://example.com/replit",
+    linkPattern: "https://replit.com/",
   },
 ]

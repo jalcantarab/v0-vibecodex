@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Check, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { GradientButton } from "@/components/ui/gradient-button"
 import { cn } from "@/lib/utils"
 
 interface PhaseCompletionStatusProps {
@@ -21,18 +21,18 @@ export function PhaseCompletionStatus({ phaseIndex, totalPhases, onComplete }: P
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <div
           className={cn(
-            "w-8 h-8 rounded-full flex items-center justify-center",
+            "w-10 h-10 rounded-full flex items-center justify-center",
             status === "not-started" && "bg-muted text-muted-foreground",
-            status === "in-progress" && "bg-amber-100 text-amber-600",
-            status === "completed" && "bg-green-100 text-green-600",
+            status === "in-progress" && "bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-300",
+            status === "completed" && "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-300",
           )}
         >
-          {status === "not-started" && <Clock className="h-4 w-4" />}
-          {status === "in-progress" && <Clock className="h-4 w-4" />}
-          {status === "completed" && <Check className="h-4 w-4" />}
+          {status === "not-started" && <Clock className="h-5 w-5" />}
+          {status === "in-progress" && <Clock className="h-5 w-5" />}
+          {status === "completed" && <Check className="h-5 w-5" />}
         </div>
         <div>
           <p className="font-medium">
@@ -46,9 +46,9 @@ export function PhaseCompletionStatus({ phaseIndex, totalPhases, onComplete }: P
         </div>
       </div>
 
-      <Button
-        className="w-full"
-        variant={status === "completed" ? "outline" : "default"}
+      <GradientButton
+        className="w-full h-12"
+        variant={status === "completed" ? "secondary" : "primary"}
         onClick={handleComplete}
         disabled={status === "completed"}
       >
@@ -59,7 +59,7 @@ export function PhaseCompletionStatus({ phaseIndex, totalPhases, onComplete }: P
           : status === "completed"
             ? "Project Completed"
             : "Mark Project as Complete"}
-      </Button>
+      </GradientButton>
     </div>
   )
 }

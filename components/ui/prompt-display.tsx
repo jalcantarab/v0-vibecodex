@@ -79,7 +79,7 @@ export function PromptDisplay({ prompt }: PromptDisplayProps) {
   }
 
   return (
-    <div className="rounded-md border bg-muted/50 p-4 font-mono text-sm overflow-x-auto">
+    <div className="rounded-md border bg-muted/30 p-6 font-mono text-sm overflow-x-auto">
       {renderPromptWithTooltips()}
     </div>
   )

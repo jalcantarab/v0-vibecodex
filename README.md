@@ -1,30 +1,124 @@
-# VibeCodex
+<div align="center">
+  <h1>VibeCodex</h1>
+  <p>An open-source AI coding starter kit to help everyone build real projects with AI assistance—no coding required.</p>
+  
+  <p>
+    <a href="https://github.com/jalcantarab/v0-vibecodex/stargazers">
+      <img src="https://img.shields.io/github/stars/jalcantarab/v0-vibecodex" alt="Stars" />
+    </a>
+    <a href="https://github.com/jalcantarab/v0-vibecodex/network/members">
+      <img src="https://img.shields.io/github/forks/jalcantarab/v0-vibecodex" alt="Forks" />
+    </a>
+    <a href="https://github.com/jalcantarab/v0-vibecodex/issues">
+      <img src="https://img.shields.io/github/issues/jalcantarab/v0-vibecodex" alt="Issues" />
+    </a>
+    <a href="https://github.com/jalcantarab/v0-vibecodex/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/jalcantarab/v0-vibecodex" alt="License" />
+    </a>
+  </p>
+  
+  <p>
+    <a href="https://vibecodex.vercel.app">View Demo</a>
+    ·
+    <a href="https://github.com/jalcantarab/v0-vibecodex/issues/new?template=bug_report.md">Report Bug</a>
+    ·
+    <a href="https://github.com/jalcantarab/v0-vibecodex/issues/new?template=feature_request.md">Request Feature</a>
+  </p>
+</div>
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+## 🌟 About The Project
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/jorge-alcantaras-projects/v0-vibe-codex)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/mlQmMn1x11x)
+VibeCodex is an open-source project designed to help everyone build real applications with AI assistance, regardless of their coding experience. It provides a structured approach to using AI tools like v0, Bolt, Lovable, and Replit to transform ideas into functional code.
 
-## Overview
+![VibeCodex Screenshot](public/vibecodex-screenshot.png)
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+### Key Features
 
-## Deployment
+- 🚀 **Guided Project Creation**: Step-by-step phases to build complete projects
+- 🛠️ **Multi-Tool Support**: Integration with popular AI coding tools
+- 📚 **Learning-Focused**: Learn while building real, usable applications
+- 🌐 **Community-Driven**: Share your projects and learn from others
+- 🎨 **Modern UI**: Clean, responsive interface with dark mode support
 
-Your project is live at:
+### Built With
 
-**[https://vercel.com/jorge-alcantaras-projects/v0-vibe-codex](https://vercel.com/jorge-alcantaras-projects/v0-vibe-codex)**
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/)
 
-## Build your app
+## 🚀 Getting Started
 
-Continue building your app on:
+Follow these steps to set up the project locally:
 
-**[https://v0.dev/chat/projects/mlQmMn1x11x](https://v0.dev/chat/projects/mlQmMn1x11x)**
+### Prerequisites
 
-## How It Works
+- Node.js (v18 or higher)
+- npm or yarn
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### Installation
+
+1. Clone the repository
+   \`\`\`sh
+   git clone https://github.com/jalcantarab/v0-vibecodex.git
+   \`\`\`
+
+2. Install dependencies
+   \`\`\`sh
+   cd v0-vibecodex
+   npm install
+   # or
+   yarn install
+   \`\`\`
+
+3. Run the development server
+   \`\`\`sh
+   npm run dev
+   # or
+   yarn dev
+   \`\`\`
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 🗺️ Roadmap
+
+- [x] Initial project setup
+- [x] Integration with AI tools
+- [x] Project templates and guides
+- [ ] User authentication
+- [ ] Project saving and sharing
+- [ ] Community showcase
+- [ ] Mobile app
+
+See the [open issues](https://github.com/jalcantarab/v0-vibecodex/issues) for a full list of proposed features and known issues.
+
+## 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+## 📝 License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+## 📬 Contact
+
+Project Link: [https://github.com/jalcantarab/v0-vibecodex](https://github.com/jalcantarab/v0-vibecodex)
+
+## 🙏 Acknowledgments
+
+- [v0 by Vercel](https://v0.dev)
+- [Bolt](https://bolt.new)
+- [Lovable](https://lovable.dev)
+- [Replit](https://replit.com)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
