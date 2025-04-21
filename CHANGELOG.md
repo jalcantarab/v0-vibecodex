@@ -31,4 +31,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Responsive design
 \`\`\`
 
-Let's create a package.json file with proper metadata:
+2. Let's add a CODEOWNERS file to define code ownership:
+
+```plaintext file=".github/CODEOWNERS"
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# they will be requested for review when someone opens a pull request.
+* @jalcantarab
+
+# Order is important; the last matching pattern takes the most
+# precedence.
+
+# Core components
+/components/ @jalcantarab
+/lib/ @jalcantarab
+
+# Documentation
+/docs/ @jalcantarab
+*.md @jalcantarab

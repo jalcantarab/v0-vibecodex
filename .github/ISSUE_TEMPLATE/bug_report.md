@@ -32,4 +32,4 @@ If applicable, add screenshots to help explain your problem.
 Add any other context about the problem here.
 \`\`\`
 
-Now, let's create the feature request template:
+12. Let's add a .github/ISSUE_TEMPLATE/feature_request.md file for feature requests:
