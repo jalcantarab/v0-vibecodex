@@ -28,21 +28,4 @@ Fixes # (issue)
 - [ ] New and existing unit tests pass locally with my changes
 \`\`\`
 
-Now, let's add the CODEOWNERS file:
-
-```plaintext file=".github/CODEOWNERS"
-# These owners will be the default owners for everything in
-# the repo. Unless a later match takes precedence,
-# they will be requested for review when someone opens a pull request.
-* @jalcantarab
-
-# Order is important; the last matching pattern takes the most
-# precedence.
-
-# Core components
-/components/ @jalcantarab
-/lib/ @jalcantarab
-
-# Documentation
-/docs/ @jalcantarab
-*.md @jalcantarab
+Let's also add a GitHub configuration file for issue templates:
