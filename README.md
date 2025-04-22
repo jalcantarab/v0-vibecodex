@@ -1,29 +1,29 @@
 <div align="center">
-  <h1>VibeCodex</h1>
-  <p>An open-source AI coding starter kit to help everyone build real projects with AI assistance—no coding required.</p>
-  
-  <p>
-    <a href="https://github.com/jalcantarab/v0-vibecodex/stargazers">
-      <img src="https://img.shields.io/github/stars/jalcantarab/v0-vibecodex" alt="Stars" />
-    </a>
-    <a href="https://github.com/jalcantarab/v0-vibecodex/network/members">
-      <img src="https://img.shields.io/github/forks/jalcantarab/v0-vibecodex" alt="Forks" />
-    </a>
-    <a href="https://github.com/jalcantarab/v0-vibecodex/issues">
-      <img src="https://img.shields.io/github/issues/jalcantarab/v0-vibecodex" alt="Issues" />
-    </a>
-    <a href="https://github.com/jalcantarab/v0-vibecodex/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/jalcantarab/v0-vibecodex" alt="License" />
-    </a>
-  </p>
-  
-  <p>
-    <a href="https://vibecodex.vercel.app">View Demo</a>
-    ·
-    <a href="https://github.com/jalcantarab/v0-vibecodex/issues/new?template=bug_report.md">Report Bug</a>
-    ·
-    <a href="https://github.com/jalcantarab/v0-vibecodex/issues/new?template=feature_request.md">Request Feature</a>
-  </p>
+ <h1>VibeCodex</h1>
+ <p>An open-source AI coding starter kit to help everyone build real projects with AI assistance—no coding required.</p>
+ 
+ <p>
+   <a href="https://github.com/jalcantarab/v0-vibecodex/stargazers">
+     <img src="https://img.shields.io/github/stars/jalcantarab/v0-vibecodex" alt="Stars" />
+   </a>
+   <a href="https://github.com/jalcantarab/v0-vibecodex/network/members">
+     <img src="https://img.shields.io/github/forks/jalcantarab/v0-vibecodex" alt="Forks" />
+   </a>
+   <a href="https://github.com/jalcantarab/v0-vibecodex/issues">
+     <img src="https://img.shields.io/github/issues/jalcantarab/v0-vibecodex" alt="Issues" />
+   </a>
+   <a href="https://github.com/jalcantarab/v0-vibecodex/blob/main/LICENSE">
+     <img src="https://img.shields.io/github/license/jalcantarab/v0-vibecodex" alt="License" />
+   </a>
+ </p>
+ 
+ <p>
+   <a href="https://vibecodex.vercel.app">View Demo</a>
+   ·
+   <a href="https://github.com/jalcantarab/v0-vibecodex/issues/new?template=bug_report.md">Report Bug</a>
+   ·
+   <a href="https://github.com/jalcantarab/v0-vibecodex/issues/new?template=feature_request.md">Request Feature</a>
+ </p>
 </div>
 
 ## 🌟 About The Project
@@ -61,32 +61,47 @@ Follow these steps to set up the project locally:
 ### Installation
 
 1. Clone the repository
-   \`\`\`sh
-   git clone https://github.com/jalcantarab/v0-vibecodex.git
-   \`\`\`
+  \`\`\`sh
+  git clone https://github.com/jalcantarab/v0-vibecodex.git
+  \`\`\`
 
 2. Install dependencies
-   \`\`\`sh
-   cd v0-vibecodex
-   npm install
-   # or
-   yarn install
-   \`\`\`
+  \`\`\`sh
+  cd v0-vibecodex
+  npm install
+  # or
+  yarn install
+  \`\`\`
 
 3. Run the development server
-   \`\`\`sh
-   npm run dev
-   # or
-   yarn dev
-   \`\`\`
+  \`\`\`sh
+  npm run dev
+  # or
+  yarn dev
+  \`\`\`
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📚 Documentation
+
+Our documentation has been reorganized for better accessibility:
+
+- [Documentation Home](docs/README.md) - Central index for all documentation
+- [Guides](docs/guides/) - How-to guides and tutorials
+  - [Development Workflow](docs/guides/development-workflow.md) - Setting up your development environment
+  - [AI Tools Integration](docs/guides/ai-tools-integration.md) - Working with AI tools
+- [Reference](docs/reference/) - Technical reference documentation
+  - [Project Structure](docs/reference/project-structure.md) - Codebase organization
+  - [Implementation Notes](docs/reference/implementation-notes.md) - Design patterns and guidelines
+- [Contributing](docs/CONTRIBUTING.md) - How to contribute to the project
+- [Changelog](docs/CHANGELOG.md) - History of changes
 
 ## 🗺️ Roadmap
 
 - [x] Initial project setup
 - [x] Integration with AI tools
 - [x] Project templates and guides
+- [x] Documentation reorganization
 - [ ] User authentication
 - [ ] Project saving and sharing
 - [ ] Community showcase
@@ -104,7 +119,7 @@ Contributions make the open-source community an amazing place to learn, inspire,
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+Please see our [Contributing Guide](docs/CONTRIBUTING.md) for more details.
 
 ## 📝 License
 

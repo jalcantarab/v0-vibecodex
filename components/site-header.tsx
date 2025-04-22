@@ -24,6 +24,7 @@ export function SiteHeader() {
 
   const navigation = [
     { name: "Projects", href: "/projects" },
+    { name: "Guides", href: "/guides" },
     { name: "How It Works", href: "/#how-it-works" },
     { name: "Contribute", href: "/contribute" },
     { name: "Community", href: "/community" },

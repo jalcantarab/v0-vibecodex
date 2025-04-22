@@ -98,18 +98,21 @@ export function SiteFooter() {
             <h3 className="text-sm font-medium">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/docs" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Documentation
-                </Link>
-              </li>
-              <li>
                 <Link href="/guides" className="text-muted-foreground hover:text-foreground transition-colors">
                   Guides
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Blog
+                <Link
+                  href="/guides/ai-development"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  AI Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/docs" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Documentation
                 </Link>
               </li>
             </ul>
@@ -138,7 +141,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/contributors" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/contribute" className="text-muted-foreground hover:text-foreground transition-colors">
                   Contributors
                 </Link>
               </li>

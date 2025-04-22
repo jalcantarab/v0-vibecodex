@@ -216,7 +216,7 @@ export default function Home() {
               We believe everyone should be able to create with AI, regardless of their coding background
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <Card className="flex flex-col p-6 space-y-4 shadow-sm bg-white/80 backdrop-blur-sm dark:bg-slate-950/80">
               <div className="h-12 w-12 rounded-lg bg-violet-100 flex items-center justify-center dark:bg-violet-900/30">
                 <BookOpen className="h-6 w-6 text-violet-600 dark:text-violet-400" />
@@ -245,6 +245,66 @@ export default function Home() {
                 Join a supportive community of builders. Share your projects, get feedback, and learn from others.
               </p>
             </Card>
+            <Card className="flex flex-col p-6 space-y-4 shadow-sm bg-white/80 backdrop-blur-sm dark:bg-slate-950/80">
+              <div className="h-12 w-12 rounded-lg bg-emerald-100 flex items-center justify-center dark:bg-emerald-900/30">
+                <BookOpen className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+              </div>
+              <h3 className="text-xl font-bold">Comprehensive guides</h3>
+              <p className="text-muted-foreground flex-1">
+                Access detailed guides on AI development workflows, best practices, and tool comparisons to enhance your
+                skills.
+              </p>
+              <Button variant="outline" size="sm" className="mt-auto" asChild>
+                <Link href="/guides">
+                  Explore Guides
+                  <ArrowRight className="ml-2 h-3 w-3 flex-shrink-0" />
+                </Link>
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="flex items-center justify-center">
+              <div className="rounded-lg overflow-hidden border shadow-lg">
+                <img
+                  src="/abstract-v0.png"
+                  alt="AI Development Guide"
+                  className="aspect-video object-cover"
+                  width={600}
+                  height={400}
+                />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300 mb-2">
+                Learning Resources
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Master AI-Assisted Development
+              </h2>
+              <p className="text-muted-foreground md:text-xl">
+                Our comprehensive guides will help you learn effective strategies for working with AI tools, from
+                planning to implementation and best practices.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 min-[400px]:flex-row">
+                <GradientButton asChild>
+                  <Link href="/guides" className="flex items-center whitespace-nowrap">
+                    Explore Guides
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                  </Link>
+                </GradientButton>
+                <Button variant="outline" asChild>
+                  <Link href="/guides/ai-development" className="flex items-center whitespace-nowrap">
+                    AI Development Guide
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

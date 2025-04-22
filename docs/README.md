@@ -1,22 +1,40 @@
 # VibeCodex Documentation
 
-Welcome to the VibeCodex documentation! This directory contains detailed information about the project structure, architecture, and guides for contributors.
+Welcome to the VibeCodex documentation! This is your central resource for all documentation related to the VibeCodex project.
 
-## Table of Contents
+## Documentation Sections
 
-- [Project Structure](./project-structure.md) - Overview of the codebase organization
-- [AI Tools Integration](./ai-tools-integration.md) - How VibeCodex integrates with AI coding tools
-- [Contributing Guide](../CONTRIBUTING.md) - Guidelines for contributing to the project
-- [Code of Conduct](../CODE_OF_CONDUCT.md) - Community standards and expectations
+- [Guides](#guides) - How-to guides and tutorials
+- [Reference](#reference) - Technical reference documentation
+- [Contributing](#contributing) - How to contribute to VibeCodex
+- [Project Information](#project-information) - General project information
 
-## Getting Started
+## Guides
 
-If you're new to the project, we recommend starting with the [Project Structure](./project-structure.md) document to get a high-level overview of how the codebase is organized.
+- [AI Tools Integration](./guides/ai-tools-integration.md) - How VibeCodex integrates with various AI coding tools
+
+## Reference
+
+- [Project Structure](./reference/project-structure.md) - Overview of the codebase organization
+- [Implementation Notes](./reference/implementation-notes.md) - Detailed implementation guidelines and patterns
 
 ## Contributing
 
-If you're interested in contributing to VibeCodex, please read our [Contributing Guide](../CONTRIBUTING.md) for information on how to get started.
+- [Contributing Guide](./CONTRIBUTING.md) - Guidelines for contributing to the project
+- [Development Workflow](./guides/development-workflow.md) - Setting up your development environment
 
-## License
+## Project Information
 
-VibeCodex is licensed under the MIT License. See the [LICENSE](../LICENSE) file for more information.
+- [Changelog](./CHANGELOG.md) - History of changes to the project
+- [Security Policy](../SECURITY.md) - Security policy and vulnerability reporting
+- [Support](../SUPPORT.md) - How to get help with VibeCodex
+- [Code of Conduct](../CODE_OF_CONDUCT.md) - Community standards and expectations
+- [Code of Merit](../CODE_OF_MERIT.md) - Technical merit principles
+
+## Additional Resources
+
+- [GitHub Repository](https://github.com/jalcantarab/v0-vibecodex) - Source code and issue tracking
+- [Live Demo](https://vibecodex.vercel.app) - See VibeCodex in action
+\`\`\`
+
+Let's create the guides directory and move the AI tools integration guide:
