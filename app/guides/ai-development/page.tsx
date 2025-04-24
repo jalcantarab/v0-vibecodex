@@ -30,9 +30,9 @@ export default function AIDevelopmentGuidePage() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <GradientButton asChild size="lg">
-                <Link href="#guide-sections">
+                <Link href="#guide-sections" className="inline-flex items-center whitespace-nowrap">
                   Explore the Guide
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
                 </Link>
               </GradientButton>
               <Button variant="outline" size="lg" asChild>
@@ -194,9 +194,9 @@ export default function AIDevelopmentGuidePage() {
             </div>
             <div className="flex flex-wrap gap-4 justify-center">
               <GradientButton asChild size="lg">
-                <Link href="/guides/ai-development/planning">
+                <Link href="/guides/ai-development/planning" className="inline-flex items-center whitespace-nowrap">
                   Start with Planning
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
                 </Link>
               </GradientButton>
               <Button variant="outline" size="lg" asChild>

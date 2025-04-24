@@ -4,23 +4,18 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
-import { Github, Menu, X, Sun, Moon } from "lucide-react"
+import { Github, Menu, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { GradientButton } from "@/components/ui/gradient-button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { useTheme } from "next-themes"
+import { useThemeMounted } from "@/hooks/use-theme-mounted"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = React.useState(false)
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  // Prevent hydration mismatch with theme toggle
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+  const { theme, setTheme, mounted } = useThemeMounted()
 
   const navigation = [
     { name: "Projects", href: "/projects" },
@@ -70,17 +65,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-4">
-          {mounted && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="mr-2"
-            >
-              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          )}
+          <ThemeToggle />
 
           <Link
             href="https://github.com/yourusername/vibecodex"
@@ -144,6 +129,9 @@ export function SiteHeader() {
                       </Link>
                     </Button>
                   </div>
+                </div>
+                <div className="flex items-center justify-center mt-4">
+                  <ThemeToggle />
                 </div>
               </div>
             </SheetContent>

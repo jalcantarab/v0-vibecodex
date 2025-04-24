@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Github } from "lucide-react"
+import { BrandConnection } from "@/components/brand-connection"
 
 export function SiteFooter() {
   return (
@@ -173,6 +174,9 @@ export function SiteFooter() {
         <p className="text-xs text-muted-foreground md:order-1 md:ml-auto">
           © {new Date().getFullYear()} VibeCodex. Released under the MIT License.
         </p>
+        <div className="md:order-0">
+          <BrandConnection />
+        </div>
       </div>
     </footer>
   )

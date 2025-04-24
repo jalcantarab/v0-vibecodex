@@ -74,7 +74,7 @@ export default function Home() {
             {/* Description */}
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
               <AnimatedText
-                text="A toolkit that bridges the gap between your imagination and functional code. Build real projects with AI assistance and join a community of creators."
+                text="Perfect for designers, entrepreneurs, and non-developers who want to build functional web apps, dashboards, and tools without learning to code. Turn your ideas into working software with AI assistance."
                 delay={800}
               />
             </p>
@@ -84,8 +84,10 @@ export default function Home() {
               className={`flex flex-col sm:flex-row gap-4 min-[400px]:flex-row transition-all duration-700 delay-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
               <GradientButton size="lg" className="group px-8" onClick={handleStartBuilding}>
-                <span>Start Creating</span>
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="flex items-center whitespace-nowrap">
+                  Start Creating
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 flex-shrink-0" />
+                </span>
               </GradientButton>
               <Button
                 size="lg"
@@ -170,8 +172,13 @@ export default function Home() {
               <p className="text-muted-foreground text-center">
                 Start with your idea, no matter how rough. Even a simple sketch or description is enough to begin.
               </p>
+
               <div className="mt-4 rounded-lg border bg-card p-3 shadow-sm">
-                <img src="/abstract-geometric-sketch.png" alt="Sketch example" className="rounded-md w-full h-auto" />
+                <img
+                  src="/step1-ideation-sketch.png"
+                  alt="Sketch to idea concept"
+                  className="rounded-md w-full h-auto"
+                />
               </div>
             </div>
 
@@ -183,12 +190,9 @@ export default function Home() {
               <p className="text-muted-foreground text-center">
                 Use our guided prompts with your favorite AI tools to transform your idea into code.
               </p>
+
               <div className="mt-4 rounded-lg border bg-card p-3 shadow-sm">
-                <img
-                  src="/futuristic-prompt-interface.png"
-                  alt="AI prompt example"
-                  className="rounded-md w-full h-auto"
-                />
+                <img src="/step2-ai-prompt.png" alt="AI prompt interface" className="rounded-md w-full h-auto" />
               </div>
             </div>
 
@@ -200,10 +204,110 @@ export default function Home() {
               <p className="text-muted-foreground text-center">
                 Get a working application you can use, share, and continue to build upon.
               </p>
+
               <div className="mt-4 rounded-lg border bg-card p-3 shadow-sm">
-                <img src="/modern-web-dashboard.png" alt="Application example" className="rounded-md w-full h-auto" />
+                <img src="/step3-final-app.png" alt="Resulting application" className="rounded-md w-full h-auto" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Who is this for?</h2>
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              VibeCodex helps anyone with ideas but limited coding skills build real software
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="flex flex-col p-6 space-y-4 shadow-sm">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-6 w-6"
+                >
+                  <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                  <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 22v-2"></path>
+                  <path d="m17 20.66-1-1.73"></path>
+                  <path d="M11 10.27 7 3.34"></path>
+                  <path d="m20.66 17-1.73-1"></path>
+                  <path d="m3.34 7 1.73 1"></path>
+                  <path d="M14 12h8"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="m20.66 7-1.73 1"></path>
+                  <path d="m3.34 17 1.73-1"></path>
+                  <path d="m17 3.34-1 1.73"></path>
+                  <path d="m7 20.66-1-1.73"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Designers & Creatives</h3>
+              <p className="text-muted-foreground flex-1">
+                Transform your designs and mockups into functional prototypes and websites without having to learn
+                complex coding.
+              </p>
+            </Card>
+            <Card className="flex flex-col p-6 space-y-4 shadow-sm">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-6 w-6"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Entrepreneurs & Founders</h3>
+              <p className="text-muted-foreground flex-1">
+                Build MVPs and validate your business ideas quickly without hiring developers or learning to code from
+                scratch.
+              </p>
+            </Card>
+            <Card className="flex flex-col p-6 space-y-4 shadow-sm">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 flex items-center justify-center text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-6 w-6"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Students & Learners</h3>
+              <p className="text-muted-foreground flex-1">
+                Learn practical development skills by building real projects with AI guidance, bridging the gap between
+                theory and application.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
@@ -256,8 +360,10 @@ export default function Home() {
               </p>
               <Button variant="outline" size="sm" className="mt-auto" asChild>
                 <Link href="/guides">
-                  Explore Guides
-                  <ArrowRight className="ml-2 h-3 w-3 flex-shrink-0" />
+                  <span className="flex items-center whitespace-nowrap">
+                    Explore Guides
+                    <ArrowRight className="ml-2 h-3 w-3 flex-shrink-0" />
+                  </span>
                 </Link>
               </Button>
             </Card>
@@ -271,7 +377,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div className="rounded-lg overflow-hidden border shadow-lg">
                 <img
-                  src="/abstract-v0.png"
+                  src="/ai-development-hero.png"
                   alt="AI Development Guide"
                   className="aspect-video object-cover"
                   width={600}
@@ -293,14 +399,18 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 min-[400px]:flex-row">
                 <GradientButton asChild>
                   <Link href="/guides" className="flex items-center whitespace-nowrap">
-                    Explore Guides
-                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                    <span className="flex items-center whitespace-nowrap">
+                      Explore Guides
+                      <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                    </span>
                   </Link>
                 </GradientButton>
                 <Button variant="outline" asChild>
                   <Link href="/guides/ai-development" className="flex items-center whitespace-nowrap">
-                    AI Development Guide
-                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                    <span className="flex items-center whitespace-nowrap">
+                      AI Development Guide
+                      <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                    </span>
                   </Link>
                 </Button>
               </div>
@@ -325,8 +435,10 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 min-[400px]:flex-row">
                 <GradientButton size="lg" onClick={handleStartBuilding}>
-                  Start Building Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <span className="flex items-center whitespace-nowrap">
+                    Start Building Now
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                  </span>
                 </GradientButton>
                 <Button size="lg" variant="outline" asChild>
                   <Link href="https://github.com/yourusername/vibecodex" target="_blank" rel="noopener noreferrer">
@@ -347,6 +459,87 @@ export default function Home() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What People Are Building</h2>
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              See what our community has created with VibeCodex
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <div className="flex items-start space-x-4">
+                <div className="h-12 w-12 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 flex items-center justify-center text-white font-bold">
+                  JD
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <h3 className="font-semibold">Jamie Diaz</h3>
+                    <div className="ml-auto flex">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg
+                          key={star}
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className="text-amber-500"
+                        >
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground">
+                    "I built a client dashboard for my freelance business in just one weekend. As a designer with no
+                    coding experience, I never thought I could create something so functional on my own!"
+                  </p>
+                  <div className="pt-4 mt-4 border-t text-sm text-muted-foreground">
+                    Built: Client Management Dashboard
+                  </div>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-start space-x-4">
+                <div className="h-12 w-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white font-bold">
+                  MT
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <h3 className="font-semibold">Michael Torres</h3>
+                    <div className="ml-auto flex">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg
+                          key={star}
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className="text-amber-500"
+                        >
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground">
+                    "I launched an MVP for my startup idea in just two weeks using VibeCodex. The AI guidance helped me
+                    build features I didn't think were possible without a technical co-founder."
+                  </p>
+                  <div className="pt-4 mt-4 border-t text-sm text-muted-foreground">
+                    Built: Inventory Management System
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -378,8 +571,10 @@ export default function Home() {
                 </p>
                 <Button variant="outline" size="sm" className="w-full" asChild>
                   <Link href="/projects/kanban-board">
-                    View Project
-                    <ArrowRight className="ml-2 h-3 w-3" />
+                    <span className="flex items-center whitespace-nowrap">
+                      View Project
+                      <ArrowRight className="ml-2 h-3 w-3 flex-shrink-0" />
+                    </span>
                   </Link>
                 </Button>
               </div>
@@ -403,8 +598,10 @@ export default function Home() {
                 </p>
                 <Button variant="outline" size="sm" className="w-full" asChild>
                   <Link href="/projects/personal-dashboard">
-                    View Project
-                    <ArrowRight className="ml-2 h-3 w-3" />
+                    <span className="flex items-center whitespace-nowrap">
+                      View Project
+                      <ArrowRight className="ml-2 h-3 w-3 flex-shrink-0" />
+                    </span>
                   </Link>
                 </Button>
               </div>
@@ -424,8 +621,10 @@ export default function Home() {
                 </p>
                 <Button variant="outline" size="sm" className="w-full" asChild>
                   <Link href="/projects/product-landing">
-                    View Project
-                    <ArrowRight className="ml-2 h-3 w-3" />
+                    <span className="flex items-center whitespace-nowrap">
+                      View Project
+                      <ArrowRight className="ml-2 h-3 w-3 flex-shrink-0" />
+                    </span>
                   </Link>
                 </Button>
               </div>
@@ -434,8 +633,10 @@ export default function Home() {
           <div className="flex justify-center mt-8">
             <Button variant="outline" asChild>
               <Link href="/projects">
-                View All Projects
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <span className="flex items-center whitespace-nowrap">
+                  View All Projects
+                  <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                </span>
               </Link>
             </Button>
           </div>

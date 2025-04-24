@@ -50,9 +50,9 @@ export default function GuidesPage() {
                     Learn how to effectively leverage AI tools to accelerate your development workflow and build better
                     projects.
                   </p>
-                  <div className="flex items-center text-primary mt-auto">
+                  <div className="flex items-center text-primary mt-auto whitespace-nowrap">
                     <span>Explore guide</span>
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
                   </div>
                 </Link>
               </GlassCard>
@@ -64,10 +64,9 @@ export default function GuidesPage() {
                   <div className="h-12 w-12 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400 mb-4">
                     <Code className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Project Tutorials</h3>
+                  <h3 className="text-xl font-bold mb-2">Team Product Operations</h3>
                   <p className="text-muted-foreground mb-6 flex-grow">
-                    Step-by-step tutorials for building specific projects with AI assistance. From simple apps to
-                    complex systems.
+                    Learn how full teams can integrate AI-assisted development into their product operations workflow.
                   </p>
                   <div className="flex items-center text-muted-foreground mt-auto">
                     <span>Coming soon</span>
@@ -82,9 +81,10 @@ export default function GuidesPage() {
                   <div className="h-12 w-12 rounded-lg bg-violet-100 flex items-center justify-center text-violet-600 dark:bg-violet-900/30 dark:text-violet-400 mb-4">
                     <Sparkles className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Advanced Techniques</h3>
+                  <h3 className="text-xl font-bold mb-2">Tool Deep Dives</h3>
                   <p className="text-muted-foreground mb-6 flex-grow">
-                    Advanced strategies and techniques for maximizing the potential of AI in your development workflow.
+                    In-depth guides on getting the most out of specific AI tools, with a focus on Cursor and other
+                    popular development assistants.
                   </p>
                   <div className="flex items-center text-muted-foreground mt-auto">
                     <span>Coming soon</span>
