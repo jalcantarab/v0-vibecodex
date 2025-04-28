@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils"
 import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 interface BrandConnectionProps {
   className?: string
@@ -15,7 +15,7 @@ export function BrandConnection({ className }: BrandConnectionProps) {
         rel="noopener noreferrer"
         className="flex items-center gap-1.5 text-sm font-medium hover:text-primary transition-colors"
       >
-        <div className="relative h-5 w-5 overflow-hidden rounded-full">
+        <div className="relative h-5 w-5 rounded-full overflow-hidden">
           <Image src="/zentrik-logo.png" alt="Zentrik.ai" width={20} height={20} className="object-cover" />
         </div>
         zentrik.ai

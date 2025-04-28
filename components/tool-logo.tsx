@@ -3,12 +3,13 @@ import { cn } from "@/lib/utils"
 
 interface ToolLogoProps {
   toolId: string
-  size?: "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg"
   className?: string
 }
 
 export function ToolLogo({ toolId, size = "md", className }: ToolLogoProps) {
   const sizeClasses = {
+    xs: "h-5 w-5",
     sm: "h-8 w-8",
     md: "h-10 w-10",
     lg: "h-12 w-12",
@@ -25,6 +26,8 @@ export function ToolLogo({ toolId, size = "md", className }: ToolLogoProps) {
         return "p-0" // No padding for Lovable logo
       case "replit":
         return "p-0.5" // Slight padding for Replit logo
+      case "cursor":
+        return "p-0.5" // Slight padding for Cursor logo
       default:
         return ""
     }

@@ -12,6 +12,8 @@ import { HomePageStructuredData } from "@/components/structured-data"
 import { AnimatedBackground } from "@/components/animated-background"
 import { AnimatedText } from "@/components/animated-text"
 import { GradientButton } from "@/components/ui/gradient-button"
+import { NewsletterSignup } from "@/components/newsletter-signup"
+import { SocialShare } from "@/components/social-share"
 
 export default function Home() {
   const router = useRouter()
@@ -117,6 +119,13 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Social sharing */}
+            <div
+              className={`mt-6 transition-all duration-700 delay-1300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            >
+              <SocialShare />
+            </div>
+
             {/* Featured on section */}
             <div
               className={`mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 w-full max-w-3xl transition-all duration-700 delay-1400 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -150,6 +159,44 @@ export default function Home() {
   effort: "minimal"
 };`}
           </pre>
+        </div>
+      </section>
+
+      {/* Metrics section */}
+      <section className="w-full py-12 md:py-16 bg-black">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="space-y-2">
+              <h3 className="text-5xl font-bold text-white">500+</h3>
+              <p className="text-gray-400">AI PROMPTS COMING SOON</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-5xl font-bold text-white">10x</h3>
+              <p className="text-gray-400">FASTER DEVELOPMENT</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-5xl font-bold text-white">24/7</h3>
+              <p className="text-gray-400">AI PAIR PROGRAMMING</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter section */}
+      <section className="w-full py-12 md:py-16 bg-gradient-to-br from-violet-950 to-black">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-white">Join the Codex Crew</h2>
+              <p className="text-gray-300">
+                Get early access to our AI development prompts for Cursor, v0, and Bolt.new. Stay updated with the
+                latest drops and be part of our growing community.
+              </p>
+            </div>
+            <div>
+              <NewsletterSignup />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -315,7 +362,9 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/20 dark:to-cyan-950/20">
         <div className="container px-4 md:px-6 max-w-6xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Why this project exists</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Development Will Never Be the Same
+            </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
               We believe everyone should be able to create with AI, regardless of their coding background
             </p>
@@ -453,6 +502,45 @@ export default function Home() {
                 <img
                   src="/ai-app-builder.png"
                   alt="Person building an application with AI tools"
+                  className="aspect-video object-cover"
+                  width={600}
+                  height={400}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Path CTA */}
+      <section className="w-full py-12 md:py-24">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="space-y-4">
+              <div className="inline-block rounded-lg bg-violet-100 px-3 py-1 text-sm text-violet-800 dark:bg-violet-900/30 dark:text-violet-300 mb-2">
+                Structured Learning
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Follow Your Learning Path</h2>
+              <p className="text-muted-foreground md:text-xl">
+                Whether you're a complete beginner or an experienced developer, our structured learning paths will guide
+                you through mastering AI-assisted development.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 min-[400px]:flex-row">
+                <GradientButton asChild>
+                  <Link href="/learning-path" className="flex items-center whitespace-nowrap">
+                    <span className="flex items-center whitespace-nowrap">
+                      Find Your Path
+                      <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                    </span>
+                  </Link>
+                </GradientButton>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="rounded-lg overflow-hidden border shadow-lg">
+                <img
+                  src="/abstract-geometric-sketch.png"
+                  alt="Learning path illustration"
                   className="aspect-video object-cover"
                   width={600}
                   height={400}
