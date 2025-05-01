@@ -24,39 +24,83 @@ export const projectsMockData = [
         order: 1,
         prompts: {
           bolt: {
-            content: `I want to create a Kanban board application with Bolt. 
+            content: `Let's create a Kanban board application for team task management. First, let's analyze requirements before implementation.
 
-Please help me create the initial structure with:
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a drag-and-drop Kanban board for visualizing team tasks
+   - Problem: Teams need a visual way to track task progress
+   - Solution: Interactive board with customizable columns and tasks
+
+2. **Core Features**
+   - Draggable task cards between columns
+   - Task creation with title, description, assignee
+   - Visual status indicators
+   - Column management
+
+3. **UI Structure**
+   - Header with app title and controls
+   - Main board area with columns
+   - Task cards with consistent styling
+   - Add task functionality
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
 - A header with the title "Team Kanban Board"
 - Three columns labeled "To Do", "In Progress", and "Done"
-- A simple, clean design using a light color scheme
+- A clean design using a light color scheme
 - A "+ Add Task" button at the top of each column
 
-For the styling, use a modern, minimalist approach with:
+Focus on creating a responsive layout that works on different screen sizes with:
 - Rounded corners on the columns and cards
 - Subtle shadows for depth
 - Adequate spacing between elements
-- A responsive layout that works on different screen sizes`,
+- A modern, minimalist approach`,
             tooltips: [
               {
-                text: "I want to create a Kanban board application with Bolt.",
-                explanation: "Start with a clear statement of your overall goal to give the AI context.",
+                text: "Let's create a Kanban board application for team task management. First, let's analyze requirements before implementation.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
               {
-                text: 'Three columns labeled "To Do", "In Progress", and "Done"',
-                explanation: "Be specific about the structural elements you need.",
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
                 highlightColor: "#06b6d4",
               },
               {
-                text: "For the styling, use a modern, minimalist approach with:",
-                explanation: "Provide guidance on appearance to avoid generic-looking results.",
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
           },
           v0: {
-            content: `Create a Kanban board application with:
+            content: `Let's create a Kanban board application for team task management. First, let's analyze requirements before implementation.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a drag-and-drop Kanban board for visualizing team tasks
+   - Problem: Teams need a visual way to track task progress
+   - Solution: Interactive board with customizable columns and tasks
+
+2. **Core Features**
+   - Draggable task cards between columns
+   - Task creation with title, description, assignee
+   - Visual status indicators
+   - Column management
+
+3. **UI Structure**
+   - Header with app title and controls
+   - Main board area with columns
+   - Task cards with consistent styling
+   - Add task functionality
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
 - A header with the title "Team Kanban Board"
 - Three columns labeled "To Do", "In Progress", and "Done"
 - A clean, modern design with a light theme
@@ -69,53 +113,110 @@ Use shadcn/ui components and Tailwind CSS for styling with:
 - Proper spacing between elements`,
             tooltips: [
               {
-                text: "Create a Kanban board application with:",
-                explanation: "Start with a clear instruction of what you want to build.",
+                text: "Let's create a Kanban board application for team task management. First, let's analyze requirements before implementation.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
               {
-                text: "Use shadcn/ui components and Tailwind CSS for styling with:",
-                explanation: "Specify the UI library and styling approach for consistent results.",
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
                 highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
               },
             ],
           },
           lovable: {
-            content: `I'd like to create a Kanban board for team collaboration.
+            content: `Let's create a Kanban board for team collaboration. First, let's think about what we need before we start building.
 
-Can you help me build:
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make a board where teams can see and move their tasks
+   - Problem: It's hard to keep track of who's working on what
+   - Solution: A visual board with columns for different stages
+
+2. **Main Features We Need**
+   - Cards that can be dragged between columns
+   - A way to create new tasks with details
+   - Visual indicators for priority or status
+   - Columns for different stages of work
+
+3. **How It Should Look**
+   - A header at the top with the title
+   - Columns for tasks in different stages
+   - Cards that are easy to read and move
+   - Buttons to add new tasks
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
 - A header with the title "Team Kanban Board"
 - Three columns: "To Do", "In Progress", and "Done"
 - A "+ Add Task" button for each column
-- A clean, modern design that's easy to use
+- A clean, friendly design that's easy to use
 
-I want it to look professional with:
+The design should have:
 - Rounded corners for cards and columns
 - Light shadows to create depth
 - Enough spacing so it doesn't feel crowded
 - A design that works on phones and computers`,
             tooltips: [
               {
-                text: "I'd like to create a Kanban board for team collaboration.",
-                explanation: "Start with a friendly, conversational request.",
+                text: "Let's create a Kanban board for team collaboration. First, let's think about what we need before we start building.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
               {
-                text: "I want it to look professional with:",
-                explanation: "Use simple language to describe design preferences.",
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
                 highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with straightforward instructions.",
+                highlightColor: "#8b5cf6",
               },
             ],
           },
           replit: {
-            content: `Create a React Kanban board application with the following features:
+            content: `Let's create a React Kanban board application for team task management. First, let's analyze requirements before implementation.
 
-1. Structure:
+## REQUIREMENTS ANALYSIS
+
+1. **Project Scope**
+   - Create a drag-and-drop Kanban board for visualizing team tasks
+   - Problem: Teams need a visual way to track task progress
+   - Solution: Interactive board with customizable columns and tasks
+
+2. **Core Functionality Requirements**
+   - Draggable task cards between columns
+   - Task creation with title, description, assignee
+   - Visual status indicators
+   - Column management
+
+3. **Technical Structure**
+   - React component hierarchy
+   - State management approach
+   - Event handling for interactions
+   - Styling methodology
+
+## IMPLEMENTATION - PHASE 1
+
+Let's implement the basic structure:
+
+1. Create a React Kanban board application with the following features:
+
+   a. Structure:
    - Header component with the title "Team Kanban Board"
    - Three column components with labels "To Do", "In Progress", and "Done"
    - Add Task button component at the top of each column
 
-2. Styling:
+   b. Styling:
    - Use CSS modules or styled-components
    - Implement a clean, minimalist design with light color scheme
    - Add rounded corners (8px radius) to columns and cards
@@ -123,23 +224,23 @@ I want it to look professional with:
    - Ensure proper spacing (16px between elements)
    - Make the layout responsive with flexbox or grid
 
-3. Initial State:
+   c. Initial State:
    - Set up a React state array to hold task data
    - Create empty initial state for each column`,
             tooltips: [
               {
-                text: "Create a React Kanban board application with the following features:",
-                explanation: "Start with a technical, structured approach for Replit.",
+                text: "Let's create a React Kanban board application for team task management. First, let's analyze requirements before implementation.",
+                explanation: "Start with a technical introduction that establishes a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
               {
-                text: "Use CSS modules or styled-components",
-                explanation: "Provide specific technical implementation details.",
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
                 highlightColor: "#06b6d4",
               },
               {
-                text: "Set up a React state array to hold task data",
-                explanation: "Include implementation details for the data structure.",
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -755,39 +856,136 @@ For downloading and loading:
         order: 1,
         prompts: {
           bolt: {
-            content: `I want to create a personal habit tracking dashboard with Bolt.
+            content: `Let's build a personal dashboard for tracking daily habits and goals. Let's start with requirements analysis.
 
-Please help me create the initial structure with:
-- A header with the title "My Habit Dashboard" and user profile
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a customizable dashboard for tracking personal habits and goals
+   - Problem: People struggle to maintain visibility of their habits and progress
+   - Solution: Visual dashboard with tracking widgets and progress visualization
+
+2. **Core Features**
+   - Habit tracking with completion status
+   - Progress visualization over time
+   - Customizable dashboard layout
+   - Daily/weekly/monthly views
+
+3. **User Flow**
+   - User logs in to view dashboard
+   - User can mark habits as complete
+   - User can add new habits
+   - User can view progress statistics
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- A header with the title "My Habit Dashboard" and user profile section
 - A sidebar with navigation options (Dashboard, Habits, Progress, Settings)
 - A main content area with a grid layout for widgets
-- A "Add New Habit" button in the top right of the content area
+- An "Add New Habit" button in the top right of the content area
 
-For the styling, use a modern, clean approach with:
+Style the dashboard with:
 - A light color scheme with accent colors for important elements
 - Card-based widgets with consistent styling
 - Responsive layout that works on desktop and tablets
 - Clear typography hierarchy for readability`,
-            tooltips: [],
+            tooltips: [
+              {
+                text: "Let's build a personal dashboard for tracking daily habits and goals. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
           },
           v0: {
-            content: `Create a personal habit tracking dashboard with:
-- A header with the title "My Habit Dashboard" and user profile
+            content: `Let's build a personal dashboard for tracking daily habits and goals. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a customizable dashboard for tracking personal habits and goals
+   - Problem: People struggle to maintain visibility of their habits and progress
+   - Solution: Visual dashboard with tracking widgets and progress visualization
+
+2. **Core Features**
+   - Habit tracking with completion status
+   - Progress visualization over time
+   - Customizable dashboard layout
+   - Daily/weekly/monthly views
+
+3. **User Flow**
+   - User logs in to view dashboard
+   - User can mark habits as complete
+   - User can add new habits
+   - User can view progress statistics
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- A header with the title "My Habit Dashboard" and user profile section
 - A sidebar with navigation options (Dashboard, Habits, Progress, Settings)
 - A main content area with a grid layout for widgets
-- A "Add New Habit" button in the top right of the content area
+- An "Add New Habit" button in the top right of the content area
 
 Use shadcn/ui components and Tailwind CSS for styling with:
 - Light theme with accent colors for important elements
 - Card-based widgets with consistent styling
 - Responsive layout that works on desktop and tablets
 - Clear typography hierarchy for readability`,
-            tooltips: [],
+            tooltips: [
+              {
+                text: "Let's build a personal dashboard for tracking daily habits and goals. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
           },
           lovable: {
-            content: `I'd like to create a personal dashboard for tracking my daily habits.
+            content: `Let's create a dashboard to help you track your daily habits. First, let's think about what we need.
 
-Can you help me build:
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make a dashboard where you can track your daily habits
+   - Problem: It's hard to stay consistent with habits without visual tracking
+   - Solution: A simple dashboard that shows your progress and keeps you motivated
+
+2. **Main Features We Need**
+   - A way to check off completed habits each day
+   - Visual charts to see your progress over time
+   - A customizable layout for different types of habits
+   - Different views to see daily, weekly, or monthly progress
+
+3. **How People Will Use It**
+   - Open the dashboard to see today's habits
+   - Mark habits as complete as you do them
+   - Add new habits you want to track
+   - Check your progress to stay motivated
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
 - A header with the title "My Habit Dashboard" and a small profile section
 - A sidebar with buttons for different sections (Dashboard, Habits, Progress, Settings)
 - A main area with spaces for different tracking widgets
@@ -798,29 +996,88 @@ I want it to look clean and modern with:
 - Cards for each widget or section
 - A design that works on both my computer and tablet
 - Text that's easy to read with clear headings`,
-            tooltips: [],
+            tooltips: [
+              {
+                text: "Let's create a dashboard to help you track your daily habits. First, let's think about what we need.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with straightforward instructions.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
           },
           replit: {
-            content: `Create a React personal habit tracking dashboard with the following features:
+            content: `Let's create a React personal habit tracking dashboard. First, let's analyze requirements before implementation.
 
-1. Structure:
+## REQUIREMENTS ANALYSIS
+
+1. **Project Scope**
+   - Create a customizable dashboard for tracking personal habits and goals
+   - Problem: Users need a centralized way to track habit consistency
+   - Solution: Interactive dashboard with tracking widgets and visualizations
+
+2. **Core Functionality Requirements**
+   - Habit tracking with completion status
+   - Progress visualization over time
+   - Customizable dashboard layout
+   - Daily/weekly/monthly views
+
+3. **Technical Structure**
+   - React component hierarchy
+   - State management approach
+   - Data persistence strategy
+   - Responsive design implementation
+
+## IMPLEMENTATION - PHASE 1
+
+Let's implement the basic structure:
+
+1. Create a React personal habit tracking dashboard with the following features:
+
+   a. Structure:
    - Header component with title "My Habit Dashboard" and user profile
    - Sidebar component with navigation links (Dashboard, Habits, Progress, Settings)
    - Main content area with grid layout for widgets
    - FloatingActionButton component for "Add New Habit"
 
-2. Styling:
+   b. Styling:
    - Use CSS modules or styled-components
    - Implement a clean, minimalist design with light color scheme
    - Create card components for widgets with consistent styling
    - Ensure responsive layout using CSS Grid or Flexbox
    - Implement proper typography scale for headings and body text
 
-3. Initial State:
+   c. Initial State:
    - Set up React Router for navigation between sections
    - Create placeholder widgets for the dashboard view
-   - Implement basic state management for active navigation item`,
-            tooltips: [],
+   - Implement basic state management for active navigation item
+   - Prepare mock data structure for habits and tracking`,
+            tooltips: [
+              {
+                text: "Let's create a React personal habit tracking dashboard. First, let's analyze requirements before implementation.",
+                explanation: "Start with a technical introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
           },
         },
       },
@@ -838,6 +1095,8 @@ I want it to look clean and modern with:
       },
     ],
   },
+  // After the personal-dashboard project entry, add back the missing projects with our new structured prompt format:
+
   {
     id: "product-landing",
     title: "Product Landing Page with Signup Form",
@@ -859,10 +1118,230 @@ I want it to look clean and modern with:
         description: "Create the main hero section and navigation bar",
         order: 1,
         prompts: {
-          bolt: { content: "", tooltips: [] },
-          v0: { content: "", tooltips: [] },
-          lovable: { content: "", tooltips: [] },
-          replit: { content: "", tooltips: [] },
+          bolt: {
+            content: `Let's create a product landing page with email signup functionality. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a professional landing page to showcase a product and collect email signups
+   - Problem: Need to attract and convert visitors into leads
+   - Solution: Compelling landing page with clear value proposition and signup form
+
+2. **Core Features**
+   - Attractive hero section with clear value proposition
+   - Email signup form with validation
+   - Product features/benefits section
+   - Responsive design for all devices
+
+3. **User Flow**
+   - User arrives on landing page
+   - User learns about product benefits
+   - User decides to sign up for more information
+   - User receives confirmation of signup
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- A navigation bar with logo, product name, and key links
+- A hero section with compelling headline, subheading, and call-to-action
+- A simple email signup form with validation
+- Basic styling for a professional appearance
+
+Style the landing page with:
+- Modern, clean design with appropriate whitespace
+- Attention-grabbing hero section with background image or gradient
+- Clear typography hierarchy for readability
+- Responsive layout that works on all devices`,
+            tooltips: [
+              {
+                text: "Let's create a product landing page with email signup functionality. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          v0: {
+            content: `Let's create a product landing page with email signup functionality. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a professional landing page to showcase a product and collect email signups
+   - Problem: Need to attract and convert visitors into leads
+   - Solution: Compelling landing page with clear value proposition and signup form
+
+2. **Core Features**
+   - Attractive hero section with clear value proposition
+   - Email signup form with validation
+   - Product features/benefits section
+   - Responsive design for all devices
+
+3. **User Flow**
+   - User arrives on landing page
+   - User learns about product benefits
+   - User decides to sign up for more information
+   - User receives confirmation of signup
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- A navigation bar with logo, product name, and key links
+- A hero section with compelling headline, subheading, and call-to-action
+- A simple email signup form with validation
+- Basic styling for a professional appearance
+
+Use shadcn/ui components and Tailwind CSS for styling with:
+- Modern, clean design with appropriate whitespace
+- Attention-grabbing hero section with background image or gradient
+- Clear typography hierarchy for readability
+- Responsive layout that works on all devices`,
+            tooltips: [
+              {
+                text: "Let's create a product landing page with email signup functionality. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          lovable: {
+            content: `Let's create a landing page for a product with a way for people to sign up. First, let's think about what we need.
+
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make a page that shows off a product and collects email addresses
+   - Problem: We need to turn website visitors into interested leads
+   - Solution: An attractive page that explains the product and makes signing up easy
+
+2. **Main Features We Need**
+   - An eye-catching top section with a clear message
+   - A simple form to collect email addresses
+   - Sections that show the product's benefits
+   - A design that works on phones, tablets, and computers
+
+3. **How People Will Use It**
+   - They'll land on our page
+   - They'll read about what makes our product special
+   - If interested, they'll enter their email to learn more
+   - They'll get a message confirming their signup
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
+- A navigation bar with a logo, product name, and a few important links
+- A top section with a strong headline, brief explanation, and signup button
+- A simple form that collects email addresses
+- Basic styling to make it look professional
+
+I want it to look modern and clean with:
+- Plenty of space so it's not crowded
+- An attractive top section with a nice background
+- Text that's easy to read with different sizes for importance
+- A design that looks good on any device`,
+            tooltips: [
+              {
+                text: "Let's create a landing page for a product with a way for people to sign up. First, let's think about what we need.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with straightforward instructions.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          replit: {
+            content: `Let's create a React product landing page with email signup functionality. First, let's analyze requirements before implementation.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Scope**
+   - Create a professional landing page to showcase a product and collect email signups
+   - Problem: Need to attract and convert visitors into leads
+   - Solution: Compelling landing page with clear value proposition and signup form
+
+2. **Core Functionality Requirements**
+   - Attractive hero section with clear value proposition
+   - Email signup form with validation
+   - Product features/benefits section
+   - Responsive design for all devices
+
+3. **Technical Structure**
+   - React component hierarchy
+   - Form validation approach
+   - Responsive design implementation
+   - Data handling for form submission
+
+## IMPLEMENTATION - PHASE 1
+
+Let's implement the basic structure:
+
+1. Create a React product landing page with the following features:
+
+   a. Structure:
+   - Navigation component with logo, product name, and navigation links
+   - Hero component with headline, subheading, and CTA button
+   - EmailSignup component with form fields and validation
+   - Basic page layout with appropriate sections
+
+   b. Styling:
+   - Use CSS modules or styled-components
+   - Implement a modern, clean design with appropriate whitespace
+   - Create a visually appealing hero section with background image or gradient
+   - Ensure responsive layout using media queries
+   - Implement proper typography scale for headings and body text
+
+   c. Functionality:
+   - Implement form validation for email field
+   - Create form submission handler
+   - Add basic animations for interactive elements
+   - Ensure accessibility compliance for all interactive elements`,
+            tooltips: [
+              {
+                text: "Let's create a React product landing page with email signup functionality. First, let's analyze requirements before implementation.",
+                explanation: "Start with a technical introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
         },
       },
     ],
@@ -888,10 +1367,240 @@ I want it to look clean and modern with:
         description: "Create the admin interface and content listing page",
         order: 1,
         prompts: {
-          bolt: { content: "", tooltips: [] },
-          v0: { content: "", tooltips: [] },
-          lovable: { content: "", tooltips: [] },
-          replit: { content: "", tooltips: [] },
+          bolt: {
+            content: `Let's create a simple content management system for blog posts. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a basic CMS for managing blog posts or articles
+   - Problem: Content creators need an easy way to manage their content
+   - Solution: Admin interface with CRUD operations for content management
+
+2. **Core Features**
+   - Content listing with search and filter
+   - Content creation with rich text editor
+   - Content editing and updating
+   - Content deletion with confirmation
+   - User authentication and authorization
+
+3. **User Flow**
+   - Admin logs in to the system
+   - Admin views list of existing content
+   - Admin can create, edit, or delete content
+   - Admin can publish or unpublish content
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- An admin dashboard layout with navigation
+- A content listing page with table/grid view
+- Basic search and filter functionality
+- A "Create New" button that links to a creation form
+- Action buttons for edit and delete operations
+
+Style the admin interface with:
+- Clean, functional design focused on usability
+- Clear visual hierarchy for content and actions
+- Responsive layout that works on desktop and tablets
+- Consistent styling for interactive elements`,
+            tooltips: [
+              {
+                text: "Let's create a simple content management system for blog posts. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          v0: {
+            content: `Let's create a simple content management system for blog posts. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create a basic CMS for managing blog posts or articles
+   - Problem: Content creators need an easy way to manage their content
+   - Solution: Admin interface with CRUD operations for content management
+
+2. **Core Features**
+   - Content listing with search and filter
+   - Content creation with rich text editor
+   - Content editing and updating
+   - Content deletion with confirmation
+   - User authentication and authorization
+
+3. **User Flow**
+   - Admin logs in to the system
+   - Admin views list of existing content
+   - Admin can create, edit, or delete content
+   - Admin can publish or unpublish content
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- An admin dashboard layout with navigation
+- A content listing page with table/grid view
+- Basic search and filter functionality
+- A "Create New" button that links to a creation form
+- Action buttons for edit and delete operations
+
+Use shadcn/ui components and Tailwind CSS for styling with:
+- Clean, functional design focused on usability
+- Clear visual hierarchy for content and actions
+- Responsive layout that works on desktop and tablets
+- Consistent styling for interactive elements`,
+            tooltips: [
+              {
+                text: "Let's create a simple content management system for blog posts. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          lovable: {
+            content: `Let's create a simple system to manage blog posts or articles. First, let's think about what we need.
+
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make a system where people can manage their blog posts
+   - Problem: It's hard to organize, create, and update content without a system
+   - Solution: A simple dashboard where you can see and work with all your content
+
+2. **Main Features We Need**
+   - A list of all your content with search and sorting
+   - A way to create new posts with formatting options
+   - The ability to edit existing posts
+   - A way to delete posts you don't want anymore
+   - Login protection so only you can access it
+
+3. **How People Will Use It**
+   - Log in to the system
+   - See a list of all their content
+   - Create new posts, edit existing ones, or remove old ones
+   - Control whether posts are visible to the public or not
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
+- A dashboard layout with a sidebar for navigation
+- A main page that shows all your content in a list or grid
+- A search box and some filters to find specific posts
+- A button to create new content
+- Buttons on each post for editing and deleting
+
+I want it to look clean and professional with:
+- A simple, easy-to-use design
+- Clear organization of information
+- A layout that works on computers and tablets
+- Consistent buttons and controls that are easy to understand`,
+            tooltips: [
+              {
+                text: "Let's create a simple system to manage blog posts or articles. First, let's think about what we need.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with straightforward instructions.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          replit: {
+            content: `Let's create a React content management system for blog posts. First, let's analyze requirements before implementation.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Scope**
+   - Create a basic CMS for managing blog posts or articles
+   - Problem: Content creators need an easy way to manage their content
+   - Solution: Admin interface with CRUD operations for content management
+
+2. **Core Functionality Requirements**
+   - Content listing with search and filter
+   - Content creation with rich text editor
+   - Content editing and updating
+   - Content deletion with confirmation
+   - User authentication and authorization
+
+3. **Technical Structure**
+   - React component hierarchy
+   - State management approach
+   - API integration for data operations
+   - Authentication implementation
+   - Form handling and validation
+
+## IMPLEMENTATION - PHASE 1
+
+Let's implement the basic structure:
+
+1. Create a React admin dashboard with the following features:
+
+   a. Structure:
+   - Layout component with navigation sidebar and content area
+   - ContentList component with table/grid view
+   - SearchFilter component for content filtering
+   - ActionButton components for CRUD operations
+   - Basic routing setup for navigation between views
+
+   b. Styling:
+   - Use CSS modules or styled-components
+   - Implement a clean, functional design focused on usability
+   - Create consistent styling for tables, forms, and buttons
+   - Ensure responsive layout using media queries
+   - Implement proper visual hierarchy for content and actions
+
+   c. Functionality:
+   - Set up mock data for content items
+   - Implement search and filter functionality
+   - Create handlers for edit and delete actions
+   - Set up routing for create/edit forms
+   - Implement basic state management for content list`,
+            tooltips: [
+              {
+                text: "Let's create a React content management system for blog posts. First, let's analyze requirements before implementation.",
+                explanation: "Start with a technical introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
         },
       },
     ],
@@ -917,10 +1626,237 @@ I want it to look clean and modern with:
         description: "Create the form for adding expenses and the expense list view",
         order: 1,
         prompts: {
-          bolt: { content: "", tooltips: [] },
-          v0: { content: "", tooltips: [] },
-          lovable: { content: "", tooltips: [] },
-          replit: { content: "", tooltips: [] },
+          bolt: {
+            content: `Let's create a personal expense tracker application. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create an app to track and categorize personal expenses
+   - Problem: People need to monitor and understand their spending habits
+   - Solution: Interactive expense tracker with visualization and categorization
+
+2. **Core Features**
+   - Expense entry with amount, category, date, and notes
+   - Expense listing with sorting and filtering
+   - Expense categorization and tagging
+   - Expense visualization with charts
+   - Data persistence for expense history
+
+3. **User Flow**
+   - User adds new expenses with details
+   - User views list of past expenses
+   - User filters and sorts expenses by various criteria
+   - User views charts and summaries of spending patterns
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- An expense entry form with fields for amount, category, date, and notes
+- A list view of expenses with key information displayed
+- Basic sorting and filtering functionality
+- A simple summary section showing total expenses
+
+Style the application with:
+- Clean, accessible design with clear form labels
+- Consistent card-based layout for expense items
+- Responsive design that works on mobile and desktop
+- Visual differentiation between expense categories`,
+            tooltips: [
+              {
+                text: "Let's create a personal expense tracker application. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          v0: {
+            content: `Let's create a personal expense tracker application. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create an app to track and categorize personal expenses
+   - Problem: People need to monitor and understand their spending habits
+   - Solution: Interactive expense tracker with visualization and categorization
+
+2. **Core Features**
+   - Expense entry with amount, category, date, and notes
+   - Expense listing with sorting and filtering
+   - Expense categorization and tagging
+   - Expense visualization with charts
+   - Data persistence for expense history
+
+3. **User Flow**
+   - User adds new expenses with details
+   - User views list of past expenses
+   - User filters and sorts expenses by various criteria
+   - User views charts and summaries of spending patterns
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- An expense entry form with fields for amount, category, date, and notes
+- A list view of expenses with key information displayed
+- Basic sorting and filtering functionality
+- A simple summary section showing total expenses
+
+Use shadcn/ui components and Tailwind CSS for styling with:
+- Clean, accessible design with clear form labels
+- Consistent card-based layout for expense items
+- Responsive design that works on mobile and desktop
+- Visual differentiation between expense categories`,
+            tooltips: [
+              {
+                text: "Let's create a personal expense tracker application. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          lovable: {
+            content: `Let's create an app to help you track your personal expenses. First, let's think about what we need.
+
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make an app where you can track what you spend money on
+   - Problem: It's hard to know where your money goes without tracking it
+   - Solution: A simple app that lets you record and categorize expenses
+
+2. **Main Features We Need**
+   - A form to enter new expenses with amount, category, date, and notes
+   - A list that shows all your past expenses
+   - Ways to sort and filter expenses to find what you're looking for
+   - Charts or graphs to see spending patterns
+   - Saving your expenses so they don't disappear when you close the app
+
+3. **How People Will Use It**
+   - Add new expenses as they spend money
+   - Look back at what they've spent in the past
+   - Filter expenses by date, category, or amount
+   - See summaries of their spending habits
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
+- A form with fields for entering expense amount, category, date, and notes
+- A list that shows all expenses with the most important information
+- Some basic sorting and filtering options
+- A simple summary that shows the total amount spent
+
+I want it to look clean and easy to use with:
+- Clear labels and instructions for the form
+- A consistent design for each expense in the list
+- A design that works well on both phones and computers
+- Different colors or icons for different expense categories`,
+            tooltips: [
+              {
+                text: "Let's create an app to help you track your personal expenses. First, let's think about what we need.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with straightforward instructions.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          replit: {
+            content: `Let's create a React personal expense tracker application. First, let's analyze requirements before implementation.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Scope**
+   - Create an app to track and categorize personal expenses
+   - Problem: Users need to monitor and understand their spending habits
+   - Solution: Interactive expense tracker with visualization and categorization
+
+2. **Core Functionality Requirements**
+   - Expense entry with amount, category, date, and notes
+   - Expense listing with sorting and filtering
+   - Expense categorization and tagging
+   - Expense visualization with charts
+   - Data persistence for expense history
+
+3. **Technical Structure**
+   - React component hierarchy
+   - Form handling and validation
+   - Data storage approach
+   - Filtering and sorting implementation
+   - Chart library integration
+
+## IMPLEMENTATION - PHASE 1
+
+Let's implement the basic structure:
+
+1. Create a React expense tracker with the following features:
+
+   a. Structure:
+   - ExpenseForm component with input fields for amount, category, date, and notes
+   - ExpenseList component to display entered expenses
+   - FilterSort component for filtering and sorting options
+   - Summary component to display expense totals
+   - Main App component to manage state and layout
+
+   b. Styling:
+   - Use CSS modules or styled-components
+   - Implement a clean, accessible design with clear form labels
+   - Create consistent card-based layout for expense items
+   - Ensure responsive design using media queries
+   - Add visual differentiation between expense categories
+
+   c. Functionality:
+   - Implement form validation for expense entry
+   - Create state management for expense data
+   - Add sorting functionality by date, amount, and category
+   - Implement filtering by date range and category
+   - Set up localStorage for basic data persistence`,
+            tooltips: [
+              {
+                text: "Let's create a React personal expense tracker application. First, let's analyze requirements before implementation.",
+                explanation: "Start with a technical introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
         },
       },
     ],
@@ -946,10 +1882,237 @@ I want it to look clean and modern with:
         description: "Create the search form and results display",
         order: 1,
         prompts: {
-          bolt: { content: "", tooltips: [] },
-          v0: { content: "", tooltips: [] },
-          lovable: { content: "", tooltips: [] },
-          replit: { content: "", tooltips: [] },
+          bolt: {
+            content: `Let's create a recipe finder application. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create an app to search and save favorite recipes
+   - Problem: People need inspiration and organization for cooking
+   - Solution: Searchable recipe database with saving functionality
+
+2. **Core Features**
+   - Recipe search with filters (ingredients, cuisine, diet)
+   - Recipe results display with images and key information
+   - Detailed recipe view with ingredients and instructions
+   - Save favorite recipes functionality
+   - Responsive design for mobile and desktop use
+
+3. **User Flow**
+   - User enters search criteria for recipes
+   - User browses search results
+   - User views detailed recipe information
+   - User saves favorite recipes for later reference
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- A search interface with input field and filter options
+- A results grid displaying recipe cards with images and basic info
+- A loading state for search results
+- Basic styling for an appealing food-related application
+
+Style the application with:
+- Food-friendly color scheme and typography
+- Attractive recipe cards with consistent sizing
+- Responsive grid layout that adapts to different screen sizes
+- Clear visual hierarchy for search and results`,
+            tooltips: [
+              {
+                text: "Let's create a recipe finder application. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          v0: {
+            content: `Let's create a recipe finder application. Let's start with requirements analysis.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Overview**
+   - Create an app to search and save favorite recipes
+   - Problem: People need inspiration and organization for cooking
+   - Solution: Searchable recipe database with saving functionality
+
+2. **Core Features**
+   - Recipe search with filters (ingredients, cuisine, diet)
+   - Recipe results display with images and key information
+   - Detailed recipe view with ingredients and instructions
+   - Save favorite recipes functionality
+   - Responsive design for mobile and desktop use
+
+3. **User Flow**
+   - User enters search criteria for recipes
+   - User browses search results
+   - User views detailed recipe information
+   - User saves favorite recipes for later reference
+
+## IMPLEMENTATION - PHASE 1
+
+For our first phase, please create:
+- A search interface with input field and filter options
+- A results grid displaying recipe cards with images and basic info
+- A loading state for search results
+- Basic styling for an appealing food-related application
+
+Use shadcn/ui components and Tailwind CSS for styling with:
+- Food-friendly color scheme and typography
+- Attractive recipe cards with consistent sizing
+- Responsive grid layout that adapts to different screen sizes
+- Clear visual hierarchy for search and results`,
+            tooltips: [
+              {
+                text: "Let's create a recipe finder application. Let's start with requirements analysis.",
+                explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          lovable: {
+            content: `Let's create an app to help you find and save recipes. First, let's think about what we need.
+
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make an app where you can search for recipes and save your favorites
+   - Problem: It's hard to find cooking inspiration and keep track of recipes you like
+   - Solution: A simple app that lets you search recipes and save ones you want to try
+
+2. **Main Features We Need**
+   - A search box where you can look for recipes by ingredients or type of food
+   - A way to filter recipes (like vegetarian, quick meals, etc.)
+   - Recipe cards that show pictures and basic information
+   - A way to save recipes you like for later
+   - A design that works well on phones and computers
+
+3. **How People Will Use It**
+   - Search for recipes based on what they want to cook
+   - Browse through the results to find something appealing
+   - Look at recipe details to see ingredients and instructions
+   - Save recipes they want to try later
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
+- A search area with a text box and some filter options
+- A results section that shows recipe cards in a grid
+- A loading indicator that shows while searching
+- A basic design that makes the app look food-related
+
+I want it to look appetizing and easy to use with:
+- Colors and fonts that make you think of good food
+- Nice recipe cards with consistent sizes and appealing images
+- A layout that works well on both phones and computers
+- Clear organization of search box and results`,
+            tooltips: [
+              {
+                text: "Let's create an app to help you find and save recipes. First, let's think about what we need.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with straightforward instructions.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          replit: {
+            content: `Let's create a React recipe finder application. First, let's analyze requirements before implementation.
+
+## REQUIREMENTS ANALYSIS
+
+1. **Project Scope**
+   - Create an app to search and save favorite recipes
+   - Problem: People need inspiration and organization for cooking
+   - Solution: Searchable recipe database with saving functionality
+
+2. **Core Functionality Requirements**
+   - Recipe search with filters (ingredients, cuisine, diet)
+   - Recipe results display with images and key information
+   - Detailed recipe view with ingredients and instructions
+   - Save favorite recipes functionality
+   - Responsive design for mobile and desktop use
+
+3. **Technical Structure**
+   - React component hierarchy
+   - API integration for recipe data
+   - State management approach
+   - Responsive design implementation
+   - Local storage for saved recipes
+
+## IMPLEMENTATION - PHASE 1
+
+Let's implement the basic structure:
+
+1. Create a React recipe finder with the following features:
+
+   a. Structure:
+   - SearchForm component with input field and filter options
+   - RecipeGrid component to display search results
+   - RecipeCard component for individual recipe display
+   - LoadingState component for search feedback
+   - Main App component to manage state and layout
+
+   b. Styling:
+   - Use CSS modules or styled-components
+   - Implement a food-friendly color scheme and typography
+   - Create attractive recipe cards with consistent sizing
+   - Ensure responsive grid layout using CSS Grid or Flexbox
+   - Add clear visual hierarchy for search and results
+
+   c. Functionality:
+   - Set up mock data for initial development
+   - Implement search filtering logic
+   - Create loading state management
+   - Add basic error handling for failed searches
+   - Prepare structure for API integration in next phase`,
+            tooltips: [
+              {
+                text: "Let's create a React recipe finder application. First, let's analyze requirements before implementation.",
+                explanation: "Start with a technical introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## REQUIREMENTS ANALYSIS",
+                explanation: "Explicitly separate requirements analysis from implementation for better results.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## IMPLEMENTATION - PHASE 1",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
         },
       },
     ],

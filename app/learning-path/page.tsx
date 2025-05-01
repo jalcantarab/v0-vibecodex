@@ -160,7 +160,7 @@ export default function LearningPathPage() {
                   <LearningPathMilestone
                     number={2}
                     title="Save & Manage Your Code"
-                    description="Learn how to save your AI-generated code and make basic edits"
+                    description="Learn how to save your AI-generated code and prepare for more advanced development"
                     estimatedTime="Half-day"
                     tools={["github"]}
                     skills={["GitHub basics", "Code organization", "Simple code editing"]}
@@ -175,6 +175,7 @@ export default function LearningPathPage() {
                         <ChecklistItem checked={false} text="Install GitHub Desktop" />
                         <ChecklistItem checked={false} text="Make a simple change and commit it" />
                         <ChecklistItem checked={false} text="Deploy your project from GitHub" />
+                        <ChecklistItem checked={false} text="Understand when to transition from v0 to Cursor" />
                       </div>
                       <div className="pt-4">
                         <Button asChild variant="outline" size="sm">
@@ -190,7 +191,7 @@ export default function LearningPathPage() {
                   <LearningPathMilestone
                     number={3}
                     title="Extend Your Project with an IDE"
-                    description="Move from AI-only to a hybrid workflow using an AI-powered code editor"
+                    description="Move from v0 to Cursor when your project grows beyond 40-50 files"
                     estimatedTime="Full day"
                     tools={["cursor"]}
                     skills={["IDE basics", "Code navigation", "Making larger changes"]}

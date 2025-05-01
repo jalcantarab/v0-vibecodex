@@ -405,6 +405,43 @@ export default function GitHubBasicsGuidePage() {
 
         <Separator />
 
+        <section id="transition-to-cursor" className="space-y-4">
+          <h2 className="text-2xl font-bold tracking-tight">When to Transition to Cursor</h2>
+
+          <div className="space-y-4">
+            <p>
+              GitHub serves as the critical bridge between v0 and more advanced development environments like Cursor.
+              While v0 is excellent for initial project creation and simple changes, you'll eventually need to
+              transition to a more powerful tool like Cursor.
+            </p>
+
+            <Alert className="bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/50">
+              <AlertTitle className="text-blue-800 dark:text-blue-400">When to make the switch</AlertTitle>
+              <AlertDescription className="text-blue-700 dark:text-blue-300">
+                <p className="mb-2">Consider moving from v0 to Cursor when:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Your project has grown to 40-50+ files</li>
+                  <li>You need to make complex changes across multiple files</li>
+                  <li>You're implementing advanced features that require detailed code editing</li>
+                  <li>You need to debug or troubleshoot specific issues</li>
+                  <li>You want to run and test your code locally</li>
+                </ul>
+              </AlertDescription>
+            </Alert>
+
+            <p>
+              Once you've exported your v0 project to GitHub, you're perfectly positioned to continue development in
+              Cursor. Check out our{" "}
+              <Link href="/guides/cursor-basics" className="text-primary hover:underline">
+                Cursor Basics Guide
+              </Link>{" "}
+              to learn how to clone your GitHub repository and continue development in a more powerful environment.
+            </p>
+          </div>
+        </section>
+
+        <Separator />
+
         <section id="troubleshooting" className="space-y-4">
           <h2 className="text-2xl font-bold tracking-tight">Troubleshooting Common Issues</h2>
 
@@ -442,9 +479,9 @@ export default function GitHubBasicsGuidePage() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <NextStepCard
-              title="Learn Branching"
-              description="Create separate branches for new features or experiments without affecting your main code."
-              link="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches"
+              title="Move to Cursor IDE"
+              description="Learn how to continue your development in Cursor, a powerful AI-assisted code editor perfect for larger projects."
+              link="/guides/cursor-basics"
             />
             <NextStepCard
               title="Collaborate with Pull Requests"
