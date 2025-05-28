@@ -2,7 +2,18 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, ArrowRight, CheckCircle, Copy, ExternalLink, Github } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle,
+  Copy,
+  ExternalLink,
+  Github,
+  GitBranch,
+  GitFork,
+  GitMerge,
+  GitPullRequest,
+} from "lucide-react"
 import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
@@ -11,6 +22,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function GitHubBasicsGuidePage() {
   return (
@@ -38,6 +50,79 @@ export default function GitHubBasicsGuidePage() {
         <p className="text-xl text-muted-foreground">
           Learn how to save, manage, and share your AI-generated code with GitHub
         </p>
+      </div>
+
+      <div className="mb-8">
+        <Tabs defaultValue="chapter1" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 mb-6">
+            <TabsTrigger value="chapter1">Getting Started</TabsTrigger>
+            <TabsTrigger value="chapter2">Core Concepts</TabsTrigger>
+            <TabsTrigger value="chapter3">Advanced & Integration</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="chapter1" className="space-y-4">
+            <p className="text-muted-foreground">
+              Chapter 1 covers the basics of GitHub, setting up your account, and creating your first repository.
+            </p>
+            <div className="grid gap-2">
+              <a href="#introduction" className="text-primary hover:underline">
+                Introduction to Version Control
+              </a>
+              <a href="#getting-started" className="text-primary hover:underline">
+                Getting Started with GitHub
+              </a>
+              <a href="#github-desktop" className="text-primary hover:underline">
+                GitHub Desktop Setup
+              </a>
+              <a href="#first-repository" className="text-primary hover:underline">
+                Your First Repository
+              </a>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="chapter2" className="space-y-4">
+            <p className="text-muted-foreground">
+              Chapter 2 explores essential GitHub concepts like commits, branches, forks, and merges.
+            </p>
+            <div className="grid gap-2">
+              <a href="#basic-workflow" className="text-primary hover:underline">
+                Basic GitHub Workflow
+              </a>
+              <a href="#branches" className="text-primary hover:underline">
+                Working with Branches
+              </a>
+              <a href="#forks" className="text-primary hover:underline">
+                Forking Repositories
+              </a>
+              <a href="#merging" className="text-primary hover:underline">
+                Merging Changes
+              </a>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="chapter3" className="space-y-4">
+            <p className="text-muted-foreground">
+              Chapter 3 covers advanced topics and integrating GitHub with AI tools and deployment platforms.
+            </p>
+            <div className="grid gap-2">
+              <a href="#ai-tool-integration" className="text-primary hover:underline">
+                GitHub with AI Tools
+              </a>
+              <a href="#deployment" className="text-primary hover:underline">
+                Deploying from GitHub
+              </a>
+              <a href="#transition-to-cursor" className="text-primary hover:underline">
+                When to Transition to Cursor
+              </a>
+              <a href="#troubleshooting" className="text-primary hover:underline">
+                Troubleshooting Common Issues
+              </a>
+              <a href="#next-steps" className="text-primary hover:underline">
+                Next Steps
+              </a>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
 
       <div className="grid gap-8">
@@ -115,6 +200,8 @@ export default function GitHubBasicsGuidePage() {
                 <TermCard term="Clone" definition="Making a copy of a repository on your computer." />
                 <TermCard term="Push" definition="Uploading your local changes to GitHub." />
                 <TermCard term="Pull" definition="Downloading the latest changes from GitHub to your computer." />
+                <TermCard term="Fork" definition="Creating your own copy of someone else's repository on GitHub." />
+                <TermCard term="Merge" definition="Combining changes from one branch into another." />
               </div>
             </div>
           </div>
@@ -363,6 +450,482 @@ export default function GitHubBasicsGuidePage() {
 
         <Separator />
 
+        <section id="branches" className="space-y-4">
+          <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+            <GitBranch className="h-6 w-6" />
+            Working with Branches
+          </h2>
+
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">What Are Branches?</h3>
+              <p>
+                Branches allow you to work on different versions of your code simultaneously. Think of them as parallel
+                timelines where you can develop features or fix bugs without affecting the main codebase.
+              </p>
+
+              <div className="relative w-full h-64 rounded-lg overflow-hidden border">
+                <Image
+                  src="/github-branches-diagram.png"
+                  alt="GitHub branches diagram showing main branch and feature branches"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">When to Use Branches</h4>
+                    <ul className="list-disc pl-6 space-y-1 mt-2">
+                      <li>Developing new features</li>
+                      <li>Fixing bugs</li>
+                      <li>Experimenting with code changes</li>
+                      <li>Working on multiple features simultaneously</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">Branch Naming Conventions</h4>
+                    <ul className="list-disc pl-6 space-y-1 mt-2">
+                      <li>
+                        <code>feature/add-login</code> - For new features
+                      </li>
+                      <li>
+                        <code>bugfix/fix-header</code> - For bug fixes
+                      </li>
+                      <li>
+                        <code>hotfix/critical-error</code> - For urgent fixes
+                      </li>
+                      <li>
+                        <code>release/v1.0</code> - For release preparation
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Creating and Using Branches in GitHub Desktop</h3>
+
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="create-branch">
+                  <AccordionTrigger>Creating a New Branch</AccordionTrigger>
+                  <AccordionContent>
+                    <ol className="list-decimal pl-6 space-y-2">
+                      <li>In GitHub Desktop, click on the "Current Branch" dropdown</li>
+                      <li>Click "New Branch"</li>
+                      <li>Enter a descriptive name for your branch</li>
+                      <li>Select the branch you want to base your new branch on (usually "main")</li>
+                      <li>Click "Create Branch"</li>
+                    </ol>
+                    <div className="relative w-full h-64 rounded-lg overflow-hidden border mt-4">
+                      <Image
+                        src="/github-desktop-new-branch.png"
+                        alt="Creating a new branch in GitHub Desktop"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="switch-branch">
+                  <AccordionTrigger>Switching Between Branches</AccordionTrigger>
+                  <AccordionContent>
+                    <ol className="list-decimal pl-6 space-y-2">
+                      <li>In GitHub Desktop, click on the "Current Branch" dropdown</li>
+                      <li>Select the branch you want to switch to from the list</li>
+                      <li>GitHub Desktop will update your files to match the selected branch</li>
+                    </ol>
+                    <Alert className="mt-4">
+                      <AlertTitle>Save Your Changes First</AlertTitle>
+                      <AlertDescription>
+                        Always commit your changes before switching branches, or use the "Stash Changes" feature to
+                        temporarily save them.
+                      </AlertDescription>
+                    </Alert>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="publish-branch">
+                  <AccordionTrigger>Publishing a Branch to GitHub</AccordionTrigger>
+                  <AccordionContent>
+                    <p>When you create a new branch locally, it only exists on your computer until you publish it.</p>
+                    <ol className="list-decimal pl-6 space-y-2 mt-2">
+                      <li>Make sure you're on the branch you want to publish</li>
+                      <li>Click "Publish branch" in the top right</li>
+                      <li>Your branch is now available on GitHub for others to see</li>
+                    </ol>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        <Separator />
+
+        <section id="forks" className="space-y-4">
+          <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+            <GitFork className="h-6 w-6" />
+            Forking Repositories
+          </h2>
+
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">What is Forking?</h3>
+              <p>
+                Forking creates your own copy of someone else's repository on GitHub. This allows you to freely
+                experiment with changes without affecting the original project.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h4 className="font-semibold">When to Fork a Repository</h4>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Contributing to open-source projects</li>
+                    <li>Using someone else's project as a starting point</li>
+                    <li>Experimenting with changes to a public project</li>
+                    <li>Creating your own version of a template or starter project</li>
+                  </ul>
+                </div>
+                <div className="relative w-full h-64 rounded-lg overflow-hidden border">
+                  <Image
+                    src="/github-fork-diagram.png"
+                    alt="GitHub fork diagram showing relationship between original and forked repository"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">How to Fork a Repository</h3>
+
+              <Tabs defaultValue="github" className="w-full">
+                <TabsList className="grid w-full grid-cols-2">
+                  <TabsTrigger value="github">On GitHub.com</TabsTrigger>
+                  <TabsTrigger value="v0">From v0</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="github" className="space-y-4 pt-4">
+                  <ol className="list-decimal pl-6 space-y-4">
+                    <li>Navigate to the GitHub repository you want to fork</li>
+                    <li>
+                      <p>Click the "Fork" button in the top-right corner of the page</p>
+                      <div className="relative w-full h-64 rounded-lg overflow-hidden border mt-2">
+                        <Image
+                          src="/github-fork-button.png"
+                          alt="Fork button on GitHub repository page"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </li>
+                    <li>Select your account as the destination for the fork</li>
+                    <li>Wait for GitHub to create your copy of the repository</li>
+                    <li>You'll be redirected to your new forked repository</li>
+                  </ol>
+                </TabsContent>
+
+                <TabsContent value="v0" className="space-y-4 pt-4">
+                  <Alert className="mb-4">
+                    <AlertTitle className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      v0 Supports Forking
+                    </AlertTitle>
+                    <AlertDescription>
+                      You can fork public v0 projects to create your own version that you can modify.
+                    </AlertDescription>
+                  </Alert>
+
+                  <ol className="list-decimal pl-6 space-y-4">
+                    <li>Find a public v0 project you want to fork</li>
+                    <li>
+                      <p>Click the "Fork" button in the project interface</p>
+                      <div className="relative w-full h-64 rounded-lg overflow-hidden border mt-2">
+                        <Image
+                          src="/v0-fork-button.png"
+                          alt="Fork button in v0 interface"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </li>
+                    <li>v0 will create a copy of the project in your account</li>
+                    <li>You can now make changes to your forked version</li>
+                    <li>Export to GitHub using the same process described earlier</li>
+                  </ol>
+                </TabsContent>
+              </Tabs>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Working with a Forked Repository</h3>
+
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Clone your forked repository to your computer using GitHub Desktop</li>
+                <li>Make changes to the code as needed</li>
+                <li>Commit and push your changes to your fork</li>
+                <li>To contribute back to the original project, create a pull request (covered in the next section)</li>
+              </ol>
+
+              <Alert className="bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/50 mt-4">
+                <AlertTitle className="text-blue-800 dark:text-blue-400">Keeping Your Fork Updated</AlertTitle>
+                <AlertDescription className="text-blue-700 dark:text-blue-300">
+                  <p>To keep your fork in sync with the original repository:</p>
+                  <ol className="list-decimal pl-6 space-y-1 mt-2">
+                    <li>Add the original repository as a "remote" called "upstream"</li>
+                    <li>Fetch changes from the upstream repository</li>
+                    <li>Merge those changes into your local branch</li>
+                    <li>Push the updated code to your fork</li>
+                  </ol>
+                  <p className="mt-2">GitHub Desktop has a "Keep fork synced" option to automate this process.</p>
+                </AlertDescription>
+              </Alert>
+            </div>
+          </div>
+        </section>
+
+        <Separator />
+
+        <section id="merging" className="space-y-4">
+          <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+            <GitMerge className="h-6 w-6" />
+            Merging Changes
+          </h2>
+
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Understanding Merges and Pull Requests</h3>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <p>
+                    Merging combines changes from one branch into another. This is how you integrate new features or bug
+                    fixes into your main codebase.
+                  </p>
+
+                  <p>
+                    <strong>Pull Requests (PRs)</strong> are GitHub's way of proposing changes and requesting that
+                    someone review and merge your code. They're essential for collaboration.
+                  </p>
+                </div>
+                <div className="relative w-full h-64 rounded-lg overflow-hidden border">
+                  <Image
+                    src="/github-merge-diagram.png"
+                    alt="GitHub merge diagram showing branches being combined"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Merging Branches in GitHub Desktop</h3>
+
+              <ol className="list-decimal pl-6 space-y-4">
+                <li>
+                  In GitHub Desktop, switch to the branch you want to merge <strong>into</strong> (usually "main")
+                </li>
+                <li>
+                  <p>Click on "Branch" in the top menu, then select "Merge into current branch..."</p>
+                  <div className="relative w-full h-64 rounded-lg overflow-hidden border mt-2">
+                    <Image
+                      src="/github-desktop-merge.png"
+                      alt="Merging branches in GitHub Desktop"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </li>
+                <li>Select the branch you want to merge from</li>
+                <li>Click "Merge [branch] into [current branch]"</li>
+                <li>Push the changes to GitHub by clicking "Push origin"</li>
+              </ol>
+
+              <Alert className="mt-4">
+                <AlertTitle className="flex items-center gap-2">
+                  <GitPullRequest className="h-4 w-4" />
+                  Merge Conflicts
+                </AlertTitle>
+                <AlertDescription>
+                  <p>
+                    If the same lines of code were changed in both branches, you'll encounter merge conflicts that need
+                    to be resolved manually.
+                  </p>
+                  <p className="mt-2">
+                    GitHub Desktop will guide you through the conflict resolution process, allowing you to choose which
+                    changes to keep.
+                  </p>
+                </AlertDescription>
+              </Alert>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Creating a Pull Request</h3>
+
+              <p>
+                Pull requests are used to propose changes to a repository, especially when contributing to projects you
+                don't own or when working with a team.
+              </p>
+
+              <ol className="list-decimal pl-6 space-y-4">
+                <li>Push your branch to GitHub</li>
+                <li>
+                  <p>In GitHub Desktop, click "Create Pull Request" (or go to the repository on GitHub.com)</p>
+                  <div className="relative w-full h-64 rounded-lg overflow-hidden border mt-2">
+                    <Image
+                      src="/github-desktop-pr.png"
+                      alt="Creating a pull request from GitHub Desktop"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </li>
+                <li>Your browser will open to GitHub.com with the pull request form</li>
+                <li>Fill in a title and description explaining your changes</li>
+                <li>Select the base branch you want to merge into (usually "main")</li>
+                <li>Click "Create pull request"</li>
+              </ol>
+
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">Good PR Descriptions Include:</h4>
+                    <ul className="list-disc pl-6 space-y-1 mt-2">
+                      <li>What changes you made</li>
+                      <li>Why you made them</li>
+                      <li>How to test the changes</li>
+                      <li>Screenshots (if applicable)</li>
+                      <li>Related issues or tickets</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">PR Review Process:</h4>
+                    <ol className="list-decimal pl-6 space-y-1 mt-2">
+                      <li>Reviewers examine your code</li>
+                      <li>They may leave comments or request changes</li>
+                      <li>Address any feedback by pushing new commits</li>
+                      <li>Once approved, the PR can be merged</li>
+                    </ol>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Separator />
+
+        <section id="ai-tool-integration" className="space-y-4">
+          <h2 className="text-2xl font-bold tracking-tight">GitHub with AI Tools</h2>
+
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Integrating GitHub Across Your AI Development Workflow</h3>
+
+              <p>
+                GitHub serves as the central hub for your code across different AI development tools. Here's how to
+                integrate GitHub with various tools in the VibeCodex ecosystem:
+              </p>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                <Card>
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/v0-logo.png" alt="v0 Logo" width={24} height={24} />
+                      <h4 className="font-semibold">v0</h4>
+                    </div>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Export directly to GitHub</li>
+                      <li>Fork public v0 projects</li>
+                      <li>Create new repositories</li>
+                      <li>Add to existing repositories</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/cursor-logo.png" alt="Cursor Logo" width={24} height={24} />
+                      <h4 className="font-semibold">Cursor</h4>
+                    </div>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Clone repositories directly</li>
+                      <li>Built-in Git controls</li>
+                      <li>Commit, push, and pull</li>
+                      <li>Branch management</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image src="/replit-logo.png" alt="Replit Logo" width={24} height={24} />
+                      <h4 className="font-semibold">Replit</h4>
+                    </div>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Import from GitHub</li>
+                      <li>Connect repositories</li>
+                      <li>Sync changes</li>
+                      <li>Deploy from GitHub</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Viewing Projects in GitHub Desktop</h3>
+
+              <p>After exporting or linking your project with GitHub, you can open and manage it in GitHub Desktop:</p>
+
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Open GitHub Desktop</li>
+                <li>Click "File" &gt; "Clone Repository"</li>
+                <li>Select your repository from the list or enter its URL</li>
+                <li>Choose where to save it on your computer</li>
+                <li>Click "Clone"</li>
+              </ol>
+
+              <div className="relative w-full h-64 rounded-lg overflow-hidden border mt-4">
+                <Image
+                  src="/github-desktop-clone.png"
+                  alt="Cloning a repository in GitHub Desktop"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              <Alert className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-900/50 mt-4">
+                <AlertTitle className="text-green-800 dark:text-green-400">Seamless Workflow</AlertTitle>
+                <AlertDescription className="text-green-700 dark:text-green-300">
+                  <p>With GitHub as your central code repository, you can:</p>
+                  <ul className="list-disc pl-6 space-y-1 mt-2">
+                    <li>Start a project in v0</li>
+                    <li>Export to GitHub</li>
+                    <li>Continue development in Cursor</li>
+                    <li>Deploy from GitHub to Vercel or other platforms</li>
+                    <li>All while maintaining a complete history of your changes</li>
+                  </ul>
+                </AlertDescription>
+              </Alert>
+            </div>
+          </div>
+        </section>
+
+        <Separator />
+
         <section id="deployment" className="space-y-4">
           <h2 className="text-2xl font-bold tracking-tight">Deploying from GitHub</h2>
 
@@ -453,7 +1016,7 @@ export default function GitHubBasicsGuidePage() {
               />
               <TroubleshootingCard
                 title="Can't Push Changes"
-                solution="Someone else might have pushed changes you don't have. Try pulling first (Fetch origin > Pull origin), resolve any conflicts, then push."
+                solution="Someone else might have pushed changes you don't have. Try pulling first (Fetch origin &gt; Pull origin), resolve any conflicts, then push."
               />
               <TroubleshootingCard
                 title="Merge Conflicts"
