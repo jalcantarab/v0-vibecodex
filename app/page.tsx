@@ -14,7 +14,6 @@ import { AnimatedText } from "@/components/animated-text"
 import { GradientButton } from "@/components/ui/gradient-button"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { SocialShare } from "@/components/social-share"
-import { HowItWorks } from "@/components/how-it-works"
 
 export default function Home() {
   const router = useRouter()
@@ -201,7 +200,65 @@ export default function Home() {
         </div>
       </section>
 
-      <HowItWorks />
+      <section id="how-it-works" className="w-full py-12 md:py-24 relative">
+        <div className="container px-4 md:px-6 max-w-6xl mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">How it works</h2>
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              From idea to implementation in three simple steps
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-violet-200 to-transparent hidden md:block -z-10" />
+
+            <div className="flex flex-col items-center space-y-4 p-6 relative">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-cyan-400 shadow-lg">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-bold">A sketch on paper</h3>
+              <p className="text-muted-foreground text-center">
+                Start with your idea, no matter how rough. Even a simple sketch or description is enough to begin.
+              </p>
+
+              <div className="mt-4 rounded-lg border bg-card p-3 shadow-sm">
+                <img
+                  src="/step1-ideation-sketch.png"
+                  alt="Sketch to idea concept"
+                  className="rounded-md w-full h-auto"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-4 p-6 relative">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-violet-500 to-violet-400 shadow-lg">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-bold">A prompt in an AI tool</h3>
+              <p className="text-muted-foreground text-center">
+                Use our guided prompts with your favorite AI tools to transform your idea into code.
+              </p>
+
+              <div className="mt-4 rounded-lg border bg-card p-3 shadow-sm">
+                <img src="/step2-ai-prompt.png" alt="AI prompt interface" className="rounded-md w-full h-auto" />
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-4 p-6 relative">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-violet-500 shadow-lg">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-bold">The resulting application</h3>
+              <p className="text-muted-foreground text-center">
+                Get a working application you can use, share, and continue to build upon.
+              </p>
+
+              <div className="mt-4 rounded-lg border bg-card p-3 shadow-sm">
+                <img src="/step3-final-app.png" alt="Resulting application" className="rounded-md w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6 max-w-6xl mx-auto">
