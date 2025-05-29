@@ -90,6 +90,7 @@ Our documentation has been reorganized for better accessibility:
 - [Guides](docs/guides/) - How-to guides and tutorials
   - [Development Workflow](docs/guides/development-workflow.md) - Setting up your development environment
   - [AI Tools Integration](docs/guides/ai-tools-integration.md) - Working with AI tools
+  - [GitHub Basics](app/guides/github-basics/page.tsx) - Essential GitHub concepts and workflows
 - [Reference](docs/reference/) - Technical reference documentation
   - [Project Structure](docs/reference/project-structure.md) - Codebase organization
   - [Implementation Notes](docs/reference/implementation-notes.md) - Design patterns and guidelines
@@ -102,6 +103,7 @@ Our documentation has been reorganized for better accessibility:
 - [x] Integration with AI tools
 - [x] Project templates and guides
 - [x] Documentation reorganization
+- [x] GitHub workflow guide
 - [ ] User authentication
 - [ ] Project saving and sharing
 - [ ] Community showcase
@@ -126,6 +128,8 @@ Please see our [Contributing Guide](docs/CONTRIBUTING.md) for more details.
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ## 📬 Contact
+
+Jorge Alcantara - [@jalcantarab](https://github.com/jalcantarab)
 
 Project Link: [https://github.com/jalcantarab/v0-vibecodex](https://github.com/jalcantarab/v0-vibecodex)
 
