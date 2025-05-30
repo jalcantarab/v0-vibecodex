@@ -1,9 +1,24 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "VibeCodex"
-    given-names: "Team"
+- family-names: "Alcantara Barroso"
+  given-names: "Jorge"
+  email: "jorge@zentrik.ai"
+  affiliation: "Zentrik AI"
+  orcid: "https://orcid.org/YOUR-ORCID-ID" # Optional: Add ORCID if available
+- name: "Zentrik AI"
+  website: "https://zentrik.ai"
 title: "VibeCodex: An open-source AI coding starter kit"
 version: 1.0.0
 date-released: 2023-12-01
+license: MIT # Added license field
 url: "https://github.com/jalcantarab/v0-vibecodex"
+repository-code: "https://github.com/jalcantarab/v0-vibecodex"
+keywords:
+- "ai"
+- "coding"
+- "starter-kit"
+- "next.js"
+- "react"
+- "tailwindcss"
+- "open-source"

@@ -239,6 +239,71 @@ Vibe contributions can include:
 - Creating tutorials or guides
 
 All vibe contributions should align with the project philosophy outlined at the beginning of this document and maintain consistency with the established design language.
+
+## Development Workflow Guide
+
+### Setting Up Your Environment
+
+1. **Clone the Repository**: Use Git to clone the VibeCodex repository from GitHub.
+   \`\`\`bash
+   git clone https://github.com/vibecodex/vibecodex.git
+   \`\`\`
+
+2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies.
+   \`\`\`bash
+   cd vibecodex
+   npm install
+   \`\`\`
+
+3. **Run the Development Server**: Start the development server to see your changes in real-time.
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+4. **Code Changes**: Make your code changes in the appropriate files. Follow the project structure and guidelines provided in this document.
+
+5. **Testing**: Test your changes across different screen sizes and devices to ensure responsiveness and usability.
+
+6. **Commit Your Changes**: Commit your changes with a clear and concise message.
+   \`\`\`bash
+   git commit -m "Add new feature: [Feature Name]"
+   \`\`\`
+
+7. **Push Your Changes**: Push your changes to your forked repository on GitHub.
+   \`\`\`bash
+   git push origin main
+   \`\`\`
+
+8. **Create a Pull Request**: Go to the VibeCodex GitHub repository and create a pull request with your changes. Reference the issue you are addressing if applicable.
+
+9. **Review and Merge**: Your changes will be reviewed by the maintainers. Once approved, they will be merged into the main repository.
+
+### Code Review Process
+
+- **Clarity**: Ensure your code is clear and easy to understand.
+- **Consistency**: Follow the established design language and component patterns.
+- **Documentation**: Update any relevant documentation to reflect your changes.
+- **Testing**: Include tests for any new features or bug fixes.
+
+### Deployment
+
+- **Automated**: VibeCodex uses Vercel for automated deployment. Changes merged into the main branch will be automatically deployed to the live site.
+- **Manual**: If you need to manually deploy, you can do so using Vercel's CLI.
+  \`\`\`bash
+  vercel --prod
+  \`\`\`
+
+### Contribution Attribution
+
+When making contributions, please include attribution for any AI systems used in the development process. This helps maintain transparency and acknowledges the contributions of AI systems.
+
+\`\`\`tsx
+/**
+* Component: [Component Name]
+* AI Contributors:
+* - [AI Name]: [Brief description of contribution]
+* - [AI Name]: [Brief description of contribution]
+*/
 \`\`\`
 
-Let's create a development workflow guide:
+By following these guidelines, you can contribute effectively to the VibeCodex project and help improve the AI Coding Starter Kit for beginners.

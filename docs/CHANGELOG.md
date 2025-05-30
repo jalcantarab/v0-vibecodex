@@ -30,6 +30,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modern UI with shadcn/ui components
 - Dark mode support
 - Responsive design
-\`\`\`
-
-Finally, let's update the main README.md to point to the new documentation structure:

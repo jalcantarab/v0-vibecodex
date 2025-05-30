@@ -556,282 +556,6 @@ Let's keep it simple by:
           },
         },
       },
-      {
-        id: "phase-4",
-        title: "Data Persistence and Sharing",
-        description: "Add data storage and sharing capabilities",
-        order: 4,
-        prompts: {
-          bolt: {
-            content: `Let's add data persistence and sharing to our Kanban board.
-
-Implement the following features:
-- Save board state to local storage
-- Add a "Share Board" button that generates a unique URL
-- Create a simple backend API to store board data (optional)
-- Add user authentication for access control (optional)
-- Implement real-time updates for collaborative editing (optional)
-
-The sharing functionality should:
-- Generate a unique identifier for the board
-- Create a shareable link
-- Allow view-only or edit access options`,
-            tooltips: [
-              {
-                text: "Let's add data persistence and sharing to our Kanban board.",
-                explanation: "Clear transition to the data persistence phase.",
-                highlightColor: "#8b5cf6",
-              },
-              {
-                text: "Save board state to local storage",
-                explanation: "Starting with the simplest persistence approach.",
-                highlightColor: "#06b6d4",
-              },
-              {
-                text: "(optional)",
-                explanation: "Marking advanced features as optional to keep the core task manageable.",
-                highlightColor: "#8b5cf6",
-              },
-            ],
-          },
-          v0: {
-            content: `Now let's implement data persistence and sharing for our Kanban board.
-
-Add these features:
-- Automatic saving of board state to localStorage
-- A "Share Board" button in the header
-- Export/import functionality for board data (JSON format)
-- Optional backend integration with a database
-
-For the localStorage implementation:
-- Save changes whenever tasks are added, edited, or moved
-- Load the saved state when the application starts
-- Add error handling for storage limits
-
-For the sharing functionality:
-- Generate a unique board ID (UUID)
-- Create a shareable URL with the board ID
-- Implement a simple modal for sharing options
-- Add copy-to-clipboard functionality for the URL
-
-For the export/import:
-- Add "Export Board" and "Import Board" buttons
-- Export the current board state as a downloadable JSON file
-- Allow users to import previously exported boards
-- Validate imported data before applying it`,
-            tooltips: [
-              {
-                text: "Now let's implement data persistence and sharing for our Kanban board.",
-                explanation: "Clear introduction to the data persistence phase.",
-                highlightColor: "#8b5cf6",
-              },
-              {
-                text: "Save changes whenever tasks are added, edited, or moved",
-                explanation: "Specific implementation detail for when to persist data.",
-                highlightColor: "#06b6d4",
-              },
-              {
-                text: "Generate a unique board ID (UUID)",
-                explanation: "Technical approach for creating shareable resources.",
-                highlightColor: "#8b5cf6",
-              },
-            ],
-          },
-          lovable: {
-            content: `Let's make sure our Kanban board saves our work and lets us share it with others.
-
-We should add:
-- Automatic saving so we don't lose our work if we close the browser
-- A way to share our board with teammates or friends
-- Options to download our board or load a previously saved one
-
-For saving our work:
-- The board should save automatically whenever we make changes
-- When we come back later, our tasks should still be there
-- We should see a small message when the board is saved
-
-For sharing with others:
-- Add a "Share" button at the top of the board
-- When clicked, it should create a link we can copy
-- We should be able to choose if others can edit or just view
-
-For downloading and loading:
-- Add "Save to Computer" and "Load from Computer" buttons
-- When saving, it should download a file with all our tasks
-- When loading, we should be able to pick a file from our computer`,
-            tooltips: [
-              {
-                text: "Let's make sure our Kanban board saves our work and lets us share it with others.",
-                explanation: "User-focused introduction to data persistence features.",
-                highlightColor: "#8b5cf6",
-              },
-              {
-                text: "The board should save automatically whenever we make changes",
-                explanation: "Simple explanation of auto-save functionality in user-friendly terms.",
-                highlightColor: "#06b6d4",
-              },
-              {
-                text: "We should see a small message when the board is saved",
-                explanation: "Suggesting user feedback for background operations.",
-                highlightColor: "#8b5cf6",
-              },
-            ],
-          },
-          replit: {
-            content: `Let's implement data persistence and sharing for our Kanban board:
-
-1. Set up localStorage persistence:
-   \`\`\`jsx
-   // Save board state
-   const saveBoard = () => {
-     const boardData = {
-       tasks,
-       columns,
-       columnOrder,
-       lastUpdated: new Date().toISOString()
-     };
-     localStorage.setItem('kanban-board', JSON.stringify(boardData));
-   };
-
-   // Load board state
-   const loadBoard = () => {
-     const savedData = localStorage.getItem('kanban-board');
-     if (savedData) {
-       try {
-         const boardData = JSON.parse(savedData);
-         setTasks(boardData.tasks);
-         setColumns(boardData.columns);
-         setColumnOrder(boardData.columnOrder);
-       } catch (error) {
-         console.error('Failed to parse saved board data:', error);
-       }
-     }
-   };
-
-   // Use effect to load data on component mount
-   useEffect(() => {
-     loadBoard();
-   }, []);
-
-   // Use effect to save data when state changes
-   useEffect(() => {
-     if (tasks && columns) {
-       saveBoard();
-     }
-   }, [tasks, columns, columnOrder]);
-   \`\`\`
-
-2. Implement board sharing functionality:
-   \`\`\`jsx
-   import { v4 as uuidv4 } from 'uuid';
-
-   // Generate shareable link
-   const generateShareableLink = () => {
-     // Create a unique ID for this board state
-     const boardId = uuidv4();
-     
-     // Save current board state to database or localStorage with this ID
-     const boardData = {
-       tasks,
-       columns,
-       columnOrder,
-       created: new Date().toISOString()
-     };
-     
-     localStorage.setItem(\`shared-board-\${boardId}\`, JSON.stringify(boardData));
-     
-     // Return shareable URL
-     return \`\${window.location.origin}/board/\${boardId}\`;
-   };
-
-   // Share board handler
-   const handleShareBoard = () => {
-     const shareableLink = generateShareableLink();
-     
-     // Copy to clipboard
-     navigator.clipboard.writeText(shareableLink)
-       .then(() => {
-         alert('Shareable link copied to clipboard!');
-       })
-       .catch(err => {
-         console.error('Failed to copy link:', err);
-         alert('Shareable link: ' + shareableLink);
-       });
-   };
-   \`\`\`
-
-3. Add export/import functionality:
-   \`\`\`jsx
-   // Export board data
-   const exportBoard = () => {
-     const boardData = {
-       tasks,
-       columns,
-       columnOrder,
-       exported: new Date().toISOString()
-     };
-     
-     const dataStr = JSON.stringify(boardData, null, 2);
-     const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-     
-     const exportFileDefaultName = 'kanban-board-export.json';
-     
-     const linkElement = document.createElement('a');
-     linkElement.setAttribute('href', dataUri);
-     linkElement.setAttribute('download', exportFileDefaultName);
-     linkElement.click();
-   };
-
-   // Import board data
-   const importBoard = (event) => {
-     const file = event.target.files[0];
-     
-     if (file) {
-       const reader = new FileReader();
-       
-       reader.onload = (e) => {
-         try {
-           const boardData = JSON.parse(e.target.result);
-           
-           // Validate the data structure
-           if (boardData.tasks && boardData.columns && boardData.columnOrder) {
-             setTasks(boardData.tasks);
-             setColumns(boardData.columns);
-             setColumnOrder(boardData.columnOrder);
-             alert('Board imported successfully!');
-           } else {
-             alert('Invalid board data format');
-           }
-         } catch (error) {
-           console.error('Failed to parse imported data:', error);
-           alert('Failed to import board data');
-         }
-       };
-       
-       reader.readAsText(file);
-     }
-   };
-   \`\`\``,
-            tooltips: [
-              {
-                text: "Let's implement data persistence and sharing for our Kanban board:",
-                explanation: "Technical introduction with clear implementation focus.",
-                highlightColor: "#8b5cf6",
-              },
-              {
-                text: "localStorage.setItem('kanban-board', JSON.stringify(boardData));",
-                explanation: "Key line for saving data to browser storage.",
-                highlightColor: "#06b6d4",
-              },
-              {
-                text: "const boardId = uuidv4();",
-                explanation: "Creating unique identifiers for shareable boards.",
-                highlightColor: "#8b5cf6",
-              },
-            ],
-          },
-        },
-      },
     ],
   },
   {
@@ -957,60 +681,6 @@ Use shadcn/ui components and Tailwind CSS for styling with:
               {
                 text: "## IMPLEMENTATION - PHASE 1",
                 explanation: "Clearly mark the transition to implementation with specific deliverables.",
-                highlightColor: "#8b5cf6",
-              },
-            ],
-          },
-          lovable: {
-            content: `Let's create a dashboard to help you track your daily habits. First, let's think about what we need.
-
-## WHAT WE'RE TRYING TO SOLVE
-
-1. **The Big Picture**
-   - We want to make a dashboard where you can track your daily habits
-   - Problem: It's hard to stay consistent with habits without visual tracking
-   - Solution: A simple dashboard that shows your progress and keeps you motivated
-
-2. **Main Features We Need**
-   - A way to check off completed habits each day
-   - Visual charts to see your progress over time
-   - A customizable layout for different types of habits
-   - Different views to see daily, weekly, or monthly progress
-
-3. **How People Will Use It**
-   - Open the dashboard to see today's habits
-   - Mark habits as complete as you do them
-   - Add new habits you want to track
-   - Check your progress to stay motivated
-
-## NOW LET'S BUILD - FIRST STEP
-
-For our first step, let's create:
-- A header with the title "My Habit Dashboard" and a small profile section
-- A sidebar with buttons for different sections (Dashboard, Habits, Progress, Settings)
-- A main area with spaces for different tracking widgets
-- A button to add new habits to track
-
-I want it to look clean and modern with:
-- Light colors that are easy on the eyes
-- Cards for each widget or section
-- A design that works on both my computer and tablet
-- Text that's easy to read with clear headings`,
-            tooltips: [
-              {
-                text: "Let's create a dashboard to help you track your daily habits. First, let's think about what we need.",
-                explanation:
-                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
-                highlightColor: "#8b5cf6",
-              },
-              {
-                text: "## WHAT WE'RE TRYING TO SOLVE",
-                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
-                highlightColor: "#06b6d4",
-              },
-              {
-                text: "## NOW LET'S BUILD - FIRST STEP",
-                explanation: "Clearly transition to implementation with straightforward instructions.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1208,7 +878,7 @@ Use shadcn/ui components and Tailwind CSS for styling with:
 - Responsive layout that works on all devices`,
             tooltips: [
               {
-                text: "Let's create a product landing page with email signup functionality. Let's start with requirements analysis.",
+                text: "Let's create a product landing page with email signup functionality. First, let's analyze requirements before implementation.",
                 explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
@@ -1285,7 +955,7 @@ I want it to look modern and clean with:
 
 1. **Project Scope**
    - Create a professional landing page to showcase a product and collect email signups
-   - Problem: Need to attract and convert visitors into leads
+   - Problem: Need to attract and convert visitors into interested leads
    - Solution: Compelling landing page with clear value proposition and signup form
 
 2. **Core Functionality Requirements**
@@ -1417,7 +1087,7 @@ Style the admin interface with:
               },
               {
                 text: "## IMPLEMENTATION - PHASE 1",
-                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1472,7 +1142,7 @@ Use shadcn/ui components and Tailwind CSS for styling with:
               },
               {
                 text: "## IMPLEMENTATION - PHASE 1",
-                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1528,7 +1198,7 @@ I want it to look clean and professional with:
               },
               {
                 text: "## NOW LET'S BUILD - FIRST STEP",
-                explanation: "Clearly transition to implementation with straightforward instructions.",
+                explanation: "Clearly transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1729,7 +1399,7 @@ Use shadcn/ui components and Tailwind CSS for styling with:
               },
               {
                 text: "## IMPLEMENTATION - PHASE 1",
-                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1749,7 +1419,7 @@ Use shadcn/ui components and Tailwind CSS for styling with:
    - A list that shows all your past expenses
    - Ways to sort and filter expenses to find what you're looking for
    - Charts or graphs to see spending patterns
-   - Saving your expenses so they don't disappear when you close the app
+   - Saving your expenses so they doesn't disappear when you close the app
 
 3. **How People Will Use It**
    - Add new expenses as they spend money
@@ -1784,7 +1454,7 @@ I want it to look clean and easy to use with:
               },
               {
                 text: "## NOW LET'S BUILD - FIRST STEP",
-                explanation: "Clearly transition to implementation with straightforward instructions.",
+                explanation: "Clearly transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1796,7 +1466,7 @@ I want it to look clean and easy to use with:
 
 1. **Project Scope**
    - Create an app to track and categorize personal expenses
-   - Problem: Users need to monitor and understand their spending habits
+   - Problem: People need to monitor and understand their spending habits
    - Solution: Interactive expense tracker with visualization and categorization
 
 2. **Core Functionality Requirements**
@@ -1931,7 +1601,7 @@ Style the application with:
               },
               {
                 text: "## IMPLEMENTATION - PHASE 1",
-                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1986,61 +1656,6 @@ Use shadcn/ui components and Tailwind CSS for styling with:
               {
                 text: "## IMPLEMENTATION - PHASE 1",
                 explanation: "Clearly mark the transition to implementation with specific deliverables.",
-                highlightColor: "#8b5cf6",
-              },
-            ],
-          },
-          lovable: {
-            content: `Let's create an app to help you find and save recipes. First, let's think about what we need.
-
-## WHAT WE'RE TRYING TO SOLVE
-
-1. **The Big Picture**
-   - We want to make an app where you can search for recipes and save your favorites
-   - Problem: It's hard to find cooking inspiration and keep track of recipes you like
-   - Solution: A simple app that lets you search recipes and save ones you want to try
-
-2. **Main Features We Need**
-   - A search box where you can look for recipes by ingredients or type of food
-   - A way to filter recipes (like vegetarian, quick meals, etc.)
-   - Recipe cards that show pictures and basic information
-   - A way to save recipes you like for later
-   - A design that works well on phones and computers
-
-3. **How People Will Use It**
-   - Search for recipes based on what they want to cook
-   - Browse through the results to find something appealing
-   - Look at recipe details to see ingredients and instructions
-   - Save recipes they want to try later
-
-## NOW LET'S BUILD - FIRST STEP
-
-For our first step, let's create:
-- A search area with a text box and some filter options
-- A results section that shows recipe cards in a grid
-- A loading indicator that shows while searching
-- A basic design that makes the app look food-related
-
-I want it to look appetizing and easy to use with:
-- Colors and fonts that make you think of good food
-- Nice recipe cards with consistent sizes and appealing images
-- A layout that works well on both phones and computers
-- Clear organization of search box and results`,
-            tooltips: [
-              {
-                text: "Let's create an app to help you find and save recipes. First, let's think about what we need.",
-                explanation:
-                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
-                highlightColor: "#8b5cf6",
-              },
-              {
-                text: "## WHAT WE'RE TRYING TO SOLVE",
-                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
-                highlightColor: "#06b6d4",
-              },
-              {
-                text: "## NOW LET'S BUILD - FIRST STEP",
-                explanation: "Clearly transition to implementation with straightforward instructions.",
                 highlightColor: "#8b5cf6",
               },
             ],

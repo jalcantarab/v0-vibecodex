@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Responsive design for mobile and desktop
 - Project phases with step-by-step guidance
 - Tool-specific prompts for each project phase
+- CODEOWNERS file to define code ownership
 
 ## [1.0.0] - 2023-12-01
 
@@ -29,23 +30,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modern UI with shadcn/ui components
 - Dark mode support
 - Responsive design
-\`\`\`
-
-2. Let's add a CODEOWNERS file to define code ownership:
-
-\`\`\`plaintext file=".github/CODEOWNERS"
-# These owners will be the default owners for everything in
-# the repo. Unless a later match takes precedence,
-# they will be requested for review when someone opens a pull request.
-* @jalcantarab
-
-# Order is important; the last matching pattern takes the most
-# precedence.
-
-# Core components
-/components/ @jalcantarab
-/lib/ @jalcantarab
-
-# Documentation
-/docs/ @jalcantarab
-*.md @jalcantarab

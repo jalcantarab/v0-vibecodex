@@ -5,9 +5,10 @@ export const siteConfig = {
   description:
     "500+ battle-tested AI coding prompts to help you build real projects with AI assistance. Our prompts for Cursor, v0, and Bolt.new help you write better code and build with confidence.",
   links: {
-    github: "https://github.com/yourusername/vibecodex",
-    twitter: "https://twitter.com/vibecodex",
-    discord: "https://discord.gg/vibecodex",
+    github: "https://github.com/jalcantarab/v0-vibecodex",
+    linkedin: "https://www.linkedin.com/in/jorgeakairos/",
+    medium: "https://medium.com/@jakairos",
+    company: "https://zentrik.ai",
   },
   keywords: [
     "AI coding prompts",
@@ -26,8 +27,9 @@ export const siteConfig = {
   ],
   authors: [
     {
-      name: "VibeCodex Team",
-      url: "https://vibecodex.dev",
+      name: "Jorge Alcantara Barroso",
+      url: "https://zentrik.ai",
+      email: "jorge@zentrik.ai",
     },
   ],
 }

@@ -26,6 +26,5 @@ Fixes # (issue)
 - [ ] My changes generate no new warnings
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
-\`\`\`
 
-Let's also add a GitHub configuration file for issue templates:
+<!-- GitHub configuration file for issue templates goes here -->

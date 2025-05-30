@@ -94,6 +94,13 @@ When adding new features:
 3. Add new pages in the app directory
 4. Update tests
 5. Document your changes
-\`\`\`
 
-Let's create a CHANGELOG.md file:
+## CHANGELOG.md
+
+This file will track changes made to the project over time. It should be updated whenever new features are added, bugs are fixed, or significant changes are made to the codebase.
+
+\`\`\`
+CHANGELOG.md/
+├── version-1.0.0.md       # Initial release
+├── version-1.1.0.md       # Added new tools and features
+└── version-1.2.0.md       # Improved UI and performance

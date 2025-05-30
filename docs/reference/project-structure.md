@@ -94,6 +94,3 @@ When adding new features:
 3. Add new pages in the app directory
 4. Update tests
 5. Document your changes
-\`\`\`
-
-Let's move the implementation notes to the reference directory:

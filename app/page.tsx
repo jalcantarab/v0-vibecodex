@@ -18,6 +18,7 @@ import { SocialShare } from "@/components/social-share"
 export default function Home() {
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
+  const [githubStats, setGithubStats] = useState({ stars: 0, contributors: 0 })
 
   // Prevent hydration mismatch with animation
   useEffect(() => {
@@ -31,6 +32,27 @@ export default function Home() {
   const handleExploreProjects = () => {
     router.push("/projects")
   }
+
+  useEffect(() => {
+    const fetchGithubStats = async () => {
+      try {
+        const repoResponse = await fetch("https://api.github.com/repos/jalcantarab/v0-vibecodex")
+        const repoData = await repoResponse.json()
+
+        const contributorsResponse = await fetch("https://api.github.com/repos/jalcantarab/v0-vibecodex/contributors")
+        const contributorsData = await contributorsResponse.json()
+
+        setGithubStats({
+          stars: repoData.stargazers_count || 0,
+          contributors: contributorsData.length || 0,
+        })
+      } catch (error) {
+        console.error("Failed to fetch GitHub stats:", error)
+      }
+    }
+
+    fetchGithubStats()
+  }, [])
 
   return (
     <>
@@ -107,7 +129,7 @@ export default function Home() {
             >
               <div className="flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm dark:bg-slate-900/80">
                 <Star className="h-4 w-4 mr-2 text-yellow-500" />
-                <span className="font-semibold">1.2k stars</span>
+                <span className="font-semibold">{githubStats.stars} stars</span>
               </div>
               <div className="flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm dark:bg-slate-900/80">
                 <Code2 className="h-4 w-4 mr-2 text-cyan-500" />
@@ -115,7 +137,7 @@ export default function Home() {
               </div>
               <div className="flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm dark:bg-slate-900/80">
                 <Users className="h-4 w-4 mr-2 text-violet-500" />
-                <span className="font-semibold">42 contributors</span>
+                <span className="font-semibold">{githubStats.contributors} contributors</span>
               </div>
             </div>
 
@@ -470,43 +492,38 @@ export default function Home() {
 
       <section className="w-full py-12 md:py-24">
         <div className="container px-4 md:px-6 max-w-6xl mx-auto">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-violet-100 px-3 py-1 text-sm text-violet-800 dark:bg-violet-900/30 dark:text-violet-300 mb-2">
-                Open Source
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Join our community of builders
-              </h2>
-              <p className="text-muted-foreground md:text-xl">
-                This project is built by the community, for the community. Contribute, share your projects, and help
-                others learn.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 min-[400px]:flex-row">
-                <GradientButton size="lg" onClick={handleStartBuilding}>
-                  <span className="flex items-center whitespace-nowrap">
-                    Start Building Now
-                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
-                  </span>
-                </GradientButton>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="https://github.com/yourusername/vibecodex" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    <span>Star on GitHub</span>
-                  </Link>
-                </Button>
-              </div>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Join our community of builders
+            </h2>
+            <p className="text-muted-foreground md:text-xl">
+              This project is built by the community, for the community. Contribute, share your projects, and help
+              others learn.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 min-[400px]:flex-row">
+              <GradientButton size="lg" onClick={handleStartBuilding}>
+                <span className="flex items-center whitespace-nowrap">
+                  Start Building Now
+                  <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                </span>
+              </GradientButton>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="https://github.com/yourusername/vibecodex" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  <span>Star on GitHub</span>
+                </Link>
+              </Button>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="rounded-lg overflow-hidden border shadow-lg">
-                <img
-                  src="/ai-app-builder.png"
-                  alt="Person building an application with AI tools"
-                  className="aspect-video object-cover"
-                  width={600}
-                  height={400}
-                />
-              </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="rounded-lg overflow-hidden border shadow-lg">
+              <img
+                src="/ai-app-builder.png"
+                alt="Person building an application with AI tools"
+                className="aspect-video object-cover"
+                width={600}
+                height={400}
+              />
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ VibeCodex currently supports the following AI tools:
 2. **Bolt** - https://bolt.new/
 3. **Lovable** - https://lovable.dev/
 4. **Replit** - https://replit.com/
+5. **New Tool Name** - https://new-tool-url.com
 
 ## Integration Architecture
 
@@ -59,6 +60,9 @@ const getToolUrl = () => {
    // Encode the prompt for v0
    const encodedPrompt = encodeURIComponent(prompt.content);
    return `${tool.linkPattern}?q=${encodedPrompt}`;
+ } else if (tool.id === "new-tool-id") {
+   // New tool-specific URL handling
+   return `${tool.linkPattern}/special-path?param=${encodeURIComponent(prompt.content)}`;
  }
  return tool.linkPattern;
 };
@@ -124,6 +128,3 @@ Common issues with tool integrations:
 3. **Authentication Requirements**: Some tools may require authentication before accepting prompts
 
 For any issues, please open a GitHub issue with detailed reproduction steps at [https://github.com/jalcantarab/v0-vibecodex/issues](https://github.com/jalcantarab/v0-vibecodex/issues).
-\`\`\`
-
-Now let's create the reference directory and move the project structure documentation:

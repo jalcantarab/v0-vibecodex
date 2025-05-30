@@ -12,6 +12,7 @@ Welcome to the VibeCodex documentation! This is your central resource for all do
 ## Guides
 
 - [AI Tools Integration](./guides/ai-tools-integration.md) - How VibeCodex integrates with various AI coding tools
+- [Development Workflow](./guides/development-workflow.md) - Setting up your development environment
 
 ## Reference
 
@@ -21,7 +22,6 @@ Welcome to the VibeCodex documentation! This is your central resource for all do
 ## Contributing
 
 - [Contributing Guide](./CONTRIBUTING.md) - Guidelines for contributing to the project
-- [Development Workflow](./guides/development-workflow.md) - Setting up your development environment
 
 ## Project Information
 
@@ -35,6 +35,3 @@ Welcome to the VibeCodex documentation! This is your central resource for all do
 
 - [GitHub Repository](https://github.com/jalcantarab/v0-vibecodex) - Source code and issue tracking
 - [Live Demo](https://vibecodex.vercel.app) - See VibeCodex in action
-\`\`\`
-
-Let's create the guides directory and move the AI tools integration guide:

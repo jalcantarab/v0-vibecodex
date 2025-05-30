@@ -24,6 +24,7 @@ Help us help you! Spend time framing questions and add links and resources. Spen
 ## Contributions
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) on how to contribute.
-\`\`\`
 
-11. Let's add a .github/ISSUE_TEMPLATE/bug_report.md file for bug reports:
+## Bug Reports
+
+For bug reports, please use the template located in the `.github/ISSUE_TEMPLATE/bug_report.md` file. This will help us understand and address the issue more efficiently.

@@ -30,7 +30,7 @@
 
 VibeCodex is an open-source project designed to help everyone build real applications with AI assistance, regardless of their coding experience. It provides a structured approach to using AI tools like v0, Bolt, Lovable, and Replit to transform ideas into functional code.
 
-![VibeCodex Screenshot](public/vibecodex-screenshot.png)
+![VibeCodex Hero Screenshot](public/vibecodex-hero-screenshot.png)
 
 ### Key Features
 
@@ -48,6 +48,7 @@ VibeCodex is an open-source project designed to help everyone build real applica
 - [Tailwind CSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Lucide Icons](https://lucide.dev/)
 
 ## 🚀 Getting Started
 
@@ -90,6 +91,7 @@ Our documentation has been reorganized for better accessibility:
 - [Guides](docs/guides/) - How-to guides and tutorials
   - [Development Workflow](docs/guides/development-workflow.md) - Setting up your development environment
   - [AI Tools Integration](docs/guides/ai-tools-integration.md) - Working with AI tools
+  - [GitHub Basics](app/guides/github-basics/page.tsx) - Essential GitHub concepts and workflows
 - [Reference](docs/reference/) - Technical reference documentation
   - [Project Structure](docs/reference/project-structure.md) - Codebase organization
   - [Implementation Notes](docs/reference/implementation-notes.md) - Design patterns and guidelines
@@ -102,6 +104,7 @@ Our documentation has been reorganized for better accessibility:
 - [x] Integration with AI tools
 - [x] Project templates and guides
 - [x] Documentation reorganization
+- [x] GitHub workflow guide
 - [ ] User authentication
 - [ ] Project saving and sharing
 - [ ] Community showcase
@@ -126,6 +129,12 @@ Please see our [Contributing Guide](docs/CONTRIBUTING.md) for more details.
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ## 📬 Contact
+
+Jorge Alcantara - [jorge@zentrik.ai](mailto:jorge@zentrik.ai) - [@jalcantarab](https://github.com/jalcantarab)
+
+LinkedIn: [https://www.linkedin.com/in/jorgeakairos/](https://www.linkedin.com/in/jorgeakairos/)
+
+Company: [Zentrik AI](https://zentrik.ai)
 
 Project Link: [https://github.com/jalcantarab/v0-vibecodex](https://github.com/jalcantarab/v0-vibecodex)
 

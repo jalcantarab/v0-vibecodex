@@ -134,7 +134,7 @@ This section lists the labels we use to help us track and manage issues and pull
 * `question` - Further information is requested
 * `wontfix` - This will not be worked on
 
-## Vibe Contributions
+### Vibe Contributions
 
 We also welcome "vibe contributions" - non-code contributions that improve the project's experience, usability, or community feel. These can include:
 

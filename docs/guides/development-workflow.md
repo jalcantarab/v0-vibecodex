@@ -157,7 +157,11 @@ If you need help with the development workflow:
 2. Ask in [GitHub Discussions](https://github.com/jalcantarab/v0-vibecodex/discussions)
 3. Reach out on [Discord](https://discord.gg/yourinvite) (when available)
 
-Happy coding!
-\`\`\`
+## Additional Resources
 
-Now let's move the CONTRIBUTING.md and CHANGELOG.md files to the docs directory:
+For more detailed information, refer to:
+
+- [CONTRIBUTING.md](../CONTRIBUTING.md)
+- [CHANGELOG.md](../CHANGELOG.md)
+
+Happy coding!

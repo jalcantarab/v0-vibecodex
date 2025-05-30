@@ -36,7 +36,7 @@ export default function CommunityPage() {
                 Star the repository, report issues, and contribute code to help improve VibeCodex.
               </p>
               <Button variant="outline" asChild className="w-full">
-                <Link href="https://github.com/yourusername/vibecodex" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/jalcantarab/v0-vibecodex" target="_blank" rel="noopener noreferrer">
                   Visit GitHub Repository
                 </Link>
               </Button>
