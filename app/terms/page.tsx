@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   const lastUpdated = "May 30, 2025"
-  const contactEmail = "jorge@zentrik.ai"
+  const contactEmail = "contact@zentrik.ai"
   const websiteName = "VibeCodex"
   const companyName = "Zentrik AI"
   // Assuming a placeholder URL, replace if you have a specific one
@@ -23,11 +23,6 @@ export default function TermsOfServicePage() {
       </header>
 
       <div className="prose prose-invert dark:prose-invert max-w-none text-muted-foreground prose-headings:text-foreground prose-a:text-primary hover:prose-a:text-primary/80">
-        <p className="border border-yellow-500/50 bg-yellow-500/10 p-4 rounded-md text-yellow-300">
-          <strong>Important:</strong> This is a template Terms of Service. It is recommended to have these terms
-          reviewed by a legal professional to ensure they meet all your specific operational and compliance needs.
-        </p>
-
         <p>
           Welcome to {websiteName} (the &quot;Site&quot;), an open-source project provided by {companyName}{" "}
           (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms of Service (&quot;Terms&quot;) govern your
