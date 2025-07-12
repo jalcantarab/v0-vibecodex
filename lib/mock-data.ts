@@ -2007,7 +2007,7 @@ export const featuredTools = [
     description: "AI-powered React component generator",
     logo: "/v0-logo.png",
     url: "https://v0.dev",
-    category: "AI Code Generation",
+    category: "AI Development",
   },
   {
     id: "bolt",
@@ -2015,7 +2015,7 @@ export const featuredTools = [
     description: "Full-stack web development in the browser",
     logo: "/bolt-logo.png",
     url: "https://bolt.new",
-    category: "Development Environment",
+    category: "AI Development",
   },
   {
     id: "lovable",
@@ -2054,7 +2054,7 @@ export const toolsMockData: Tool[] = [
     id: "cursor",
     name: "Cursor",
     description: "AI-first Code Editor",
-    linkPattern: "https://cursor.sh",
+    linkPattern: "https://cursor.com",
     logo: "/cursor-logo.png",
   },
   {
