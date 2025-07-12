@@ -1,7 +1,109 @@
 "use client"
 
+import type { Project, Tool } from "@/lib/types"
+
 // Mock data for projects
-export const projectsMockData = [
+export const projectsMockData: Project[] = [
+  {
+    id: "modern-personal-dashboard",
+    title: "Modern Personal Dashboard",
+    description: "A sleek, data-driven personal dashboard to track metrics and tasks.",
+    category: "Productivity",
+    image: "/modern-personal-dashboard.png",
+    tools: ["v0", "bolt"],
+    difficulty: "Intermediate",
+    author: "VibeCodex",
+    authorLink: "https://vibecodex.dev",
+    phases: [
+      {
+        title: "Layout and Sidebar",
+        description: "Create the main layout, sidebar navigation, and header components.",
+        prompts: {
+          v0: {
+            content:
+              "Create a modern dashboard layout with a collapsible sidebar on the left and a header at the top. The sidebar should have icons and text for navigation links: Dashboard, Projects, Tasks, and Settings. The header should have a search bar, a notification bell icon, and a user profile dropdown. Use Tailwind CSS for styling. The main content area should be a placeholder for now.",
+            tooltips: [
+              {
+                element: "collapsible sidebar",
+                text: "Ensure the sidebar can be toggled to a collapsed state showing only icons.",
+              },
+              {
+                element: "user profile dropdown",
+                text: "This should be a dropdown menu with options like 'Profile', 'Settings', and 'Logout'.",
+              },
+            ],
+          },
+          bolt: {
+            content:
+              "Design a personal dashboard UI. It needs a main content area, a fixed sidebar with navigation links (Dashboard, Projects, Tasks, Settings), and a top header. The header should include a search input, a notifications icon, and a user avatar. The design should be clean, modern, and use a dark theme.",
+            tooltips: [],
+          },
+        },
+        integration: {
+          v0: "Copy the generated JSX into `components/layout/sidebar.tsx` and `components/layout/header.tsx`. Integrate them into your main `app/layout.tsx`.",
+          bolt: "Export the design as React components. Place the sidebar and header components into your project structure and integrate them into the main layout.",
+        },
+      },
+      {
+        title: "Metric Cards",
+        description: "Design and implement reusable cards to display key metrics.",
+        prompts: {
+          v0: {
+            content:
+              "Create a reusable React component for a metric card. It should accept props for a title, a value, a percentage change (positive or negative), and an icon. The card should have a clean design with a subtle border and shadow. The percentage change should be colored green for positive and red for negative. Use Lucide React for icons.",
+            tooltips: [
+              {
+                element: "props for a title, a value",
+                text: "Example props: title='Revenue', value='$4,500', change='+5.2%'.",
+              },
+              {
+                element: "Lucide React for icons",
+                text: "Import icons like `TrendingUp` or `TrendingDown` based on the change.",
+              },
+            ],
+          },
+          bolt: {
+            content:
+              "Design a UI component for a statistics card. The card should display a title, a large number for the main metric, and a smaller text element showing a percentage change with an up or down arrow icon. The design should be minimal and fit within a grid layout.",
+            tooltips: [],
+          },
+        },
+        integration: {
+          v0: "Save the component as `components/ui/metric-card.tsx`. Import and use it on your dashboard page, passing different props for each metric you want to display.",
+          bolt: "Export the component and add it to your project. Use it to display various stats on the dashboard, populating it with data.",
+        },
+      },
+      {
+        title: "Task List",
+        description: "Create an interactive task list with completion status.",
+        prompts: {
+          v0: {
+            content:
+              "Build a 'To-Do List' component. It should display a list of tasks. Each task item should have a checkbox, a title, and a due date. When a checkbox is checked, the task title should have a line-through style. The component should have a filter for 'All', 'Active', and 'Completed' tasks. Add a simple input field at the bottom to add new tasks.",
+            tooltips: [
+              {
+                element: "checkbox",
+                text: "Use a controlled component to manage the checked state of each task.",
+              },
+              {
+                element: "filter",
+                text: "Use state to manage the current filter and display tasks accordingly.",
+              },
+            ],
+          },
+          bolt: {
+            content:
+              "Design a task management section for a dashboard. It should include a list of tasks, each with a checkbox, task name, and priority level (e.g., high, medium, low) indicated by a colored dot. There should be tabs above the list to filter by status: 'All', 'In Progress', 'Completed'.",
+            tooltips: [],
+          },
+        },
+        integration: {
+          v0: "Place the component in `components/tasks/task-list.tsx`. You'll need to manage the state for tasks (e.g., using `useState`) within this component or a parent page.",
+          bolt: "Export the task list and integrate it into the main dashboard grid. Wire up the state management for adding and completing tasks.",
+        },
+      },
+    ],
+  },
   {
     id: "kanban-board",
     title: "Team Collaboration Kanban Board",
@@ -1933,9 +2035,33 @@ export const featuredTools = [
   },
 ]
 
-export const toolsMockData = [
-  { id: "bolt", name: "Bolt", logo: "/bolt-logo.png", url: "https://bolt.new" },
-  { id: "v0", name: "v0", logo: "/v0-logo.png", url: "https://v0.dev" },
-  { id: "lovable", name: "Lovable", logo: "/lovable-logo.svg", url: "https://lovable.dev" },
-  { id: "replit", name: "Replit", logo: "/replit-logo.png", url: "https://replit.com" },
+export const toolsMockData: Tool[] = [
+  {
+    id: "v0",
+    name: "v0",
+    description: "Generative UI for React",
+    linkPattern: "https://v0.dev",
+    logo: "/v0-logo.png",
+  },
+  {
+    id: "bolt",
+    name: "Bolt",
+    description: "AI App Builder",
+    linkPattern: "https://bolt.new",
+    logo: "/bolt-logo.png",
+  },
+  {
+    id: "cursor",
+    name: "Cursor",
+    description: "AI-first Code Editor",
+    linkPattern: "https://cursor.sh",
+    logo: "/cursor-logo.png",
+  },
+  {
+    id: "replit",
+    name: "Replit",
+    description: "Online IDE & AI Assistant",
+    linkPattern: "https://replit.com",
+    logo: "/replit-logo.png",
+  },
 ]
