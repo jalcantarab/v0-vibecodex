@@ -1,0 +1,245 @@
+–––– app/privacy/page.tsx ––––
+\`\`\`tsx
+import type { Metadata } from """"""""""""""""""""""""""""""""""""""""""""""""""""""n"e"x"t"""
+"
+"export const metadata: Metadata = {
+  title: "Privacy Policy — VibeCodex",
+  description:
+    "Learn how VibeCodex collects, uses, and protects your personal information.",
+}
+
+export default function PrivacyPolicy() {
+  return (
+    <main className="prose mx-auto max-w-4xl py-12">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: 12&nbsp;July&nbsp;2025</p>
+
+      <h2>1. Introduction</h2>
+      <p>
+        Zentrik&nbsp;AI (“<strong>we</strong>”, “<strong>our</strong>”, or
+        “<strong>us</strong>”) operates the VibeCodex open-source starter kit.
+        This Privacy Policy explains how we collect, use, disclose, and safeguard
+        your information when you use VibeCodex (the “<strong>Service</strong>”).
+      </p>
+
+      <h2>2. Information We Collect</h2>
+      <ul>
+        <li>
+          <strong>Information you provide&nbsp;—</strong> name, email address,
+          GitHub username, or other details you give us when submitting forms or
+          opening issues.
+        </li>
+        <li>
+          <strong>Automatically collected&nbsp;—</strong> IP address, browser
+          type, referring URLs, and usage data collected via cookies or
+          analytics.
+        </li>
+      </ul>
+
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>To operate and maintain the Service</li>
+        <li>To improve, personalize, and expand the Service</li>
+        <li>To communicate with you about updates, security notices, or support</li>
+        <li>To prevent fraud and enforce our Terms of Service</li>
+      </ul>
+
+      <h2>4. Sharing &amp; Disclosure</h2>
+      <p>
+        We do <strong>not</strong> sell your personal information. We may share
+        data with trusted third-party processors (e.g. Vercel, GitHub) strictly
+        to provide the Service. All processors are bound by confidentiality and
+        security obligations.
+      </p>
+
+      <h2>5. Cookies</h2>
+      <p>
+        We use essential cookies for authentication and security, and optional
+        analytics cookies to understand traffic patterns. You can disable cookies
+        in your browser settings, but parts of the Service may not work
+        correctly.
+      </p>
+
+      <h2>6. Data Security</h2>
+      <p>
+        We follow industry-standard measures to protect your data, including
+        encryption in transit (TLS) and least-privilege access controls. No
+        method of transmission is 100 % secure, and we cannot guarantee absolute
+        security.
+      </p>
+
+      <h2>7. Your Rights</h2>
+      <p>
+        Depending on your jurisdiction, you may have the right to access, update,
+        or delete the personal information we hold about you. Contact us at{" "}
+        <a href="mailto:contact@zentrik.ai">contact@zentrik.ai</a>.
+      </p>
+
+      <h2>8. Children’s Privacy</h2>
+      <p>
+        The Service is not directed to children under 13. We do not knowingly
+        collect personal information from children. If you believe a child has
+        provided us data, please contact us and we will delete it.
+      </p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will notify you
+        by posting the new policy on this page and updating the “Last updated”
+        date.
+      </p>
+
+      <h2>10. Contact</h2>
+      <p>
+        Questions? Email{" "}
+        <a href="mailto:contact@zentrik.ai">contact@zentrik.ai</a>.
+      </p>
+    </main>
+  )
+}
+\`\`\`
+
+–––– app/terms/page.tsx ––––
+\`\`\`tsx
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Terms of Service — VibeCodex",
+  description:
+    "These Terms of Service govern your use of the VibeCodex starter kit and website.",
+}
+
+export default function TermsOfService() {
+  return (
+    <main className="prose mx-auto max-w-4xl py-12">
+      <h1>Terms of Service</h1>
+      <p>Last updated: 12&nbsp;July&nbsp;2025</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By accessing or using VibeCodex (the “<strong>Service</strong>”) you
+        agree to be bound by these Terms of Service (“<strong>Terms</strong>”).
+        If you do not agree, do not use the Service.
+      </p>
+
+      <h2>2. License</h2>
+      <p>
+        The source code is licensed under the MIT License. You may use, copy,
+        modify, merge, publish, distribute, sublicense, and/or sell copies of the
+        Software subject to the MIT terms.
+      </p>
+
+      <h2>3. User Content</h2>
+      <p>
+        You are responsible for the code, comments, and other content you submit.
+        You must not upload anything that infringes third-party rights or is
+        unlawful.
+      </p>
+
+      <h2>4. Acceptable Use</h2>
+      <ul>
+        <li>No illegal, harmful, or fraudulent activity</li>
+        <li>No reverse engineering of proprietary services</li>
+        <li>No automated scraping without prior consent</li>
+      </ul>
+
+      <h2>5. Intellectual Property</h2>
+      <p>
+        All trademarks, logos, and brand names (including Bolt, v0, Lovable,
+        Replit) remain the property of their respective owners. Their inclusion
+        does not imply endorsement.
+      </p>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>
+        The Service is provided “as is” without warranties of any kind, express
+        or implied. We disclaim all warranties including merchantability, fitness
+        for a particular purpose, and non-infringement.
+      </p>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by law, Zentrik&nbsp;AI will not be
+        liable for any indirect, incidental, special, or consequential damages
+        arising out of or in connection with the Service.
+      </p>
+
+      <h2>8. Termination</h2>
+      <p>
+        We may suspend or terminate your access to the Service at any time, with
+        or without notice, for conduct that we believe violates these Terms.
+      </p>
+
+      <h2>9. Governing Law</h2>
+      <p>
+        These Terms are governed by the laws of the State of Delaware (USA),
+        without regard to conflict-of-law principles.
+      </p>
+
+      <h2>10. Changes</h2>
+      <p>
+        We may modify these Terms at any time. Updated Terms will be posted on
+        this page with a new “Last updated” date. Continued use of the Service
+        constitutes acceptance of the revised Terms.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        For questions, email{" "}
+        <a href="mailto:contact@zentrik.ai">contact@zentrik.ai</a>.
+      </p>
+    </main>
+  )
+}
+\`\`\`
+
+–––– lib/mock-data.ts ––––
+\`\`\`ts
+/**
+ * Centralised mock data used across Storybook, tests, and placeholder UI.
+ * Feel free to extend as needed.
+ */
+
+export interface ToolMeta {
+  name: string
+  logo: string // path in /public
+  url: string
+}
+
+export const toolsMockData: ToolMeta[] = [
+  {
+    name: "Bolt",
+    logo: "/bolt-logo.png",
+    url: "https://bolt.new",
+  },
+  {
+    name: "v0",
+    logo: "/v0-logo.png",
+    url: "https://v0.dev",
+  },
+  {
+    name: "Lovable",
+    logo: "/lovable-logo.svg",
+    url: "https://lovable.dev",
+  },
+  {
+    name: "Replit",
+    logo: "/replit-logo.png",
+    url: "https://replit.com",
+  },
+]
+\`\`\`
+
+–––– package.json ––––
+\`\`\`jsonc
+{
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.0.2",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-separator": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6"
+  }
+}
+\`\`\`
