@@ -158,7 +158,7 @@ export function SiteHeaderMinimal() {
           <ThemeToggle />
 
           <Button variant="ghost" size="icon" asChild className="hidden md:flex">
-            <Link href="https://github.com/yourusername/vibecodex" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/jalcantarab/v0-vibecodex" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>

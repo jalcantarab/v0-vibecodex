@@ -508,7 +508,7 @@ export default function Home() {
                 </span>
               </GradientButton>
               <Button size="lg" variant="outline" asChild>
-                <Link href="https://github.com/yourusername/vibecodex" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/jalcantarab/v0-vibecodex" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   <span>Star on GitHub</span>
                 </Link>
@@ -636,7 +636,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "I launched an MVP for my startup idea in just two weeks using VibeCodex. The AI guidance helped me
+                    "I went from never having coded to an MVP for my startup idea in just two weeks thanks to VibeCodex. The guidance helped me
                     build features I didn't think were possible without a technical co-founder."
                   </p>
                   <div className="pt-4 mt-4 border-t text-sm text-muted-foreground">

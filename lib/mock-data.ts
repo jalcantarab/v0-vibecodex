@@ -1345,7 +1345,7 @@ Style the application with:
               },
               {
                 text: "## IMPLEMENTATION - PHASE 1",
-                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
@@ -1533,64 +1533,65 @@ Let's implement the basic structure:
   },
   {
     id: "recipe-finder",
-    title: "Recipe Finder App",
-    description: "Create an app to search and save favorite recipes",
+    title: "Recipe Finder with Search and Filters",
+    description: "Create a recipe discovery app with search and filtering capabilities",
     difficulty: "Intermediate",
     timeEstimate: "Full day",
     previewImage: "/recipe-finder-app-interface.png",
-    completionCount: 1243,
+    completionCount: 987,
     learningPoints: [
       "Implementing search functionality",
-      "Working with external APIs",
-      "Creating responsive grid layouts",
-      "Building a favorites system",
+      "Creating filter and sort interfaces",
+      "Building responsive card layouts",
+      "Working with external APIs for recipe data",
     ],
     phases: [
       {
         id: "phase-1",
-        title: "Search Interface and Results Grid",
-        description: "Create the search form and results display",
+        title: "Recipe Search and Display",
+        description: "Create the search interface and recipe card display",
         order: 1,
         prompts: {
           bolt: {
-            content: `Let's create a recipe finder application. Let's start with requirements analysis.
+            content: `Let's create a recipe finder application with search and filtering capabilities. Let's start with requirements analysis.
 
 ## REQUIREMENTS ANALYSIS
 
 1. **Project Overview**
-   - Create an app to search and save favorite recipes
-   - Problem: People need inspiration and organization for cooking
-   - Solution: Searchable recipe database with saving functionality
+   - Create a recipe discovery app with search and filtering capabilities
+   - Problem: People need help finding recipes that match their preferences and available ingredients
+   - Solution: Interactive recipe finder with search, filters, and detailed recipe views
 
 2. **Core Features**
-   - Recipe search with filters (ingredients, cuisine, diet)
-   - Recipe results display with images and key information
-   - Detailed recipe view with ingredients and instructions
-   - Save favorite recipes functionality
-   - Responsive design for mobile and desktop use
+   - Recipe search by name or ingredients
+   - Filtering by cuisine type, dietary restrictions, cooking time
+   - Recipe card display with key information
+   - Detailed recipe view with instructions and ingredients
+   - Favorite recipes functionality
 
 3. **User Flow**
-   - User enters search criteria for recipes
-   - User browses search results
-   - User views detailed recipe information
-   - User saves favorite recipes for later reference
+   - User searches for recipes using keywords or ingredients
+   - User applies filters to narrow down results
+   - User browses recipe cards with preview information
+   - User clicks on recipe for detailed view
+   - User can save favorite recipes
 
 ## IMPLEMENTATION - PHASE 1
 
 For our first phase, please create:
-- A search interface with input field and filter options
-- A results grid displaying recipe cards with images and basic info
-- A loading state for search results
-- Basic styling for an appealing food-related application
+- A search bar with placeholder text for recipe or ingredient search
+- Filter options for cuisine type, dietary restrictions, and cooking time
+- A grid layout of recipe cards showing image, title, cooking time, and difficulty
+- A responsive design that works on mobile and desktop
 
 Style the application with:
-- Food-friendly color scheme and typography
-- Attractive recipe cards with consistent sizing
-- Responsive grid layout that adapts to different screen sizes
-- Clear visual hierarchy for search and results`,
+- Clean, food-focused design with appetizing colors
+- Card-based layout with consistent spacing
+- Clear typography for recipe information
+- Responsive grid that adapts to different screen sizes`,
             tooltips: [
               {
-                text: "Let's create a recipe finder application. Let's start with requirements analysis.",
+                text: "Let's create a recipe finder application with search and filtering capabilities. Let's start with requirements analysis.",
                 explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
@@ -1607,44 +1608,45 @@ Style the application with:
             ],
           },
           v0: {
-            content: `Let's create a recipe finder application. Let's start with requirements analysis.
+            content: `Let's create a recipe finder application with search and filtering capabilities. Let's start with requirements analysis.
 
 ## REQUIREMENTS ANALYSIS
 
 1. **Project Overview**
-   - Create an app to search and save favorite recipes
-   - Problem: People need inspiration and organization for cooking
-   - Solution: Searchable recipe database with saving functionality
+   - Create a recipe discovery app with search and filtering capabilities
+   - Problem: People need help finding recipes that match their preferences and available ingredients
+   - Solution: Interactive recipe finder with search, filters, and detailed recipe views
 
 2. **Core Features**
-   - Recipe search with filters (ingredients, cuisine, diet)
-   - Recipe results display with images and key information
-   - Detailed recipe view with ingredients and instructions
-   - Save favorite recipes functionality
-   - Responsive design for mobile and desktop use
+   - Recipe search by name or ingredients
+   - Filtering by cuisine type, dietary restrictions, cooking time
+   - Recipe card display with key information
+   - Detailed recipe view with instructions and ingredients
+   - Favorite recipes functionality
 
 3. **User Flow**
-   - User enters search criteria for recipes
-   - User browses search results
-   - User views detailed recipe information
-   - User saves favorite recipes for later reference
+   - User searches for recipes using keywords or ingredients
+   - User applies filters to narrow down results
+   - User browses recipe cards with preview information
+   - User clicks on recipe for detailed view
+   - User can save favorite recipes
 
 ## IMPLEMENTATION - PHASE 1
 
 For our first phase, please create:
-- A search interface with input field and filter options
-- A results grid displaying recipe cards with images and basic info
-- A loading state for search results
-- Basic styling for an appealing food-related application
+- A search bar with placeholder text for recipe or ingredient search
+- Filter options for cuisine type, dietary restrictions, and cooking time
+- A grid layout of recipe cards showing image, title, cooking time, and difficulty
+- A responsive design that works on mobile and desktop
 
 Use shadcn/ui components and Tailwind CSS for styling with:
-- Food-friendly color scheme and typography
-- Attractive recipe cards with consistent sizing
-- Responsive grid layout that adapts to different screen sizes
-- Clear visual hierarchy for search and results`,
+- Clean, food-focused design with appetizing colors
+- Card-based layout with consistent spacing
+- Clear typography for recipe information
+- Responsive grid that adapts to different screen sizes`,
             tooltips: [
               {
-                text: "Let's create a recipe finder application. Let's start with requirements analysis.",
+                text: "Let's create a recipe finder application with search and filtering capabilities. Let's start with requirements analysis.",
                 explanation: "Start with a clear statement of what you're building and establish a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
@@ -1655,34 +1657,90 @@ Use shadcn/ui components and Tailwind CSS for styling with:
               },
               {
                 text: "## IMPLEMENTATION - PHASE 1",
-                explanation: "Clearly mark the transition to implementation with specific deliverables.",
+                explanation: "Clearly mark the transition to implementation with specific technical deliverables.",
+                highlightColor: "#8b5cf6",
+              },
+            ],
+          },
+          lovable: {
+            content: `Let's create an app to help people find recipes they'll love. First, let's think about what we need.
+
+## WHAT WE'RE TRYING TO SOLVE
+
+1. **The Big Picture**
+   - We want to make an app where people can search for recipes and find ones they like
+   - Problem: It's hard to find recipes that match what you want to cook or what ingredients you have
+   - Solution: A search app with filters to help people find the perfect recipe
+
+2. **Main Features We Need**
+   - A search box where people can type recipe names or ingredients
+   - Filters for things like cuisine type, dietary needs, and how long it takes to cook
+   - Recipe cards that show a picture, title, and basic info
+   - A detailed view when someone clicks on a recipe
+   - A way to save favorite recipes
+
+3. **How People Will Use It**
+   - Search for recipes using keywords or ingredients they have
+   - Use filters to find recipes that match their preferences
+   - Browse through recipe cards to see what looks good
+   - Click on recipes to see full details and instructions
+   - Save recipes they want to try later
+
+## NOW LET'S BUILD - FIRST STEP
+
+For our first step, let's create:
+- A search bar with helpful placeholder text
+- Filter buttons or dropdowns for cuisine, dietary restrictions, and cooking time
+- A grid of recipe cards showing pictures, titles, cooking time, and difficulty level
+- A design that looks good on phones, tablets, and computers
+
+I want it to look appetizing and inviting with:
+- Colors and design that make food look appealing
+- Cards that are easy to scan and compare
+- Text that's easy to read with good contrast
+- A layout that adjusts nicely to different screen sizes`,
+            tooltips: [
+              {
+                text: "Let's create an app to help people find recipes they'll love. First, let's think about what we need.",
+                explanation:
+                  "Start with a friendly, conversational introduction that establishes a two-stage approach.",
+                highlightColor: "#8b5cf6",
+              },
+              {
+                text: "## WHAT WE'RE TRYING TO SOLVE",
+                explanation: "Use simple language to frame the requirements analysis in an approachable way.",
+                highlightColor: "#06b6d4",
+              },
+              {
+                text: "## NOW LET'S BUILD - FIRST STEP",
+                explanation: "Clearly transition to implementation with specific technical deliverables.",
                 highlightColor: "#8b5cf6",
               },
             ],
           },
           replit: {
-            content: `Let's create a React recipe finder application. First, let's analyze requirements before implementation.
+            content: `Let's create a React recipe finder application with search and filtering capabilities. First, let's analyze requirements before implementation.
 
 ## REQUIREMENTS ANALYSIS
 
 1. **Project Scope**
-   - Create an app to search and save favorite recipes
-   - Problem: People need inspiration and organization for cooking
-   - Solution: Searchable recipe database with saving functionality
+   - Create a recipe discovery app with search and filtering capabilities
+   - Problem: People need help finding recipes that match their preferences and available ingredients
+   - Solution: Interactive recipe finder with search, filters, and detailed recipe views
 
 2. **Core Functionality Requirements**
-   - Recipe search with filters (ingredients, cuisine, diet)
-   - Recipe results display with images and key information
-   - Detailed recipe view with ingredients and instructions
-   - Save favorite recipes functionality
-   - Responsive design for mobile and desktop use
+   - Recipe search by name or ingredients
+   - Filtering by cuisine type, dietary restrictions, cooking time
+   - Recipe card display with key information
+   - Detailed recipe view with instructions and ingredients
+   - Favorite recipes functionality
 
 3. **Technical Structure**
    - React component hierarchy
+   - Search and filter state management
    - API integration for recipe data
-   - State management approach
-   - Responsive design implementation
-   - Local storage for saved recipes
+   - Responsive grid layout implementation
+   - Local storage for favorites
 
 ## IMPLEMENTATION - PHASE 1
 
@@ -1691,28 +1749,28 @@ Let's implement the basic structure:
 1. Create a React recipe finder with the following features:
 
    a. Structure:
-   - SearchForm component with input field and filter options
-   - RecipeGrid component to display search results
-   - RecipeCard component for individual recipe display
-   - LoadingState component for search feedback
+   - SearchBar component with input field and search functionality
+   - FilterPanel component with cuisine, dietary, and time filters
+   - RecipeGrid component to display recipe cards
+   - RecipeCard component with image, title, cooking time, and difficulty
    - Main App component to manage state and layout
 
    b. Styling:
    - Use CSS modules or styled-components
-   - Implement a food-friendly color scheme and typography
-   - Create attractive recipe cards with consistent sizing
+   - Implement a clean, food-focused design with appetizing colors
+   - Create consistent card-based layout with proper spacing
    - Ensure responsive grid layout using CSS Grid or Flexbox
-   - Add clear visual hierarchy for search and results
+   - Add clear typography for recipe information
 
    c. Functionality:
-   - Set up mock data for initial development
-   - Implement search filtering logic
-   - Create loading state management
-   - Add basic error handling for failed searches
-   - Prepare structure for API integration in next phase`,
+   - Implement search functionality with debounced input
+   - Create filter state management for multiple filter types
+   - Set up mock recipe data for initial development
+   - Add responsive grid that adapts to different screen sizes
+   - Implement basic recipe card interactions`,
             tooltips: [
               {
-                text: "Let's create a React recipe finder application. First, let's analyze requirements before implementation.",
+                text: "Let's create a React recipe finder application with search and filtering capabilities. First, let's analyze requirements before implementation.",
                 explanation: "Start with a technical introduction that establishes a two-stage approach.",
                 highlightColor: "#8b5cf6",
               },
@@ -1734,30 +1792,150 @@ Let's implement the basic structure:
   },
 ]
 
-// Mock data for AI tools
-export const toolsMockData = [
+// Mock data for guides
+export const guidesMockData = [
   {
-    id: "bolt",
-    name: "Bolt",
-    description: "Fastest path to a working prototype",
-    linkPattern: "https://bolt.new/",
+    id: "ai-development",
+    title: "AI Development Guide",
+    description: "Complete guide to building applications with AI assistance",
+    category: "AI Development",
+    readTime: "15 min read",
+    difficulty: "Beginner",
+    lastUpdated: "2024-01-15",
+    sections: [
+      {
+        id: "planning",
+        title: "Planning Your AI Project",
+        description: "Learn how to plan and structure your AI-powered application",
+        readTime: "5 min",
+      },
+      {
+        id: "workflow",
+        title: "Development Workflow",
+        description: "Understand the workflow from idea to deployment",
+        readTime: "4 min",
+      },
+      {
+        id: "tools",
+        title: "AI Tools Integration",
+        description: "How to integrate various AI tools into your development process",
+        readTime: "3 min",
+      },
+      {
+        id: "best-practices",
+        title: "Best Practices",
+        description: "Tips and best practices for AI-assisted development",
+        readTime: "3 min",
+      },
+    ],
   },
   {
+    id: "github-basics",
+    title: "GitHub Basics Guide",
+    description: "Essential GitHub skills for modern development",
+    category: "Version Control",
+    readTime: "12 min read",
+    difficulty: "Beginner",
+    lastUpdated: "2024-01-10",
+    sections: [
+      {
+        id: "getting-started",
+        title: "Getting Started with GitHub",
+        description: "Set up your GitHub account and first repository",
+        readTime: "4 min",
+      },
+      {
+        id: "basic-workflow",
+        title: "Basic Git Workflow",
+        description: "Learn the fundamental Git commands and workflow",
+        readTime: "4 min",
+      },
+      {
+        id: "collaboration",
+        title: "Collaboration Features",
+        description: "Work with others using branches, pull requests, and issues",
+        readTime: "4 min",
+      },
+    ],
+  },
+  {
+    id: "requirements-template",
+    title: "Requirements Template",
+    description: "Template for writing clear project requirements",
+    category: "Planning",
+    readTime: "8 min read",
+    difficulty: "Beginner",
+    lastUpdated: "2024-01-08",
+    sections: [
+      {
+        id: "overview",
+        title: "Project Overview",
+        description: "How to define your project scope and objectives",
+        readTime: "3 min",
+      },
+      {
+        id: "functional-requirements",
+        title: "Functional Requirements",
+        description: "Specify what your application should do",
+        readTime: "3 min",
+      },
+      {
+        id: "technical-requirements",
+        title: "Technical Requirements",
+        description: "Define the technical constraints and specifications",
+        readTime: "2 min",
+      },
+    ],
+  },
+]
+
+// Mock data for community metrics
+export const communityMetrics = {
+  totalProjects: 12,
+  totalCompletions: 15847,
+  activeUsers: 3421,
+  averageRating: 4.8,
+}
+
+// Mock data for featured tools
+export const featuredTools = [
+  {
     id: "v0",
-    name: "v0",
-    description: "More polished interface design",
-    linkPattern: "https://v0.dev/chat",
+    name: "v0.dev",
+    description: "AI-powered React component generator",
+    logo: "/v0-logo.png",
+    url: "https://v0.dev",
+    category: "AI Code Generation",
+  },
+  {
+    id: "bolt",
+    name: "Bolt.new",
+    description: "Full-stack web development in the browser",
+    logo: "/bolt-logo.png",
+    url: "https://bolt.new",
+    category: "Development Environment",
   },
   {
     id: "lovable",
     name: "Lovable",
-    description: "Most beginner-friendly experience",
-    linkPattern: "https://lovable.dev/",
+    description: "Build full-stack apps with AI assistance",
+    logo: "/lovable-logo.svg",
+    url: "https://lovable.dev",
+    category: "AI Development",
   },
   {
     id: "replit",
     name: "Replit",
-    description: "Best for adding more complex functionality later",
-    linkPattern: "https://replit.com/",
+    description: "Collaborative coding environment",
+    logo: "/replit-logo.png",
+    url: "https://replit.com",
+    category: "Development Environment",
   },
+]
+
+export const toolsMockData = [
+  { id: "bolt", name: "Bolt", logo: "/bolt-logo.png", url: "https://bolt.new" },
+  { id: "v0", name: "v0", logo: "/v0-logo.png", url: "https://v0.dev" },
+  { id: "lovable", name: "Lovable", logo: "/lovable-logo.svg", url: "https://lovable.dev" },
+  { id: "replit", name: "Replit", logo: "/replit-logo.png", url: "https://replit.com" },
 ]

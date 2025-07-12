@@ -1,21 +1,48 @@
-import { Github } from "lucide-react"
+import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 interface ToolLogoSmallProps {
-  toolId: string
+  tool: string
   className?: string
 }
 
-export function ToolLogoSmall({ toolId, className = "" }: ToolLogoSmallProps) {
-  switch (toolId) {
-    case "v0":
-      return <img src="/v0-logo.png" alt="v0" className={`h-4 w-4 ${className}`} />
-    case "cursor":
-      return <img src="/bolt-logo.png" alt="Cursor" className={`h-4 w-4 ${className}`} />
-    case "github":
-      return <Github className={`h-4 w-4 ${className}`} />
-    case "vercel":
-      return <img src="/vercel-logo.png" alt="Vercel" className={`h-4 w-4 ${className}`} />
-    default:
-      return null
+const toolConfig = {
+  v0: {
+    src: "/v0-logo.png",
+    alt: "v0.dev",
+    url: "https://v0.dev",
+  },
+  bolt: {
+    src: "/bolt-logo.png",
+    alt: "Bolt.new",
+    url: "https://bolt.new",
+  },
+  lovable: {
+    src: "/lovable-logo.svg",
+    alt: "Lovable",
+    url: "https://lovable.dev",
+  },
+  replit: {
+    src: "/replit-logo.png",
+    alt: "Replit",
+    url: "https://replit.com",
+  },
+}
+
+export function ToolLogoSmall({ tool, className }: ToolLogoSmallProps) {
+  const config = toolConfig[tool as keyof typeof toolConfig]
+
+  if (!config) {
+    return null
   }
+
+  return (
+    <Image
+      src={config.src || "/placeholder.svg"}
+      alt={config.alt}
+      width={16}
+      height={16}
+      className={cn("w-4 h-4 object-contain", className)}
+    />
+  )
 }
