@@ -1,3 +1,6 @@
+---
+title: "Security Policy"
+---
 # Security Policy
 
 ## Supported Versions
@@ -7,7 +10,7 @@ Use this section to tell people about which versions of your project are current
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
-| &lt; 1.0   | :x:                |
+| < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -39,3 +42,5 @@ When we receive a security bug report, we will:
 ## Comments on this Policy
 
 If you have suggestions on how this process could be improved, please submit a pull request.
+
+## [Back to Docs Index](/docs)

@@ -1,3 +1,6 @@
+---
+title: "Code of Merit"
+---
 # Code of Merit
 
 1. The project creators, lead developers, core team, constitute the managing members of the project and have final say in every decision of the project, technical or otherwise, including overruling previous decisions. There are no limitations to this decisional power.
@@ -31,3 +34,5 @@
 For support information, please refer to the SUPPORT.md file.
 
 This document is adapted from the Code of Merit (http://code-of-merit.org), version 1.0.
+
+## [Back to Docs Index](/docs)

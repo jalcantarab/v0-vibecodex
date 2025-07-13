@@ -157,16 +157,41 @@ Highlight the open-source nature of the project:
 - Use "Open Source" badges and callouts
 - Emphasize community contributions and collaborative learning
 
-## Future Considerations
+## Cursor: AI-Assisted Development with Rules
 
-As the project evolves, we'll add more sections to this document covering:
-- State management patterns
-- Form handling
-- Authentication flows
-- Data fetching strategies
-- Animation guidelines
-- Accessibility requirements
-- Contribution guidelines
+Cursor is a powerful AI coding tool that helps automate, refactor, and document code using natural language prompts and project-specific rules. VibeCodex is designed to work seamlessly with Cursor for an AI-first workflow.
+
+### Why Cursor?
+- Enables rapid prototyping and automation of repetitive coding tasks
+- Enforces project conventions and best practices through rules
+- Makes onboarding and collaboration easier for new contributors
+
+### Writing Effective Cursor Rules
+- Use simple, specific, and focused rules tailored to your project
+- Organize rules in `.cursor/rules/` as modular `.mdc` files (see [Cursor Rules & Prompt Templates](/guides/cursor-rules-templates))
+- Example rule file:
+
+```mdc
+# React Component Guidelines
+- Use functional components with hooks
+- Export as named exports
+- Use Tailwind CSS for styling
+- Use PascalCase for component names
+```
+
+- Example prompt for Cursor:
+
+```txt
+Refactor this component to use the latest shadcn/ui Button and add error handling.
+```
+
+### Best Practices
+- Start with 10-15 core rules and iterate based on results
+- Reference your tech stack and preferred patterns in rules
+- Keep rules up to date as your project evolves
+- See [Cursor Rules & Prompt Templates](/guides/cursor-rules-templates) for more examples and community best practices
+
+---
 
 ## Project Structure
 

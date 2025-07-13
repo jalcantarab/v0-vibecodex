@@ -275,7 +275,7 @@ export default function ContributePage() {
                   <div className="flex justify-center mt-4">
                     <Button asChild variant="outline" className="w-full">
                       <Link
-                        href="https://github.com/yourusername/ai-coding-starter-kit"
+                        href="https://github.com/jalcantarab/v0-vibecodex"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -343,7 +343,7 @@ export default function ContributePage() {
                       </Link>
                     </Button>
                     <Button variant="outline" asChild className="w-full">
-                      <Link href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://x.com/jorgeakairos" target="_blank" rel="noopener noreferrer">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"

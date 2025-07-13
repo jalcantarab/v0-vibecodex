@@ -1,3 +1,6 @@
+---
+title: "VibeCodex - AI Coding Starter Kit"
+---
 # VibeCodex - AI Coding Starter Kit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -170,3 +173,5 @@ Need help? We're here for you:
 **Built with ❤️ by [Jorge Alcantara](https://www.linkedin.com/in/jorgeakairos/) and the VibeCodex community using v0.dev, cursor.com and [Zentrik](https://zentrik.ai)**
 
 *Transform your ideas into applications with AI-powered development*
+
+## [Back to Docs Index](/docs)

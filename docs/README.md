@@ -42,7 +42,7 @@ Welcome to the VibeCodex documentation! This is your central resource for all do
 ## Additional Resources
 
 - [GitHub Repository](https://github.com/jalcantarab/v0-vibecodex) - Source code and issue tracking
-- [Live Demo](https://vibecodex.vercel.app) - See VibeCodex in action
+- [Live Demo](https://vibecodex.dev) - See VibeCodex in action
 
 ---
 

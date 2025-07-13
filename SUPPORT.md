@@ -1,3 +1,6 @@
+---
+title: "Support"
+---
 # Support
 
 This article explains where to get help with VibeCodex. Please read through the following guidelines.
@@ -28,3 +31,5 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) on how to contribute.
 ## Bug Reports
 
 For bug reports, please use the template located in the `.github/ISSUE_TEMPLATE/bug_report.md` file. This will help us understand and address the issue more efficiently.
+
+## [Back to Docs Index](/docs)

@@ -1,3 +1,6 @@
+---
+title: "Changelog"
+---
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -16,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project phases with step-by-step guidance
 - Tool-specific prompts for each project phase
 - CODEOWNERS file to define code ownership
+- Improved documentation structure
 
 ## [1.0.0] - 2023-12-01
 
@@ -30,3 +34,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modern UI with shadcn/ui components
 - Dark mode support
 - Responsive design
+
+## [Back to Docs Index](/docs)

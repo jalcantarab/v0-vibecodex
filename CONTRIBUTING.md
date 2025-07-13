@@ -2,6 +2,8 @@
 
 First off, thank you for considering contributing to VibeCodex! It's people like you that make VibeCodex such a great tool.
 
+> New here? See [Getting Started](/docs/getting-started)
+
 ## Code of Conduct
 
 By participating in this project, you are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md). Please report unacceptable behavior to [project_email@example.com].
@@ -65,7 +67,7 @@ The process described here has several goals:
 
 Please follow these steps to have your contribution considered by the maintainers:
 
-1. Follow all instructions in [the template](PULL_REQUEST_TEMPLATE.md)
+1. Follow all instructions in [the template](.github/PULL_REQUEST_TEMPLATE.md)
 2. Follow the [styleguides](#styleguides)
 3. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing
 
@@ -80,18 +82,18 @@ While the prerequisites above must be satisfied prior to having your pull reques
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
 * Consider starting the commit message with an applicable emoji:
-    * 🎨 `:art:` when improving the format/structure of the code
-    * 🐎 `:racehorse:` when improving performance
-    * 🚱 `:non-potable_water:` when plugging memory leaks
-    * 📝 `:memo:` when writing docs
-    * 🐛 `:bug:` when fixing a bug
-    * 🔥 `:fire:` when removing code or files
-    * 💚 `:green_heart:` when fixing the CI build
-    * ✅ `:white_check_mark:` when adding tests
-    * 🔒 `:lock:` when dealing with security
-    * ⬆️ `:arrow_up:` when upgrading dependencies
-    * ⬇️ `:arrow_down:` when downgrading dependencies
-    * 👕 `:shirt:` when removing linter warnings
+   * 🎨 `:art:` when improving the format/structure of the code
+   * 🐎 `:racehorse:` when improving performance
+   * 🚱 `:non-potable_water:` when plugging memory leaks
+   * 📝 `:memo:` when writing docs
+   * 🐛 `:bug:` when fixing a bug
+   * 🔥 `:fire:` when removing code or files
+   * 💚 `:green_heart:` when fixing the CI build
+   * ✅ `:white_check_mark:` when adding tests
+   * 🔒 `:lock:` when dealing with security
+   * ⬆️ `:arrow_up:` when upgrading dependencies
+   * ⬇️ `:arrow_down:` when downgrading dependencies
+   * 👕 `:shirt:` when removing linter warnings
 
 ### JavaScript/TypeScript Styleguide
 
@@ -112,13 +114,13 @@ All JavaScript/TypeScript code is linted with [ESLint](https://eslint.org/) and 
 ### Documentation Styleguide
 
 * Use [Markdown](https://guides.github.com/features/mastering-markdown/) for documentation
-* Reference components, functions, and variables with backticks: \`Component\`
+* Reference components, functions, and variables with backticks: `Component`
 * Place code examples in fenced code blocks with the appropriate language:
-  \`\`\`tsx
-  function Example() {
-    return <div>Example</div>;
-  }
-  \`\`\`
+```tsx
+function Example() {
+  return <div>Example</div>;
+}
+```
 
 ## Additional Notes
 
@@ -145,4 +147,6 @@ We also welcome "vibe contributions" - non-code contributions that improve the p
 * Reporting bugs or issues
 * Creating tutorials or guides
 
-All vibe contributions should align with the project philosophy outlined in our implementation-notes.md file and maintain consistency with the established design language.
+All vibe contributions should align with the project philosophy outlined in our [implementation notes](docs/reference/implementation-notes.md) file and maintain consistency with the established design language.
+
+## [Back to Docs Index](/docs)
