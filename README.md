@@ -168,6 +168,6 @@ Need help? We're here for you:
 
 ---
 
-**Built with ❤️ by [Jorge Alcantara Barroso](https://github.com/jalcantarab) and the VibeCodex community**
+**Built with ❤️ by [Jorge Alcantara Barroso](https://www.linkedin.com/in/jorgeakairos/) and the VibeCodex community using v0.dev, cursor.com and [Zentrik](https://zentrik.ai)**
 
 *Transform your ideas into applications with AI-powered development*
