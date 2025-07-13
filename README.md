@@ -4,6 +4,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-14-black.svg?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC.svg?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ![VibeCodex Hero Screenshot](public/vibecodex-hero-screenshot.png)
 
@@ -15,34 +16,34 @@ VibeCodex is a comprehensive starter kit that bridges the gap between AI-generat
 
 ### Option 1: Use the Template (Recommended)
 
-1.  **Click "Use this template"** on GitHub to create your own repository.
+1. **Click "Use this template"** on GitHub to create your own repository.
 
-2.  **Clone your new repository**:
-\`\`\`bash
+2. **Clone your new repository**:
+```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
-\`\`\`
+```
 
-3.  **Install dependencies**:
-\`\`\`bash
+3. **Install dependencies**:
+```bash
 npm install
-\`\`\`
+```
 
-4.  **Start developing**:
-\`\`\`bash
+4. **Start developing**:
+```bash
 npm run dev
-\`\`\`
+```
 
 ### Option 2: Fork and Contribute
 
-1.  **Fork this repository** to contribute back to the community.
-2.  **Clone your fork**:
-\`\`\`bash
+1. **Fork this repository** to contribute back to the community.
+2. **Clone your fork**:
+```bash
 git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
 cd v0-vibecodex
-\`\`\`
+```
 
-3.  **Follow the same installation steps** as above.
+3. **Follow the same installation steps** as above.
 
 ## 🎯 What's Inside
 
@@ -101,11 +102,11 @@ cd v0-vibecodex
 
 We welcome contributions! Here's how you can help:
 
-1.  **Star this repository** if you find it useful.
-2.  **Share your projects** built with VibeCodex.
-3.  **Submit new project templates** via pull request.
-4.  **Improve documentation** and guides.
-5.  **Report bugs** or suggest features.
+1. **Star this repository** if you find it useful.
+2. **Share your projects** built with VibeCodex.
+3. **Submit new project templates** via pull request.
+4. **Improve documentation** and guides.
+5. **Report bugs** or suggest features.
 
 See our [Contributing Guide](CONTRIBUTING.md) for detailed instructions.
 
