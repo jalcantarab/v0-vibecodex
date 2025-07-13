@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { projectsMockData, toolsMockData } from "@/lib/mock-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vibecodex.com"
@@ -26,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guides/ai-development/best-practices",
     "/guides/github-basics",
     "/guides/requirements-template",
+    "/guides/from-v0-to-cursor", // Added the new guide here
   ]
 
   // Project pages
@@ -47,10 +49,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const allPages = [...staticPages, ...guidePages, ...projectPages, ...projectToolPages, ...completionPages]
 
-  return allPages.map((page) => ({
-    url: `${baseUrl}${page}`,
+  const staticRoutes = [
+    "",
+    "/projects",
+    "/guides",
+    "/community",
+    "/contribute",
+    "/start",
+    "/learning-path",
+    "/license",
+    "/privacy",
+    "/terms",
+    "/guides/ai-development",
+    "/guides/ai-development/planning",
+    "/guides/ai-development/workflow",
+    "/guides/ai-development/tools",
+    "/guides/ai-development/best-practices",
+    "/guides/github-basics",
+    "/guides/requirements-template",
+    "/guides/from-v0-to-cursor",
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: page === "" ? "daily" : "weekly",
-    priority: page === "" ? 1 : page.startsWith("/projects") ? 0.8 : 0.6,
+    changeFrequency: "weekly" as const,
+    priority: route === "" ? 1.0 : 0.8,
   }))
+
+  const projectRoutes = projectsMockData.flatMap((project) => {
+    const projectBaseUrl = `${baseUrl}/projects/${project.id}`
+    const routes = [
+      {
+        url: projectBaseUrl,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      },
+      {
+        url: `${projectBaseUrl}/complete`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.5,
+      },
+    ]
+
+    // Add tool-specific project pages
+    toolsMockData.forEach((tool) => {
+      routes.push({
+        url: `${projectBaseUrl}/${tool.id}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      })
+    })
+
+    return routes
+  })
+
+  return [...staticRoutes, ...projectRoutes]
 }
