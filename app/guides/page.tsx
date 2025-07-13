@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Code, FileText, Lightbulb, Sparkles } from "lucide-react"
+import { ArrowRight, Code, FileText, Lightbulb, Sparkles, ArrowRightLeft } from "lucide-react"
 import { GlassCard } from "@/components/ui/glass-card"
 import { GradientButton } from "@/components/ui/gradient-button"
 import { AnimatedBackground } from "@/components/animated-background"
@@ -78,6 +78,25 @@ export default function GuidesPage() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <GlassCard className="h-full flex flex-col" hoverEffect="lift">
+                <Link href="/guides/from-v0-to-cursor" className="p-6 flex flex-col h-full">
+                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                    <ArrowRightLeft className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">From v0 to Cursor</h3>
+                  <p className="text-muted-foreground mb-6 flex-grow">
+                    Learn how to transition your AI-generated prototype to a professional local development environment
+                    using GitHub.
+                  </p>
+                  <div className="flex items-center text-primary mt-auto whitespace-nowrap">
+                    <span>View Workflow</span>
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                  </div>
+                </Link>
+              </GlassCard>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+              <GlassCard className="h-full flex flex-col" hoverEffect="lift">
                 <Link href="/guides/github-basics" className="p-6 flex flex-col h-full">
                   <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
                     <Code className="h-6 w-6" />
@@ -95,7 +114,7 @@ export default function GuidesPage() {
               </GlassCard>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
               <GlassCard className="h-full flex flex-col" hoverEffect="lift">
                 <div className="p-6 flex flex-col h-full">
                   <div className="h-12 w-12 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400 mb-4">
@@ -113,7 +132,7 @@ export default function GuidesPage() {
               </GlassCard>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
               <GlassCard className="h-full flex flex-col" hoverEffect="lift">
                 <div className="p-6 flex flex-col h-full">
                   <div className="h-12 w-12 rounded-lg bg-violet-100 flex items-center justify-center text-violet-600 dark:bg-violet-900/30 dark:text-violet-400 mb-4">
