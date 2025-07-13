@@ -128,3 +128,5 @@ Common issues with tool integrations:
 3. **Authentication Requirements**: Some tools may require authentication before accepting prompts
 
 For any issues, please open a GitHub issue with detailed reproduction steps at [https://github.com/jalcantarab/v0-vibecodex/issues](https://github.com/jalcantarab/v0-vibecodex/issues).
+
+## [Back to Docs Index](/docs)

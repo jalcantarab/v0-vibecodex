@@ -1,5 +1,7 @@
 # Implementation Notes for AI Coding Starter Kit
 
+> See also: [Architecture Overview](/docs/architecture-overview), [Getting Started](/docs/getting-started), [Glossary](/docs/glossary), [Roadmap](/docs/roadmap), [FAQ](/docs/faq)
+
 This document contains important guidelines, patterns, and methodologies that should be followed consistently across the project. It serves as a reference for all developers working on the AI Coding Starter Kit.
 
 ## Project Philosophy
@@ -34,13 +36,13 @@ The AI Coding Starter Kit is an open-source project designed to help beginners c
 
 All pages should follow this consistent layout structure:
 
-\`\`\`jsx
+```jsx
 <div className="flex flex-col min-h-screen">
  <div className="container py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
    {/* Page content */}
  </div>
 </div>
-\`\`\`
+```
 
 This structure ensures:
 - Content is properly centered in the viewport
@@ -58,7 +60,7 @@ Use these container constraints consistently:
 
 For pages with a sidebar (like project details and tool pages), use this grid structure:
 
-\`\`\`jsx
+```jsx
 <div className="grid gap-6 md:grid-cols-[2fr_1fr]">
  {/* Main content column */}
  <div className="space-y-6">
@@ -70,7 +72,7 @@ For pages with a sidebar (like project details and tool pages), use this grid st
    {/* Sidebar components */}
  </div>
 </div>
-\`\`\`
+```
 
 This ensures:
 - Proper spacing between columns
@@ -170,7 +172,7 @@ As the project evolves, we'll add more sections to this document covering:
 
 The VibeCodex project follows this file structure:
 
-\`\`\`
+```
 vibecodex/
 ├── app/                    # Next.js App Router pages
 │   ├── contribute/         # Contribution page
@@ -195,7 +197,7 @@ vibecodex/
 │   ├── images/             # Image assets
 │   └── favicon.ico         # Favicon
 └── implementation-notes.md # Project documentation
-\`\`\`
+```
 
 ## Tech Stack
 
@@ -217,14 +219,14 @@ VibeCodex has been developed with assistance from the following AI systems:
 
 When making contributions that involve AI assistance, please add attribution in the following format:
 
-\`\`\`tsx
+```tsx
 /**
 * Component: [Component Name]
 * AI Contributors:
 * - [AI Name]: [Brief description of contribution]
 * - [AI Name]: [Brief description of contribution]
 */
-\`\`\`
+```
 
 ## Contribution Guidelines for Vibe Contributions
 
@@ -245,34 +247,34 @@ All vibe contributions should align with the project philosophy outlined at the 
 ### Setting Up Your Environment
 
 1. **Clone the Repository**: Use Git to clone the VibeCodex repository from GitHub.
-   \`\`\`bash
+   ```bash
    git clone https://github.com/vibecodex/vibecodex.git
-   \`\`\`
+   ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies.
-   \`\`\`bash
+   ```bash
    cd vibecodex
    npm install
-   \`\`\`
+   ```
 
 3. **Run the Development Server**: Start the development server to see your changes in real-time.
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
 4. **Code Changes**: Make your code changes in the appropriate files. Follow the project structure and guidelines provided in this document.
 
 5. **Testing**: Test your changes across different screen sizes and devices to ensure responsiveness and usability.
 
 6. **Commit Your Changes**: Commit your changes with a clear and concise message.
-   \`\`\`bash
+   ```bash
    git commit -m "Add new feature: [Feature Name]"
-   \`\`\`
+   ```
 
 7. **Push Your Changes**: Push your changes to your forked repository on GitHub.
-   \`\`\`bash
+   ```bash
    git push origin main
-   \`\`\`
+   ```
 
 8. **Create a Pull Request**: Go to the VibeCodex GitHub repository and create a pull request with your changes. Reference the issue you are addressing if applicable.
 
@@ -289,21 +291,23 @@ All vibe contributions should align with the project philosophy outlined at the 
 
 - **Automated**: VibeCodex uses Vercel for automated deployment. Changes merged into the main branch will be automatically deployed to the live site.
 - **Manual**: If you need to manually deploy, you can do so using Vercel's CLI.
-  \`\`\`bash
+  ```bash
   vercel --prod
-  \`\`\`
+  ```
 
 ### Contribution Attribution
 
 When making contributions, please include attribution for any AI systems used in the development process. This helps maintain transparency and acknowledges the contributions of AI systems.
 
-\`\`\`tsx
+```tsx
 /**
 * Component: [Component Name]
 * AI Contributors:
 * - [AI Name]: [Brief description of contribution]
 * - [AI Name]: [Brief description of contribution]
 */
-\`\`\`
+```
 
 By following these guidelines, you can contribute effectively to the VibeCodex project and help improve the AI Coding Starter Kit for beginners.
+
+## [Back to Docs Index](/docs)

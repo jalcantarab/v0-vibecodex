@@ -1,3 +1,7 @@
+# ⚠️ Legacy Notice (2025): This file is deprecated
+
+As of July 2025, Cursor uses the `.cursor/rules/` directory with modular `.mdc` files for all new projects. This `.cursorrules` file is supported for legacy compatibility only. Please migrate your rules to the new modular format for better organization, overrides, and AI context. See the [Cursor Rules & Prompt Templates Guide](/guides/cursor-rules-templates) for details and migration steps.
+
 # VibeCodex - AI Coding Starter Kit Rules
 
 ## Project Overview

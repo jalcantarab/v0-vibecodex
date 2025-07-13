@@ -87,7 +87,7 @@ export default function CursorRulesTemplatesPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <p>
-                  AI coding tools like <ToolLogoSmall toolId="cursor" /> are incredibly powerful, but their effectiveness 
+                  AI coding tools like <ToolLogoSmall tool="cursor" /> are incredibly powerful, but their effectiveness 
                   depends heavily on how well you communicate your intentions. This guide teaches you how to create 
                   effective prompts and configure Cursor rules that will supercharge your development workflow.
                 </p>
@@ -254,11 +254,8 @@ export default function CursorRulesTemplatesPage() {
           <section id="cursor-rules" className="space-y-4">
             <h2 className="text-2xl font-bold tracking-tight">Configuring Cursor Rules</h2>
             <p>
-              Cursor rules are configuration files that tell the AI how to behave in your project. They provide 
-              consistent guidance across all your AI interactions. Based on the popular 
-              <a href="https://github.com/PatrickJS/awesome-cursorrules" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                Awesome Cursor Rules repository
-              </a> with over 30k stars, here are the best practices for creating effective rules.
+              Cursor rules are configuration files that tell the LLMs how to behave in your project. They provide 
+              consistent guidance across your interactions and can be specific to areas of your project. Here are the best practices for creating effective rules.
             </p>
             
             <div className="flex items-center justify-center mb-6">
@@ -281,7 +278,10 @@ export default function CursorRulesTemplatesPage() {
                   <a href="https://medium.com/@aashari/getting-better-results-from-cursor-ai-with-simple-rules-cbc87346ad88" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
                     community research
                   </a>, the most effective Cursor rules are simple, specific, and focused on your project's unique needs. 
-                  Don't over-engineer your rules - start simple and iterate based on results.
+                  Don't over-engineer your rules - start simple and iterate based on results. You can see more examples below and in the &nbsp;
+                  <a href="https://github.com/PatrickJS/awesome-cursorrules" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    Awesome Cursor Rules repository.
+                  </a>
                 </AlertDescription>
               </Alert>
 
@@ -289,64 +289,39 @@ export default function CursorRulesTemplatesPage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Settings className="h-5 w-5" />
-                    Creating Your .cursor_rules File
+                    Organizing Your Cursor Rules
                   </CardTitle>
                   <CardDescription>
-                    Create a .cursor_rules file in your project root to configure AI behavior
+                    Use the <code>.cursor/rules/</code> directory with modular <code>.mdc</code> files for AI configuration (2025+ best practice)
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    <p className="text-sm text-muted-foreground">
-                      The .cursor_rules file should be placed in your project root directory. This file tells Cursor's AI 
-                      how to behave when working with your codebase.
-                    </p>
-                    
-                    <div className="bg-muted p-4 rounded-md">
-                      <h4 className="font-medium mb-2">Basic .cursor_rules Template</h4>
-                      <pre className="text-sm whitespace-pre-wrap">{`# Cursor Rules for [Project Name]
-
-## Project Overview
-This is a [description of your project] built with [tech stack].
-
-## Code Style and Conventions
-- Use TypeScript for all new code
-- Follow camelCase for variables and functions
-- Use PascalCase for components and classes
-- Prefer functional components with hooks
-- Use Tailwind CSS for styling
-- Follow the existing file structure
-
-## Architecture Guidelines
-- Keep components small and focused
-- Use proper TypeScript types
-- Implement error boundaries where appropriate
-- Follow React best practices
-- Use proper accessibility attributes
-
-## Testing Requirements
-- Write unit tests for utility functions
-- Test component behavior, not implementation
-- Use React Testing Library for component tests
-
-## Performance Considerations
-- Optimize images and assets
-- Use proper React optimization techniques
-- Implement proper loading states
-
-## Security Guidelines
-- Validate all user inputs
-- Use proper authentication patterns
-- Follow OWASP security guidelines`}</pre>
-                      <div className="mt-4">
-                        <Button asChild variant="outline" size="sm">
-                          <a href="/example-cursor-rules.txt" download className="inline-flex items-center">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download Complete Example
-                          </a>
-                        </Button>
-                      </div>
+                  <p className="text-sm text-muted-foreground">
+                    Place your modular rule files in <code>.cursor/rules/</code> at the project root. Each rule is a separate <code>.mdc</code> file (Markdown+Context), allowing for clear organization and easy overrides. Example:
+                  </p>
+                  <div className="bg-muted p-4 rounded-md">
+                    <h4 className="font-medium mb-2">Example: <code>.cursor/rules/project-overview.mdc</code></h4>
+                    <pre className="text-sm whitespace-pre-wrap">{`# VibeCodex - AI Coding Starter Kit\n\n## Project Philosophy\nVibeCodex is an open-source AI coding starter kit designed to help beginners create real projects with AI assistance.\n\n## Tech Stack\n- Next.js 14+\n- TypeScript\n- Tailwind CSS\n- shadcn/ui\n\n## Key Principles\n1. Beginner-Friendly\n2. AI-First\n3. Community-Driven\n4. Production-Ready\n5. Educational\n\n## File Organization\n- app/\n- components/\n- lib/\n- public/\n- docs/\n- hooks/`}</pre>
+                    <div className="mt-4">
+                      <Button asChild variant="outline" size="sm">
+                        <a href="/example-cursor-rules.txt" download className="inline-flex items-center">
+                          <Download className="mr-2 h-4 w-4" />
+                          Download Legacy Example (.cursor_rules)
+                        </a>
+                      </Button>
+                      <Button asChild variant="outline" size="sm" className="ml-2">
+                        <a href="/.cursor/rules/project-overview.mdc" download className="inline-flex items-center">
+                          <Download className="mr-2 h-4 w-4" />
+                          Download Modern Example (.mdc)
+                        </a>
+                      </Button>
                     </div>
+                  </div>
+                  <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-950/30 rounded-md border border-yellow-200 dark:border-yellow-900/50">
+                    <h4 className="font-medium mb-2">⚠️ 2025 Update: Modular Rules</h4>
+                    <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                      As of 2025, Cursor uses the <code>.cursor/rules/</code> directory with modular <code>.mdc</code> files. The old <code>.cursor_rules</code> file is still supported for legacy projects, but new projects should use the modular format for better organization, overrides, and AI context. See <a href="/docs/project-structure" className="text-primary hover:underline">Project Structure</a> for details.
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -1112,8 +1087,8 @@ Please help me identify reusable patterns and create well-structured components.
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Keep your .cursor_rules file updated as your project evolves. Document new patterns, 
-                    conventions, and requirements as they emerge.
+                    Keep your <code>.cursor/rules/</code> directory updated as your project evolves. Document new patterns, 
+                    conventions, and requirements as they emerge. Modular rules make it easy to update and override specific behaviors.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
@@ -1199,7 +1174,7 @@ Please help me identify reusable patterns and create well-structured components.
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Include your .cursor_rules file in version control so your team can benefit from 
+                    Include your <code>.cursor/rules/</code> directory in version control so your team can benefit from 
                     consistent AI behavior across the project.
                   </p>
                   <div className="space-y-2">

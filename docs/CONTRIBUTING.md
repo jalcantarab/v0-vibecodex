@@ -1,5 +1,7 @@
 # Contributing to VibeCodex
 
+> New here? See [Getting Started](/docs/getting-started)
+
 First off, thank you for considering contributing to VibeCodex! It's people like you that make VibeCodex such a great tool.
 
 ## Code of Conduct
@@ -146,3 +148,5 @@ We also welcome "vibe contributions" - non-code contributions that improve the p
 * Creating tutorials or guides
 
 All vibe contributions should align with the project philosophy outlined in our [implementation notes](./reference/implementation-notes.md) file and maintain consistency with the established design language.
+
+## [Back to Docs Index](/docs)

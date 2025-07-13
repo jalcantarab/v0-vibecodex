@@ -288,8 +288,8 @@ export default function DevelopmentWorkflowPage() {
                     </div>
                     <div>
                       <h4 className="font-medium">Cursor</h4>
-                      <p className="text-sm text-muted-foreground">Use settings menu to configure AI behavior rules</p>
-                      <p className="text-sm text-muted-foreground">Create a .cursor_rules file in your project root</p>
+                      <p className="text-sm text-muted-foreground">Use the <code>.cursor/rules/</code> directory with modular <code>.mdc</code> files to configure AI behavior (2025+ best practice).</p>
+                      <p className="text-sm text-muted-foreground">See the <Link href="/guides/cursor-rules-templates" className="text-primary hover:underline">Cursor Rules & Prompt Templates Guide</Link> for details and examples.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

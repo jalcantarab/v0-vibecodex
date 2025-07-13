@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Code, FileText, Lightbulb, Sparkles, ArrowRightLeft } from "lucide-react"
+import { ArrowRight, Code, FileText, Lightbulb, Sparkles, ArrowRightLeft, BookOpen } from "lucide-react"
 import { GlassCard } from "@/components/ui/glass-card"
 import { GradientButton } from "@/components/ui/gradient-button"
 import { AnimatedBackground } from "@/components/animated-background"
@@ -150,6 +150,27 @@ export default function GuidesPage() {
                     <span>Coming soon</span>
                   </div>
                 </div>
+              </GlassCard>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+              <GlassCard className="h-full flex flex-col border-2 border-cyan-400/40" hoverEffect="lift">
+                <Link href="/resources" className="p-6 flex flex-col h-full">
+                  <div className="h-12 w-12 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400 mb-4">
+                    <BookOpen className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
+                    Resources & Tips
+                    <span className="inline-block bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">New</span>
+                  </h3>
+                  <p className="text-muted-foreground mb-6 flex-grow">
+                    Checklists, prompt samples, expert tips, and curated links to help you go further with VibeCodex and AI development.
+                  </p>
+                  <div className="flex items-center text-cyan-600 mt-auto whitespace-nowrap font-medium">
+                    <span>Browse resources</span>
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+                  </div>
+                </Link>
               </GlassCard>
             </motion.div>
           </div>

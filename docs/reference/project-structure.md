@@ -2,9 +2,11 @@
 
 This document provides an overview of the VibeCodex project structure to help contributors understand how the codebase is organized.
 
+> See also: [Architecture Overview](/docs/architecture-overview), [Getting Started](/docs/getting-started), [Glossary](/docs/glossary), [Roadmap](/docs/roadmap), [FAQ](/docs/faq)
+
 ## Directory Structure
 
-\`\`\`
+```
 vibecodex/
 ├── app/                    # Next.js App Router pages
 │   ├── contribute/         # Contribution page
@@ -29,7 +31,7 @@ vibecodex/
 │   ├── images/             # Image assets
 │   └── favicon.ico         # Favicon
 └── docs/                   # Documentation
-\`\`\`
+```
 
 ## Key Components
 
@@ -94,3 +96,5 @@ When adding new features:
 3. Add new pages in the app directory
 4. Update tests
 5. Document your changes
+
+## [Back to Docs Index](/docs)
