@@ -1,0 +1,83 @@
+# Example .cursor_rules file for VibeCodex projects
+
+# Project Overview
+This is a Next.js application built with TypeScript, Tailwind CSS, and shadcn/ui components.
+
+# Code Style and Conventions
+- Use TypeScript for all new code
+- Follow camelCase for variables and functions
+- Use PascalCase for components and classes
+- Prefer functional components with hooks over class components
+- Use Tailwind CSS for styling
+- Follow the existing file structure in app/ directory
+
+# Architecture Guidelines
+- Use Next.js App Router
+- Implement Server Components by default
+- Use Client Components only when necessary
+- Keep components small and focused
+- Use proper TypeScript types
+- Implement error boundaries where appropriate
+- Follow React best practices
+- Use proper accessibility attributes
+
+# State Management
+- Use React Server Components for server state
+- Use useState/useReducer for client-side state
+- Consider Zustand for complex client state
+- Implement proper loading and error states
+
+# Styling
+- Use Tailwind CSS for styling
+- Implement dark mode with next-themes
+- Use CSS modules for component-specific styles
+- Follow responsive design principles
+
+# Performance
+- Optimize images with Next.js Image component
+- Implement proper caching strategies
+- Use dynamic imports for code splitting
+- Optimize bundle size
+
+# Testing
+- Write unit tests for utility functions
+- Test component behavior with React Testing Library
+- Mock external dependencies appropriately
+- Test accessibility features
+
+# Security
+- Validate all user inputs
+- Use proper authentication patterns
+- Follow OWASP security guidelines
+- Never expose sensitive data in client-side code
+
+# Error Handling
+- Implement proper error boundaries
+- Use try-catch blocks for async operations
+- Provide user-friendly error messages
+- Log errors for debugging
+
+# Accessibility
+- Use semantic HTML elements
+- Implement proper ARIA attributes
+- Ensure keyboard navigation works
+- Test with screen readers
+- Maintain proper color contrast ratios
+
+# Documentation
+- Write clear component documentation
+- Include usage examples
+- Document complex logic
+- Keep README files updated
+
+# Git and Version Control
+- Write descriptive commit messages
+- Use conventional commit format
+- Keep commits focused and atomic
+- Review code before merging
+
+# Dependencies
+- Keep dependencies up to date
+- Use exact versions in package.json
+- Audit dependencies regularly
+- Document why specific dependencies are needed 

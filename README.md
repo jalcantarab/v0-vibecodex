@@ -132,8 +132,10 @@ See our [Contributing Guide](CONTRIBUTING.md) for detailed instructions.
 ### 🚧 In Progress
 - [ ] Advanced project templates
 - [ ] Tutorials and walkthroughs
-- [ ] Prompt, Instructions and Cursor Rules Templates
 - [ ] API integrations guide
+
+### ✅ Recently Completed
+- [x] Prompt, Instructions and Cursor Rules Templates
 
 ### 🔮 Planned
 - [ ] App companion

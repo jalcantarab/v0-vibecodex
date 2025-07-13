@@ -1,0 +1,264 @@
+# Documentation Standards
+
+## Markdown Formatting
+
+### 1. **Headers and Structure**
+```markdown
+# Main Title (H1)
+## Section Title (H2)
+### Subsection (H3)
+#### Detail Section (H4)
+```
+
+### 2. **Icons and Visual Elements**
+Use emoji icons consistently for better navigation:
+- 🚀 **Getting Started**: Installation and setup guides
+- 📚 **Documentation**: Reference materials
+- 🛠️ **Tools**: AI tools and integrations
+- 🎯 **Features**: Project capabilities
+- 🤝 **Community**: Contributing and support
+- 📋 **Checklists**: Tasks and requirements
+- 🔧 **Configuration**: Setup and settings
+- 🎨 **Design**: UI/UX guidelines
+
+### 3. **Code Blocks**
+```markdown
+# Inline code
+Use `backticks` for inline code references.
+
+# Code blocks with language
+```tsx
+import React from 'react'
+
+export function Component() {
+  return <div>Hello World</div>
+}
+```
+
+# Terminal commands
+```bash
+npm install
+npm run dev
+```
+```
+
+### 4. **Lists and Organization**
+```markdown
+# Unordered lists
+- Item 1
+- Item 2
+  - Sub-item 2.1
+  - Sub-item 2.2
+
+# Ordered lists
+1. First step
+2. Second step
+3. Third step
+
+# Task lists
+- [x] Completed task
+- [ ] Pending task
+- [ ] Future task
+```
+
+## Documentation Structure
+
+### 1. **File Organization**
+```
+docs/
+├── README.md              # Main documentation index
+├── guides/                # How-to guides
+│   ├── ai-development.md
+│   ├── getting-started.md
+│   └── contributing.md
+├── reference/             # Technical reference
+│   ├── api.md
+│   ├── components.md
+│   └── configuration.md
+└── examples/              # Code examples
+    ├── components.md
+    └── patterns.md
+```
+
+### 2. **Page Structure**
+```markdown
+# Page Title
+
+Brief description of what this page covers.
+
+## 🎯 Overview
+
+What the reader will learn from this page.
+
+## 📋 Prerequisites
+
+What the reader needs to know before starting.
+
+## 🚀 Getting Started
+
+Step-by-step instructions.
+
+## 📚 Examples
+
+Code examples and use cases.
+
+## 🔗 Related Links
+
+Links to related documentation.
+```
+
+## Content Guidelines
+
+### 1. **Tone and Voice**
+- **Conversational**: Use friendly, approachable language
+- **Direct**: Be clear and concise in instructions
+- **Encouraging**: Emphasize that users can succeed
+- **Community-oriented**: Reference collaborative aspects
+
+### 2. **Beginner-Friendly Writing**
+```markdown
+# Good: Clear and encouraging
+"Create your first project by following these simple steps..."
+
+# Avoid: Technical jargon without explanation
+"Initialize the project with the requisite dependencies..."
+```
+
+### 3. **Code Examples**
+```markdown
+# Always include context
+Here's how to create a simple component:
+
+```tsx
+import React from 'react'
+
+export function WelcomeMessage({ name }: { name: string }) {
+  return <h1>Welcome, {name}!</h1>
+}
+```
+
+# Explain what each part does
+- `import React`: Imports the React library
+- `export function`: Makes the component available to other files
+- `{ name }`: Destructures the name prop from props
+- `{ name: string }`: TypeScript type annotation
+```
+
+## AI-Assisted Documentation
+
+### 1. **Clear Section Headers**
+```markdown
+## 🚀 Quick Start
+## 📚 What You'll Learn
+## 🛠️ Tools You'll Use
+## 🎯 Next Steps
+```
+
+### 2. **Step-by-Step Instructions**
+```markdown
+1. **Open your terminal**
+   Navigate to your project directory
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Visit `http://localhost:3000`
+```
+
+### 3. **Troubleshooting Sections**
+```markdown
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Problem**: "Module not found" error
+**Solution**: Make sure you've installed all dependencies with `npm install`
+
+**Problem**: Port 3000 is already in use
+**Solution**: Use a different port: `npm run dev -- -p 3001`
+```
+
+## Cross-References
+
+### 1. **Internal Links**
+```markdown
+# Link to other documentation
+See our [Getting Started Guide](getting-started.md) for installation instructions.
+
+# Link to specific sections
+Check the [Component Library](../components/README.md#available-components) for UI components.
+```
+
+### 2. **External Links**
+```markdown
+# Link to external resources
+Learn more about [Next.js](https://nextjs.org/docs) in the official documentation.
+
+# Link to community resources
+Join our [Slack Community](https://join.slack.com/t/zentrikfriends/shared_invite/zt-39fkemr4h-s4uisVwiRmpAoZ1dZYCJwg) for support.
+```
+
+## Accessibility
+
+### 1. **Alt Text for Images**
+```markdown
+![VibeCodex Hero Screenshot](public/vibecodex-hero-screenshot.png)
+*The VibeCodex homepage showing project templates and AI tool integrations*
+```
+
+### 2. **Clear Link Text**
+```markdown
+# Good: Descriptive link text
+[Read our contributing guidelines](CONTRIBUTING.md)
+
+# Avoid: Generic link text
+[Click here](CONTRIBUTING.md)
+```
+
+## SEO and Metadata
+
+### 1. **Page Titles**
+```markdown
+---
+title: "Getting Started with VibeCodex"
+description: "Learn how to set up your first AI-assisted project with VibeCodex"
+keywords: ["ai", "coding", "starter-kit", "next.js", "react"]
+---
+```
+
+### 2. **Structured Content**
+```markdown
+# Use clear headings for SEO
+## What is VibeCodex?
+## Why Use AI-Assisted Development?
+## Getting Started
+## Next Steps
+```
+
+## Maintenance
+
+### 1. **Regular Updates**
+- Review documentation monthly
+- Update screenshots when UI changes
+- Verify all links work correctly
+- Update code examples for new versions
+
+### 2. **Version Control**
+- Include documentation changes in commits
+- Use descriptive commit messages
+- Tag major documentation updates
+- Maintain changelog for documentation
+
+Remember: Good documentation is as important as good code. Make it accessible, clear, and helpful for beginners.
+description:
+globs:
+alwaysApply: false
+---

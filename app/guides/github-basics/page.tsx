@@ -990,8 +990,8 @@ export default function GitHubBasicsGuidePage() {
             <p>
               Once you've exported your v0 project to GitHub, you're perfectly positioned to continue development in
               Cursor. Check out our{" "}
-              <Link href="/guides/cursor-basics" className="text-primary hover:underline">
-                Cursor Basics Guide
+              <Link href="/guides/cursor-rules-templates" className="text-primary hover:underline">
+                Cursor Rules & Prompt Templates Guide
               </Link>{" "}
               to learn how to clone your GitHub repository and continue development in a more powerful environment.
             </p>

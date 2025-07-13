@@ -1,0 +1,194 @@
+# VibeCodex - AI Coding Starter Kit Rules
+
+## Project Overview
+VibeCodex is an open-source AI coding starter kit designed to help beginners create real projects with AI assistance. The project emphasizes approachability, community-focus, educational value, and practical application.
+
+## Tech Stack
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui + Radix UI
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Package Manager**: pnpm
+
+## Key Principles
+1. **Beginner-Friendly**: All code should be accessible to newcomers
+2. **AI-First**: Optimize for AI-assisted development workflows
+3. **Community-Driven**: Encourage contributions and collaboration
+4. **Production-Ready**: Focus on real-world applications
+5. **Educational**: Provide clear explanations and learning paths
+
+## React Component Guidelines
+
+### Component Structure
+Always use functional components with hooks:
+```tsx
+import { ComponentProps } from 'react'
+import { cn } from '@/lib/utils'
+
+interface ComponentNameProps extends ComponentProps<'div'> {
+  // Add specific props here
+}
+
+export function ComponentName({ className, ...props }: ComponentNameProps) {
+  return (
+    <div className={cn("base-classes", className)} {...props}>
+      {/* Component content */}
+    </div>
+  )
+}
+```
+
+### Key Patterns
+- Use PascalCase for component names
+- Export as named exports, not default exports
+- Extend HTML element props when appropriate
+- Use `cn()` utility for className merging
+- Use Tailwind CSS classes consistently
+- Leverage shadcn/ui components as base
+
+## Styling Guidelines
+
+### Color Palette
+- **Primary**: Violet gradients (`from-violet-600 to-violet-500`)
+- **Secondary**: Cyan accents (`bg-cyan-600`)
+- **Background**: Subtle gradients (`from-violet-50 to-cyan-50`)
+- **Text**: Use semantic colors (`text-foreground`, `text-muted-foreground`)
+
+### Layout Patterns
+```tsx
+// Standard page layout
+<div className="flex flex-col min-h-screen">
+  <div className="container py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Page content */}
+  </div>
+</div>
+
+// Two-column layout
+<div className="grid gap-6 md:grid-cols-[2fr_1fr]">
+  <div className="space-y-6">
+    {/* Main content */}
+  </div>
+  <div className="space-y-6">
+    {/* Sidebar */}
+  </div>
+</div>
+```
+
+### Spacing System
+- **Vertical spacing**: `space-y-6` for component groups
+- **Grid gaps**: `gap-6` for grid layouts
+- **Margins**: `mb-6` for section spacing
+- **Padding**: `p-6` for card content
+
+## AI-Assisted Development
+
+### Supported AI Tools
+- **v0.dev**: React component generation
+- **Bolt.new**: Full-stack development environment
+- **Lovable**: AI-assisted application building
+- **Replit**: Collaborative coding platform
+
+### Code Documentation for AI
+```tsx
+/**
+ * ComponentName - Brief description
+ * 
+ * Features:
+ * - Feature 1: Description
+ * - Feature 2: Description
+ * 
+ * Usage:
+ * <ComponentName title="Example" variant="outline" />
+ * 
+ * AI Notes:
+ * - This component follows the [pattern] for consistency
+ * - Uses [specific library] for [specific functionality]
+ * - Designed for [specific use case]
+ */
+```
+
+### AI-Optimized Code Structure
+- Write clear, descriptive component and function names
+- Include helpful comments for complex logic
+- Use consistent patterns for similar functionality
+- Structure code for easy understanding and modification
+- Use comprehensive type definitions
+
+## Documentation Standards
+
+### Markdown Formatting
+- Use emoji icons consistently for better navigation
+- Follow clear header structure (H1, H2, H3, H4)
+- Use proper code blocks with language specification
+- Include context and explanations for code examples
+
+### Content Guidelines
+- **Conversational**: Use friendly, approachable language
+- **Direct**: Be clear and concise in instructions
+- **Encouraging**: Emphasize that users can succeed
+- **Community-oriented**: Reference collaborative aspects
+
+## File Organization
+```
+vibecodex/
+├── app/                    # Next.js App Router pages
+├── components/             # Reusable React components
+│   ├── ui/                # shadcn/ui components
+│   └── [feature]/         # Feature-specific components
+├── lib/                    # Utility functions and data
+├── public/                 # Static assets
+├── docs/                   # Documentation
+└── hooks/                  # Custom React hooks
+```
+
+## Best Practices
+
+### Code Quality
+- Use TypeScript for type safety
+- Include proper error handling
+- Write self-documenting code
+- Follow established patterns
+- Maintain consistent file structure
+
+### Performance
+- Use React.memo for pure components
+- Implement proper code splitting
+- Optimize images and assets
+- Use proper key props in lists
+
+### Accessibility
+- Use semantic HTML elements
+- Include proper ARIA labels
+- Ensure keyboard navigation
+- Test with screen readers
+
+### Testing
+- Write clear test descriptions
+- Focus on simple, focused tests
+- Test edge cases explicitly
+- Document why edge cases matter
+
+## AI Context Guidelines
+
+### File Organization
+- Keep related functionality together
+- Use clear file and folder names
+- Maintain consistent import patterns
+- Document file purposes
+
+### Component Hierarchy
+- Clear parent-child relationships
+- Consistent prop drilling patterns
+- Well-defined component boundaries
+- Logical component composition
+
+### State Management
+- Use React hooks consistently
+- Keep state as local as possible
+- Document state dependencies
+- Use clear state update patterns
+
+## Remember
+This is a beginner-friendly project designed to help people learn AI-assisted development. Keep code simple, well-documented, and easy to understand. Focus on creating educational value while maintaining production-ready quality. 

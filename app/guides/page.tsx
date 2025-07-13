@@ -6,6 +6,7 @@ import { ArrowRight, Code, FileText, Lightbulb, Sparkles, ArrowRightLeft } from 
 import { GlassCard } from "@/components/ui/glass-card"
 import { GradientButton } from "@/components/ui/gradient-button"
 import { AnimatedBackground } from "@/components/animated-background"
+import { Button } from "@/components/ui/button"
 
 export default function GuidesPage() {
   return (
@@ -120,14 +121,16 @@ export default function GuidesPage() {
                   <div className="h-12 w-12 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400 mb-4">
                     <Code className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Cursor Basics</h3>
+                  <h3 className="text-xl font-bold mb-2">Cursor Rules & Prompt Templates</h3>
                   <p className="text-muted-foreground mb-6 flex-grow">
-                    Get started with the Cursor AI-powered code editor for more advanced development when your project
-                    grows beyond 40-50 files.
+                    Master the art of communicating with AI coding tools through effective prompts and Cursor rules configuration.
                   </p>
-                  <div className="flex items-center text-muted-foreground mt-auto">
-                    <span>Coming soon</span>
-                  </div>
+                  <Button asChild variant="outline" size="sm" className="mt-auto">
+                    <Link href="/guides/cursor-rules-templates" className="inline-flex items-center">
+                      Read Guide
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </GlassCard>
             </motion.div>
