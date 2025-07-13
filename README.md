@@ -115,7 +115,7 @@ See our [Contributing Guide](CONTRIBUTING.md) for detailed instructions.
 - **GitHub**: [jalcantarab/v0-vibecodex](https://github.com/jalcantarab/v0-vibecodex)
 - **Email**: [contact@zentrik.ai](mailto:contact@zentrik.ai)
 - **Website**: [VibeCodex](https://vibecodex.dev)
-- **Website**: [Zentrik](https://zentrik.dev)
+- **Website**: [Zentrik](https://zentrik.ai)
 - **LinkedIn**: [Zentrik](https://www.linkedin.com/company/zentrik-ai)
 
 ## 📋 Roadmap
@@ -164,6 +164,6 @@ Need help? We're here for you:
 
 ---
 
-**Built with ❤️ by [Jorge Alcantara Barroso](https://www.linkedin.com/in/jorgeakairos/) and the VibeCodex community using v0.dev, cursor.com and [Zentrik](https://zentrik.ai)**
+**Built with ❤️ by [Jorge Alcantara](https://www.linkedin.com/in/jorgeakairos/) and the VibeCodex community using v0.dev, cursor.com and [Zentrik](https://zentrik.ai)**
 
 *Transform your ideas into applications with AI-powered development*
