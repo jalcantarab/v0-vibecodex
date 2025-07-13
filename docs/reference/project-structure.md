@@ -1,10 +1,10 @@
-# Project Structure
+# 🏗️ Project Structure
 
 This document provides an overview of the VibeCodex project structure to help contributors understand how the codebase is organized.
 
-## Directory Structure
+## 📁 Directory Structure
 
-\`\`\`
+```
 vibecodex/
 ├── app/                    # Next.js App Router pages
 │   ├── contribute/         # Contribution page
@@ -29,11 +29,11 @@ vibecodex/
 │   ├── images/             # Image assets
 │   └── favicon.ico         # Favicon
 └── docs/                   # Documentation
-\`\`\`
+```
 
-## Key Components
+## 🔧 Key Components
 
-### App Router Pages
+### 📄 App Router Pages
 
 - `app/page.tsx`: The home page with hero section and featured projects
 - `app/projects/page.tsx`: Projects listing page with filtering
@@ -42,7 +42,7 @@ vibecodex/
 - `app/start/page.tsx`: Getting started page with project type selection
 - `app/contribute/page.tsx`: Contribution page with guidelines
 
-### Components
+### 🧩 Components
 
 - `components/site-header.tsx`: Main navigation header
 - `components/site-footer.tsx`: Footer with links and copyright
@@ -50,7 +50,7 @@ vibecodex/
 - `components/phase-completion-status.tsx`: UI for tracking phase completion
 - `components/tool-logo.tsx`: Displays tool logos with consistent styling
 
-### UI Components
+### 🎨 UI Components
 
 - `components/ui/button.tsx`: Button component
 - `components/ui/card.tsx`: Card component
@@ -58,13 +58,13 @@ vibecodex/
 - `components/ui/glass-card.tsx`: Card with glass morphism effect
 - `components/ui/prompt-display.tsx`: Displays AI prompts with tooltips
 
-### Lib
+### 📚 Lib
 
 - `lib/mock-data.ts`: Contains project and tool data
 - `lib/seo-config.ts`: SEO configuration
 - `lib/utils.ts`: Utility functions including Tailwind class merging
 
-## Data Flow
+## 🔄 Data Flow
 
 1. User navigates to the projects page
 2. Projects are loaded from `mock-data.ts`
@@ -72,20 +72,20 @@ vibecodex/
 4. User selects an AI tool and is taken to the tool-specific page
 5. User follows the prompts to build their project with the selected AI tool
 
-## State Management
+## 🗂️ State Management
 
 - Local component state using React's `useState` and `useEffect`
 - URL parameters for navigation state
 - Local storage for persisting user preferences
 
-## Styling
+## 🎨 Styling
 
 - Tailwind CSS for utility-based styling
 - CSS variables for theming
 - Responsive design with mobile-first approach
 - Dark mode support
 
-## Adding New Features
+## ➕ Adding New Features
 
 When adding new features:
 
@@ -94,3 +94,9 @@ When adding new features:
 3. Add new pages in the app directory
 4. Update tests
 5. Document your changes
+
+## 📖 Related Documentation
+
+- [Implementation Notes](../implementation-notes.md) - Detailed implementation guidelines
+- [Contributing Guide](../CONTRIBUTING.md) - How to contribute to the project
+- [AI Tools Integration](../guides/ai-tools-integration.md) - Integration with AI tools

@@ -5,13 +5,13 @@ authors:
   given-names: "Jorge"
   email: "jorge@zentrik.ai"
   affiliation: "Zentrik AI"
-  orcid: "https://orcid.org/YOUR-ORCID-ID" # Optional: Add ORCID if available
+  orcid: "https://orcid.org/0009-0004-8638-8102"
 - name: "Zentrik AI"
   website: "https://zentrik.ai"
 title: "VibeCodex: An open-source AI coding starter kit"
 version: 1.0.0
 date-released: 2023-12-01
-license: MIT # Added license field
+license: MIT
 url: "https://github.com/jalcantarab/v0-vibecodex"
 repository-code: "https://github.com/jalcantarab/v0-vibecodex"
 keywords:
@@ -22,3 +22,7 @@ keywords:
 - "react"
 - "tailwindcss"
 - "open-source"
+- "ai-development"
+- "v0"
+- "bolt"
+- "lovable"

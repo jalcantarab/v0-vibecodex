@@ -1,14 +1,14 @@
-# Contributing to VibeCodex
+# 🤝 Contributing to VibeCodex
 
 First off, thank you for considering contributing to VibeCodex! It's people like you that make VibeCodex such a great tool.
 
-## Code of Conduct
+## 📋 Code of Conduct
 
-By participating in this project, you are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md). Please report unacceptable behavior to [project_email@example.com].
+By participating in this project, you are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md). Please report unacceptable behavior to [contact@zentrik.ai](mailto:contact@zentrik.ai).
 
-## How Can I Contribute?
+## 🎯 How Can I Contribute?
 
-### Reporting Bugs
+### 🐛 Reporting Bugs
 
 This section guides you through submitting a bug report for VibeCodex. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
@@ -29,7 +29,7 @@ Bugs are tracked as [GitHub issues](https://github.com/jalcantarab/v0-vibecodex/
 * Include screenshots if possible
 * Include your environment details (OS, browser, etc.)
 
-### Suggesting Enhancements
+### 💡 Suggesting Enhancements
 
 This section guides you through submitting an enhancement suggestion for VibeCodex, including completely new features and minor improvements to existing functionality.
 
@@ -47,14 +47,14 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/jalcan
 * Explain why this enhancement would be useful to most VibeCodex users
 * Include mockups or examples if applicable
 
-### Your First Code Contribution
+### 🚀 Your First Code Contribution
 
 Unsure where to begin contributing to VibeCodex? You can start by looking through these `beginner` and `help-wanted` issues:
 
 * [Beginner issues](https://github.com/jalcantarab/v0-vibecodex/labels/beginner) - issues which should only require a few lines of code, and a test or two.
 * [Help wanted issues](https://github.com/jalcantarab/v0-vibecodex/labels/help%20wanted) - issues which should be a bit more involved than `beginner` issues.
 
-### Pull Requests
+### 🔄 Pull Requests
 
 The process described here has several goals:
 
@@ -65,13 +65,13 @@ The process described here has several goals:
 
 Please follow these steps to have your contribution considered by the maintainers:
 
-1. Follow all instructions in [the template](PULL_REQUEST_TEMPLATE.md)
+1. Follow all instructions in [the template](.github/PULL_REQUEST_TEMPLATE.md)
 2. Follow the [styleguides](#styleguides)
 3. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing
 
 While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
-## Styleguides
+## 📝 Styleguides
 
 ### Git Commit Messages
 
@@ -105,22 +105,22 @@ All JavaScript/TypeScript code is linted with [ESLint](https://eslint.org/) and 
 ### CSS/Tailwind Styleguide
 
 * Use Tailwind CSS utility classes
-* Follow the design system defined in `tailwind.config.js`
+* Follow the design system defined in `tailwind.config.ts`
 * Use CSS variables for theming
 * Avoid inline styles
 
 ### Documentation Styleguide
 
 * Use [Markdown](https://guides.github.com/features/mastering-markdown/) for documentation
-* Reference components, functions, and variables with backticks: \`Component\`
+* Reference components, functions, and variables with backticks: `Component`
 * Place code examples in fenced code blocks with the appropriate language:
-  \`\`\`tsx
+  ```tsx
   function Example() {
     return <div>Example</div>;
   }
-  \`\`\`
+  ```
 
-## Additional Notes
+## 📋 Additional Notes
 
 ### Issue and Pull Request Labels
 
@@ -134,7 +134,7 @@ This section lists the labels we use to help us track and manage issues and pull
 * `question` - Further information is requested
 * `wontfix` - This will not be worked on
 
-### Vibe Contributions
+### 🌟 Vibe Contributions
 
 We also welcome "vibe contributions" - non-code contributions that improve the project's experience, usability, or community feel. These can include:
 
@@ -145,4 +145,8 @@ We also welcome "vibe contributions" - non-code contributions that improve the p
 * Reporting bugs or issues
 * Creating tutorials or guides
 
-All vibe contributions should align with the project philosophy outlined in our implementation-notes.md file and maintain consistency with the established design language.
+All vibe contributions should align with the project philosophy outlined in our [implementation-notes.md](implementation-notes.md) file and maintain consistency with the established design language.
+
+## 📞 Need Help?
+
+If you need help with contributing, check out our [Support Guide](SUPPORT.md) or reach out to us at [contact@zentrik.ai](mailto:contact@zentrik.ai).
