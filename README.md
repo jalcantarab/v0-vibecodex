@@ -37,10 +37,11 @@ npm run dev
 
 1.  **Fork this repository** to contribute back to the community.
 2.  **Clone your fork**:
-    \`\`\`bash
-    git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
-    cd v0-vibecodex
-    \`\`\`
+```bash
+git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
+cd v0-vibecodex
+```
+
 3.  **Follow the same installation steps** as above.
 
 ## 🎯 What's Inside
@@ -133,12 +134,12 @@ See our [Contributing Guide](CONTRIBUTING.md) for detailed instructions.
 
 ### 🚧 In Progress
 - [ ] Advanced project templates
-- [ ] Video tutorials and walkthroughs
-- [ ] Community showcase features
+- [ ] Tutorials and walkthroughs
+- [ ] Prompt, Instructions and Cursor Rules Templates
 - [ ] API integrations guide
 
 ### 🔮 Planned
-- [ ] Mobile app companion
+- [ ] App companion
 - [ ] Advanced AI prompt library
 - [ ] Team collaboration features
 - [ ] Enterprise deployment guides
