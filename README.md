@@ -18,29 +18,29 @@ VibeCodex is a comprehensive starter kit that bridges the gap between AI-generat
 1.  **Click "Use this template"** on GitHub to create your own repository.
 
 2.  **Clone your new repository**:
-```bash
+\`\`\`bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
-```
+\`\`\`
 
 3.  **Install dependencies**:
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 4.  **Start developing**:
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 ### Option 2: Fork and Contribute
 
 1.  **Fork this repository** to contribute back to the community.
 2.  **Clone your fork**:
-```bash
+\`\`\`bash
 git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
 cd v0-vibecodex
-```
+\`\`\`
 
 3.  **Follow the same installation steps** as above.
 
@@ -86,16 +86,16 @@ cd v0-vibecodex
 - [Installation Guide](https://github.com/jalcantarab/v0-vibecodex#quick-start)
 
 ### Development Guides
-- [AI Development Workflow](/guides/ai-development)
-- [Requirements Template](/guides/requirements-template)
-- [From v0 to Cursor](/guides/from-v0-to-cursor)
-- [GitHub Basics Guide](/guides/github-basics)
-- [Tool Integration Guide](/guides/ai-development/tools)
+- [AI Development Workflow](https://vibecodex.dev/guides/ai-development)
+- [Requirements Template](https://vibecodex.dev/guides/requirements-template)
+- [From v0 to Cursor](https://vibecodex.dev/guides/from-v0-to-cursor)
+- [GitHub Basics Guide](https://vibecodex.dev/guides/github-basics)
+- [Tool Integration Guide](https://vibecodex.dev/guides/ai-development/tools)
 
 ### Project Templates
-- [Browse All Projects](/projects)
-- [Kanban Board Tutorial](/projects/kanban-board)
-- [Personal Dashboard Guide](/projects/personal-dashboard)
+- [Browse All Projects](https://vibecodex.dev/projects)
+- [Kanban Board Tutorial](https://vibecodex.dev/projects/kanban-board)
+- [Personal Dashboard Guide](https://vibecodex.dev/projects/personal-dashboard)
 
 ## 🤝 Contributing
 
@@ -111,16 +111,12 @@ See our [Contributing Guide](CONTRIBUTING.md) for detailed instructions.
 
 ## 🏆 Community
 
-### Stats
-- **12** Project Templates
-- **15,847** Completions
-- **3,421** Active Users
-- **4.8/5** Average Rating
-
 ### Connect
 - **GitHub**: [jalcantarab/v0-vibecodex](https://github.com/jalcantarab/v0-vibecodex)
-- **Website**: [VibeCodex](https://vibecodex.com)
 - **Email**: [contact@zentrik.ai](mailto:contact@zentrik.ai)
+- **Website**: [VibeCodex](https://vibecodex.dev)
+- **Website**: [Zentrik](https://zentrik.dev)
+- **LinkedIn**: [Zentrik](https://www.linkedin.com/company/zentrik-ai)
 
 ## 📋 Roadmap
 
@@ -161,7 +157,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Need help? We're here for you:
 
-- **Documentation**: Check our [guides](/guides) first.
+- **Documentation**: Check our [guides](https://vibecodex.dev/guides) first.
 - **Issues**: [GitHub Issues](https://github.com/jalcantarab/v0-vibecodex/issues)
 - **Email**: [contact@zentrik.ai](mailto:contact@zentrik.ai)
 - **Community**: Join our discussions.
