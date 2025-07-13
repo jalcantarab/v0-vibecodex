@@ -17,27 +17,27 @@ VibeCodex is a comprehensive starter kit that bridges the gap between AI-generat
 
 1.  **Click "Use this template"** on GitHub to create your own repository.
 2.  **Clone your new repository**:
-  \`\`\`bash
-  git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-  cd YOUR_REPO_NAME
-  \`\`\`
+    \`\`\`bash
+    git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+    cd YOUR_REPO_NAME
+    \`\`\`
 3.  **Install dependencies**:
-  \`\`\`bash
-  npm install
-  \`\`\`
+    \`\`\`bash
+    npm install
+    \`\`\`
 4.  **Start developing**:
-  \`\`\`bash
-  npm run dev
-  \`\`\`
+    \`\`\`bash
+    npm run dev
+    \`\`\`
 
 ### Option 2: Fork and Contribute
 
 1.  **Fork this repository** to contribute back to the community.
 2.  **Clone your fork**:
-  \`\`\`bash
-  git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
-  cd v0-vibecodex
-  \`\`\`
+    \`\`\`bash
+    git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
+    cd v0-vibecodex
+    \`\`\`
 3.  **Follow the same installation steps** as above.
 
 ## 🎯 What's Inside
