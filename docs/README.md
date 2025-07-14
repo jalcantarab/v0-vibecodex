@@ -1,4 +1,7 @@
-# VibeCodex Documentation
+---
+title: "Documentation Index"
+---
+# Documentation Index
 
 Welcome to the VibeCodex documentation! This is your central resource for all documentation related to the VibeCodex project.
 

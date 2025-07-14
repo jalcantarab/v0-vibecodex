@@ -13,9 +13,33 @@ export interface DocsNode {
 
 const EXCLUDED_ROOT_DOCS = ['README.md']; // Exclude README.md from sidebar
 
-export function getDocsTree(dir = 'docs', basePath = ''): DocsNode[] {
+export function getDocsTree(dir = 'docs', basePath = '', rootDocNames?: Set<string>): DocsNode[] {
   const fullDir = path.join(process.cwd(), dir);
   let docsNodes: DocsNode[] = [];
+
+  // Discover all root-level .md files except excluded ones
+  let rootDocsNodes: DocsNode[] = [];
+  let canonicalRootDocNames: Set<string> = rootDocNames || new Set();
+  if (!basePath) { // Only do this at the top-level call
+    const rootDocsDir = process.cwd();
+    rootDocsNodes = fs.readdirSync(rootDocsDir)
+      .filter((filename) => filename.endsWith('.md') && !EXCLUDED_ROOT_DOCS.includes(filename))
+      .map((filename) => {
+        const filePath = path.join(rootDocsDir, filename);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const { data } = matter(fileContent);
+        const normalized = filename.replace('.md', '').replace(/_/g, '-').toLowerCase();
+        canonicalRootDocNames.add(normalized);
+        return {
+          type: 'file',
+          name: normalized,
+          path: normalized,
+          title: data.title || prettyTitle(filename),
+          order: typeof data.order === 'number' ? data.order : undefined,
+        };
+      });
+  }
+
   if (fs.existsSync(fullDir)) {
     docsNodes = fs.readdirSync(fullDir)
       .filter((item) => !item.startsWith('.'))
@@ -23,7 +47,7 @@ export function getDocsTree(dir = 'docs', basePath = ''): DocsNode[] {
         const itemPath = path.join(fullDir, item);
         const relPath = basePath ? `${basePath}/${item}` : item;
         if (fs.statSync(itemPath).isDirectory()) {
-          const children = getDocsTree(path.join(dir, item), relPath);
+          const children = getDocsTree(path.join(dir, item), relPath, canonicalRootDocNames);
           return {
             type: 'folder',
             name: item,
@@ -31,12 +55,17 @@ export function getDocsTree(dir = 'docs', basePath = ''): DocsNode[] {
             children: children.sort(sortDocsNodes),
           };
         } else if (item.endsWith('.md')) {
+          // Deduplicate: skip if this file's normalized name matches a root doc
+          const normalized = item.replace('.md', '').replace(/_/g, '-').toLowerCase();
+          if (canonicalRootDocNames.has(normalized)) {
+            return null;
+          }
           const fileContent = fs.readFileSync(itemPath, 'utf8');
           const { data } = matter(fileContent);
           return {
             type: 'file',
-            name: item.replace('.md', ''),
-            path: relPath.replace('.md', ''),
+            name: normalized,
+            path: relPath.replace('.md', '').replace(/_/g, '-').toLowerCase(),
             title: data.title || undefined,
             order: typeof data.order === 'number' ? data.order : undefined,
           };
@@ -46,25 +75,12 @@ export function getDocsTree(dir = 'docs', basePath = ''): DocsNode[] {
       .filter(Boolean) as DocsNode[];
   }
 
-  // Discover all root-level .md files except excluded ones
-  const rootDocsDir = process.cwd();
-  const rootDocsNodes = fs.readdirSync(rootDocsDir)
-    .filter((filename) => filename.endsWith('.md') && !EXCLUDED_ROOT_DOCS.includes(filename))
-    .map((filename) => {
-      const filePath = path.join(rootDocsDir, filename);
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-      const { data } = matter(fileContent);
-      return {
-        type: 'file',
-        name: filename.replace('.md', '').replace(/_/g, '-').toLowerCase(),
-        path: filename.replace('.md', '').replace(/_/g, '-').toLowerCase(),
-        title: data.title || prettyTitle(filename),
-        order: typeof data.order === 'number' ? data.order : undefined,
-      };
-    });
-
-  // Combine root docs and docs/ tree, root docs first
-  return [...rootDocsNodes, ...docsNodes].sort(sortDocsNodes);
+  // Combine root docs and docs/ tree, root docs first (only at top-level)
+  if (!basePath) {
+    return [...rootDocsNodes, ...docsNodes].sort(sortDocsNodes);
+  } else {
+    return docsNodes.sort(sortDocsNodes);
+  }
 }
 
 function sortDocsNodes(a: DocsNode, b: DocsNode) {
