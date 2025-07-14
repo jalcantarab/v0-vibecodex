@@ -9,6 +9,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    outputFileTracingIgnores: [
+      '**/public/**',
+      '**/*.png',
+      '**/*.jpg',
+      '**/*.jpeg',
+      '**/*.svg',
+      '**/*.gif',
+    ],
+  },
 }
 
 export default nextConfig
