@@ -10,7 +10,7 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    outputFileTracingIgnores: [
+    outputFileTracingExcludes: [
       '**/public/**',
       '**/*.png',
       '**/*.jpg',
