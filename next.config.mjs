@@ -10,14 +10,16 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    outputFileTracingExcludes: [
-      '**/public/**',
-      '**/*.png',
-      '**/*.jpg',
-      '**/*.jpeg',
-      '**/*.svg',
-      '**/*.gif',
-    ],
+    outputFileTracingExcludes: {
+      '*': [
+        'public/**',
+        '**/*.png',
+        '**/*.jpg',
+        '**/*.jpeg',
+        '**/*.svg',
+        '**/*.gif',
+      ],
+    },
   },
 }
 
