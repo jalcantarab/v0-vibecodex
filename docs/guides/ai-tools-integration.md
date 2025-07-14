@@ -1,11 +1,8 @@
----
-title: "AI Tools Integration Guide"
----
-# AI Tools Integration Guide
+# 🤖 AI Tools Integration Guide
 
 This document explains how VibeCodex integrates with various AI coding tools and how to extend or modify these integrations.
 
-## Supported AI Tools
+## 🛠️ Supported AI Tools
 
 VibeCodex currently supports the following AI tools:
 
@@ -15,7 +12,7 @@ VibeCodex currently supports the following AI tools:
 4. **Replit** - https://replit.com/
 5. **New Tool Name** - https://new-tool-url.com
 
-## Integration Architecture
+## 🏗️ Integration Architecture
 
 The integration with AI tools is primarily handled through:
 
@@ -23,7 +20,7 @@ The integration with AI tools is primarily handled through:
 2. **Prompt Templates**: Stored in `lib/mock-data.ts` under each project's phases
 3. **Tool-specific URL Handling**: Implemented in `app/projects/[id]/[tool]/page.tsx`
 
-## Tool Configuration
+## ⚙️ Tool Configuration
 
 Each tool is configured with the following properties:
 
@@ -36,7 +33,7 @@ Each tool is configured with the following properties:
 }
 ```
 
-## Prompt Templates
+## 📝 Prompt Templates
 
 Each project phase contains tool-specific prompts:
 
@@ -53,7 +50,7 @@ prompts: {
 }
 ```
 
-## URL Handling
+## 🔗 URL Handling
 
 The `getToolUrl()` function in `app/projects/[id]/[tool]/page.tsx` handles tool-specific URL generation:
 
@@ -71,11 +68,11 @@ const getToolUrl = () => {
 };
 ```
 
-## Adding a New AI Tool
+## ➕ Adding a New AI Tool
 
 To add a new AI tool:
 
-1. Add the tool configuration to `toolsMockData` in `lib/mock-data.ts`:
+1. **Add the tool configuration** to `toolsMockData` in `lib/mock-data.ts`:
 
 ```typescript
 {
@@ -86,7 +83,7 @@ To add a new AI tool:
 }
 ```
 
-2. Add tool-specific prompts for each project phase:
+2. **Add tool-specific prompts** for each project phase:
 
 ```typescript
 prompts: {
@@ -97,7 +94,7 @@ prompts: {
 }
 ```
 
-3. Update the `getToolUrl()` function if the new tool requires special URL handling:
+3. **Update the `getToolUrl()` function** if the new tool requires special URL handling:
 
 ```typescript
 const getToolUrl = () => {
@@ -111,9 +108,9 @@ const getToolUrl = () => {
 };
 ```
 
-4. Add the tool logo to the `public` directory and update the `ToolLogo` component if needed.
+4. **Add the tool logo** to the `public` directory and update the `ToolLogo` component if needed.
 
-## Testing Tool Integrations
+## 🧪 Testing Tool Integrations
 
 When testing a new tool integration:
 
@@ -122,7 +119,7 @@ When testing a new tool integration:
 3. Ensure the "Open in [Tool]" button correctly navigates to the tool with the prompt
 4. Test the copy functionality to ensure the prompt can be manually copied if needed
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 Common issues with tool integrations:
 
@@ -132,4 +129,8 @@ Common issues with tool integrations:
 
 For any issues, please open a GitHub issue with detailed reproduction steps at [https://github.com/jalcantarab/v0-vibecodex/issues](https://github.com/jalcantarab/v0-vibecodex/issues).
 
-## [Back to Docs Index](/docs)
+## 📚 Related Documentation
+
+- [Project Structure](../reference/project-structure.md) - Understanding the codebase organization
+- [Implementation Notes](../implementation-notes.md) - Detailed implementation guidelines
+- [Contributing Guide](../CONTRIBUTING.md) - How to contribute to the project

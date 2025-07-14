@@ -1,10 +1,10 @@
-# Development Workflow
+# 🚀 Development Workflow
 
 > For a step-by-step onboarding, see [Getting Started](/docs/getting-started)
 
 This guide explains how to set up your development environment and the recommended workflow for contributing to VibeCodex.
 
-## Prerequisites
+## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -12,7 +12,7 @@ Before you begin, ensure you have the following installed:
 - **npm** or **yarn**
 - **Git**
 
-## Setting Up Your Development Environment
+## 🛠️ Setting Up Your Development Environment
 
 1. **Fork the Repository**
 
@@ -53,9 +53,9 @@ Before you begin, ensure you have the following installed:
 
    The application will be available at [http://localhost:3000](http://localhost:3000).
 
-## Development Workflow
+## 🔄 Development Workflow
 
-### Branch Strategy
+### 🌿 Branch Strategy
 
 We follow a feature branch workflow:
 
@@ -94,7 +94,7 @@ We follow a feature branch workflow:
 
    Go to your fork on GitHub and click "New Pull Request" to submit your changes for review.
 
-### Code Quality
+### ✅ Code Quality
 
 Before submitting your pull request, ensure:
 
@@ -122,7 +122,7 @@ Before submitting your pull request, ensure:
    yarn test
    ```
 
-### Keeping Your Fork Updated
+### 🔄 Keeping Your Fork Updated
 
 To keep your fork in sync with the main repository:
 
@@ -141,7 +141,7 @@ To keep your fork in sync with the main repository:
    git push origin main
    ```
 
-## Deployment
+## 🚀 Deployment
 
 The project is automatically deployed to Vercel when changes are merged to the main branch.
 
@@ -151,21 +151,20 @@ For preview deployments:
 2. Vercel will automatically create a preview deployment
 3. The preview URL will be available in your pull request
 
-## Getting Help
+## 🆘 Getting Help
 
 If you need help with the development workflow:
 
 1. Check the [documentation](/docs/README)
 2. Ask in [GitHub Discussions](https://github.com/jalcantarab/v0-vibecodex/discussions)
-3. Reach out on [Discord](https://discord.gg/yourinvite) (when available)
+3. Join our [Slack Community](https://join.slack.com/t/zentrikfriends/shared_invite/zt-39fkemr4h-s4uisVwiRmpAoZ1dZYCJwg) - Zentrik Friends
+4. Reach out at [contact@zentrik.ai](mailto:contact@zentrik.ai)
 
-## Additional Resources
+## 📚 Additional Resources
 
-For more detailed information, refer to:
+- [CONTRIBUTING.md](../CONTRIBUTING) - Detailed contributing guidelines
+- [CHANGELOG.md](../CHANGELOG) - Project changelog
+- [AI Tools Integration](./ai-tools-integration) - Understanding AI tool integrations
+- [Project Structure](../reference/project-structure) - Codebase organization
 
-- [CONTRIBUTING.md](/docs/CONTRIBUTING)
-- [CHANGELOG.md](/docs/CHANGELOG)
-
-Happy coding!
-
-## [Back to Docs Index](/docs)
+Happy coding! 🎉

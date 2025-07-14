@@ -117,10 +117,11 @@ See our [Contributing Guide](CONTRIBUTING.md) for detailed instructions.
 
 ### Connect
 - **GitHub**: [jalcantarab/v0-vibecodex](https://github.com/jalcantarab/v0-vibecodex)
-- **Email**: [contact@zentrik.ai](mailto:contact@zentrik.ai)
 - **Website**: [VibeCodex](https://vibecodex.dev)
 - **Website**: [Zentrik](https://zentrik.ai)
+- **Slack**: [Zentrik Friends](https://join.slack.com/t/zentrikfriends/shared_invite/zt-39fkemr4h-s4uisVwiRmpAoZ1dZYCJwg)
 - **LinkedIn**: [Zentrik](https://www.linkedin.com/company/zentrik-ai)
+- **Email**: [contact@zentrik.ai](mailto:contact@zentrik.ai)
 
 ## 📋 Roadmap
 
@@ -165,8 +166,8 @@ Need help? We're here for you:
 
 - **Documentation**: Check our [guides](https://vibecodex.dev/guides) first.
 - **Issues**: [GitHub Issues](https://github.com/jalcantarab/v0-vibecodex/issues)
+- **Community**: Join our [Slack Community](https://join.slack.com/t/zentrikfriends/shared_invite/zt-39fkemr4h-s4uisVwiRmpAoZ1dZYCJwg) - Zentrik Friends
 - **Email**: [contact@zentrik.ai](mailto:contact@zentrik.ai)
-- **Community**: Join our discussions.
 
 ---
 
