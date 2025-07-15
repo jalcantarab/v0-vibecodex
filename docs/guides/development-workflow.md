@@ -1,5 +1,7 @@
 # 🚀 Development Workflow
 
+> For a step-by-step onboarding, see [Getting Started](/docs/getting-started)
+
 This guide explains how to set up your development environment and the recommended workflow for contributing to VibeCodex.
 
 ## 📋 Prerequisites
@@ -71,7 +73,7 @@ We follow a feature branch workflow:
 
 2. **Make Your Changes**
 
-   Implement your changes, following the coding standards and patterns described in the [Implementation Notes](../reference/implementation-notes.md).
+   Implement your changes, following the coding standards and patterns described in the [Implementation Notes](/docs/reference/implementation-notes).
 
 3. **Commit Your Changes**
 
@@ -153,18 +155,16 @@ For preview deployments:
 
 If you need help with the development workflow:
 
-1. Check the [documentation](../README.md)
+1. Check the [documentation](/docs/README)
 2. Ask in [GitHub Discussions](https://github.com/jalcantarab/v0-vibecodex/discussions)
 3. Join our [Slack Community](https://join.slack.com/t/zentrikfriends/shared_invite/zt-39fkemr4h-s4uisVwiRmpAoZ1dZYCJwg) - Zentrik Friends
 4. Reach out at [contact@zentrik.ai](mailto:contact@zentrik.ai)
 
 ## 📚 Additional Resources
 
-For more detailed information, refer to:
-
-- [CONTRIBUTING.md](../CONTRIBUTING.md) - Detailed contributing guidelines
-- [CHANGELOG.md](../CHANGELOG.md) - Project changelog
-- [AI Tools Integration](./ai-tools-integration.md) - Understanding AI tool integrations
-- [Project Structure](../reference/project-structure.md) - Codebase organization
+- [CONTRIBUTING.md](../CONTRIBUTING) - Detailed contributing guidelines
+- [CHANGELOG.md](../CHANGELOG) - Project changelog
+- [AI Tools Integration](./ai-tools-integration) - Understanding AI tool integrations
+- [Project Structure](../reference/project-structure) - Codebase organization
 
 Happy coding! 🎉

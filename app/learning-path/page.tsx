@@ -209,8 +209,8 @@ export default function LearningPathPage() {
                       </div>
                       <div className="pt-4">
                         <Button asChild variant="outline" size="sm">
-                          <Link href="/guides/cursor-basics" className="inline-flex items-center">
-                            Cursor Basics Guide
+                          <Link href="/guides/cursor-rules-templates" className="inline-flex items-center">
+                            Cursor Rules & Prompt Templates
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>

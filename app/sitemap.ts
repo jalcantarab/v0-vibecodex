@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/projects",
     "/guides",
+    "/docs",
     "/community",
     "/contribute",
     "/start",
@@ -29,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guides/from-v0-to-cursor",
   ]
 
+  /* ---------- Docs ---------- */
+  const docsPages = [
+    "/docs/README",
+    "/docs/project-structure",
+    "/docs/guides/ai-tools-integration",
+    "/docs/guides/development-workflow",
+    "/docs/reference/project-structure",
+    "/docs/reference/implementation-notes",
+    "/docs/CONTRIBUTING",
+    "/docs/CHANGELOG",
+  ]
+
   /* ---------- Projects ---------- */
   const projectPages = [
     "/projects/kanban-board",
@@ -46,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   /* ---------- Completion pages ---------- */
   const completionPages = projectPages.map((project) => `${project}/complete`)
 
-  const allPages = [...staticPages, ...guidePages, ...projectPages, ...projectToolPages, ...completionPages]
+  const allPages = [...staticPages, ...guidePages, ...docsPages, ...projectPages, ...projectToolPages, ...completionPages]
 
   return allPages.map((page) => ({
     url: `${baseUrl}${page}`,

@@ -1,0 +1,156 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github", "github.com/jalcantarab/v0-vibecodex"],
+      "env": {
+        "GITHUB_TOKEN": "${env:GITHUB_TOKEN}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "MCP_FILESYSTEM_ROOT": "${workspaceFolder}"
+      }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "${env:POSTGRES_CONNECTION_STRING}"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "${env:BRAVE_API_KEY}"
+      }
+    },
+    "ollama": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-ollama"],
+      "env": {
+        "OLLAMA_HOST": "${env:OLLAMA_HOST || 'http://localhost:11434'}"
+      }
+    }
+  },
+  "projectSettings": {
+    "aiModel": "claude-3.5-sonnet",
+    "contextWindow": 200000,
+    "temperature": 0.1,
+    "maxTokens": 4000,
+    "systemPrompt": "You are an AI assistant helping with the VibeCodex project - an AI coding starter kit designed to help beginners create real projects with AI assistance. The project uses Next.js 14, TypeScript, Tailwind CSS, and shadcn/ui components. Always consider the beginner-friendly, educational nature of the codebase and maintain consistency with established design patterns. Focus on clear, well-documented code that's easy for both humans and AI to understand and modify.",
+    "rules": [
+      "Always use functional components with hooks",
+      "Follow the established design system with violet-cyan gradients",
+      "Write clear, descriptive component and function names",
+      "Include helpful comments for complex logic",
+      "Use TypeScript for type safety",
+      "Leverage shadcn/ui components as base building blocks",
+      "Maintain responsive design with mobile-first approach",
+      "Consider AI-assisted development workflows",
+      "Keep code beginner-friendly and well-documented",
+      "Use consistent spacing with Tailwind utilities",
+      "Include proper error handling",
+      "Follow the project's file structure and naming conventions"
+    ]
+  },
+  "workspaceSettings": {
+    "autoSave": true,
+    "formatOnSave": true,
+    "defaultFormatter": "prettier",
+    "typescript": {
+      "suggest": {
+        "autoImports": true,
+        "includeCompletionsForModuleExports": true
+      }
+    },
+    "tailwindCSS": {
+      "experimental": {
+        "classRegex": [
+          "cva\\(([^)]*)\\)",
+          "[\"'`]([^\"'`]*).*?[\"'`]"
+        ]
+      }
+    }
+  },
+  "aiAssistance": {
+    "codeCompletion": {
+      "enabled": true,
+      "suggestions": true,
+      "autoImport": true
+    },
+    "inlineEdit": {
+      "enabled": true,
+      "suggestions": true
+    },
+    "chat": {
+      "enabled": true,
+      "contextAware": true,
+      "projectAware": true
+    }
+  },
+  "integrations": {
+    "github": {
+      "enabled": true,
+      "repository": "jalcantarab/v0-vibecodex",
+      "branch": "main"
+    },
+    "vercel": {
+      "enabled": true,
+      "projectId": "${env:VERCEL_PROJECT_ID}",
+      "teamId": "${env:VERCEL_TEAM_ID}"
+    },
+    "slack": {
+      "enabled": true,
+      "workspace": "zentrikfriends",
+      "channel": "general"
+    }
+  },
+  "developmentTools": {
+    "eslint": {
+      "enabled": true,
+      "config": ".eslintrc.json"
+    },
+    "prettier": {
+      "enabled": true,
+      "config": ".prettierrc"
+    },
+    "typescript": {
+      "enabled": true,
+      "strict": true,
+      "noImplicitAny": true
+    },
+    "tailwind": {
+      "enabled": true,
+      "config": "tailwind.config.ts"
+    }
+  },
+  "projectContext": {
+    "description": "VibeCodex is an AI coding starter kit that bridges the gap between AI-generated code and production-ready applications. It provides structured prompts, workflows, and templates for building real projects with AI assistance.",
+    "techStack": [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Radix UI",
+      "Framer Motion",
+      "Lucide React"
+    ],
+    "aiTools": [
+      "v0.dev",
+      "Bolt.new",
+      "Lovable",
+      "Replit"
+    ],
+    "targetAudience": "Beginners learning AI-assisted development",
+    "projectGoals": [
+      "Help beginners create real projects with AI",
+      "Provide structured workflows and templates",
+      "Foster community collaboration",
+      "Make AI development accessible to everyone"
+    ]
+  }
+} 

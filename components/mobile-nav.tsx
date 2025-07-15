@@ -94,7 +94,7 @@ export function MobileNav() {
             <div className="flex flex-col space-y-3 mt-8">
               <h4 className="font-medium text-sm text-muted-foreground">Links</h4>
               <MobileLink
-                href="https://github.com/yourusername/vibecodex"
+                href="https://github.com/jalcantarab/v0-vibecodex"
                 pathname={pathname}
                 setOpen={setOpen}
                 external

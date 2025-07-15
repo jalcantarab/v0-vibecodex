@@ -1,0 +1,113 @@
+[
+  {
+    "type": "file",
+    "name": "architecture-overview",
+    "path": "architecture-overview",
+    "title": "Architecture Overview"
+  },
+  {
+    "type": "file",
+    "name": "changelog",
+    "path": "changelog",
+    "title": "CHANGELOG"
+  },
+  {
+    "type": "file",
+    "name": "code-of-conduct",
+    "path": "code-of-conduct",
+    "title": "CODE OF CONDUCT"
+  },
+  {
+    "type": "file",
+    "name": "code-of-merit",
+    "path": "code-of-merit",
+    "title": "Code of Merit"
+  },
+  {
+    "type": "file",
+    "name": "contributing",
+    "path": "contributing",
+    "title": "CONTRIBUTING"
+  },
+  {
+    "type": "file",
+    "name": "faq",
+    "path": "faq",
+    "title": "Frequently Asked Questions"
+  },
+  {
+    "type": "file",
+    "name": "getting-started",
+    "path": "getting-started",
+    "title": "Getting Started"
+  },
+  {
+    "type": "file",
+    "name": "glossary",
+    "path": "glossary",
+    "title": "Glossary"
+  },
+  {
+    "type": "folder",
+    "name": "guides",
+    "path": "guides",
+    "children": [
+      {
+        "type": "file",
+        "name": "ai-tools-integration",
+        "path": "guides/ai-tools-integration"
+      },
+      {
+        "type": "file",
+        "name": "development-workflow",
+        "path": "guides/development-workflow"
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "documentation-management",
+    "path": "documentation-management",
+    "title": "Managing Documentation Files"
+  },
+  {
+    "type": "file",
+    "name": "readme",
+    "path": "readme"
+  },
+  {
+    "type": "folder",
+    "name": "reference",
+    "path": "reference",
+    "children": [
+      {
+        "type": "file",
+        "name": "implementation-notes",
+        "path": "reference/implementation-notes"
+      },
+      {
+        "type": "file",
+        "name": "project-structure",
+        "path": "reference/project-structure"
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "roadmap",
+    "path": "roadmap",
+    "title": "Roadmap"
+  },
+  {
+    "type": "file",
+    "name": "security",
+    "path": "security",
+    "title": "SECURITY"
+  },
+  {
+    "type": "file",
+    "name": "support",
+    "path": "support",
+    "title": "SUPPORT"
+  }
+]

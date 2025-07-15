@@ -97,6 +97,6 @@ When adding new features:
 
 ## 📖 Related Documentation
 
-- [Implementation Notes](../implementation-notes.md) - Detailed implementation guidelines
-- [Contributing Guide](../CONTRIBUTING.md) - How to contribute to the project
-- [AI Tools Integration](../guides/ai-tools-integration.md) - Integration with AI tools
+- [Implementation Notes](../implementation-notes) - Detailed implementation guidelines
+- [Contributing Guide](../CONTRIBUTING) - How to contribute to the project
+- [AI Tools Integration](../guides/ai-tools-integration) - Integration with AI tools

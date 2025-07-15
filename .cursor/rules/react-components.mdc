@@ -1,0 +1,119 @@
+# React Component Development Guidelines
+
+## Component Structure
+Always use functional components with hooks. Follow this structure:
+
+```tsx
+import { ComponentProps } from 'react'
+import { cn } from '@/lib/utils'
+
+interface ComponentNameProps extends ComponentProps<'div'> {
+  // Add specific props here
+}
+
+export function ComponentName({ className, ...props }: ComponentNameProps) {
+  return (
+    <div className={cn("base-classes", className)} {...props}>
+      {/* Component content */}
+    </div>
+  )
+}
+```
+
+## Key Patterns
+
+### 1. **Component Naming**
+- Use PascalCase for component names
+- Use descriptive, semantic names
+- Export as named exports, not default exports
+
+### 2. **Props Handling**
+- Extend HTML element props when appropriate
+- Use `cn()` utility for className merging
+- Destructure props with rest operator for HTML attributes
+
+### 3. **Styling Approach**
+- Use Tailwind CSS classes
+- Leverage shadcn/ui components as base
+- Use CSS variables for theming
+- Maintain consistent spacing with `space-y-6`, `gap-6`
+
+### 4. **Layout Patterns**
+```tsx
+// Standard page layout
+<div className="flex flex-col min-h-screen">
+  <div className="container py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Page content */}
+  </div>
+</div>
+
+// Two-column layout
+<div className="grid gap-6 md:grid-cols-[2fr_1fr]">
+  <div className="space-y-6">
+    {/* Main content */}
+  </div>
+  <div className="space-y-6">
+    {/* Sidebar */}
+  </div>
+</div>
+```
+
+### 5. **Card Components**
+```tsx
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+
+<Card className="hover:bg-muted/50 transition-colors">
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+  </CardHeader>
+  <CardContent>
+    {/* Content */}
+  </CardContent>
+</Card>
+```
+
+### 6. **Badge Usage**
+```tsx
+// Open source indicator
+<Badge variant="outline" className="px-3 py-1 border-violet-200 bg-violet-100/50 text-violet-800">
+  Open Source
+</Badge>
+
+// Difficulty level
+<Badge className="bg-cyan-600">Beginner</Badge>
+```
+
+### 7. **Icon Integration**
+```tsx
+import { IconName } from 'lucide-react'
+
+// Inline icons
+<IconName className="h-4 w-4" />
+
+// Feature icons
+<IconName className="h-6 w-6" />
+```
+
+## Accessibility
+- Use semantic HTML elements
+- Include proper ARIA labels
+- Ensure keyboard navigation
+- Test with screen readers
+
+## Performance
+- Use React.memo for pure components
+- Implement proper code splitting
+- Optimize images and assets
+- Use proper key props in lists
+
+## AI-Assisted Development
+- Write clear, descriptive component names
+- Include helpful comments for AI context
+- Use consistent patterns for better AI understanding
+- Structure components for easy modification by AI tools
+
+Remember: This is a beginner-friendly project. Keep components simple, well-documented, and easy to understand.
+description:
+globs:
+alwaysApply: false
+---

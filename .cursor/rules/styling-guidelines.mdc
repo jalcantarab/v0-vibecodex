@@ -1,0 +1,176 @@
+# Styling and Design Guidelines
+
+## Tailwind CSS Usage
+
+### 1. **Color Palette**
+Use the established color system:
+- **Primary**: Violet gradients (`from-violet-600 to-violet-500`)
+- **Secondary**: Cyan accents (`bg-cyan-600`)
+- **Background**: Subtle gradients (`from-violet-50 to-cyan-50`)
+- **Text**: Use semantic colors (`text-foreground`, `text-muted-foreground`)
+
+### 2. **Typography**
+```tsx
+// Page titles
+<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+
+// Section headings
+<h2 className="text-xl font-semibold">
+
+// Card titles
+<CardTitle className="text-lg font-semibold">
+
+// Body text
+<p className="text-muted-foreground">
+```
+
+### 3. **Spacing System**
+- **Vertical spacing**: `space-y-6` for component groups
+- **Grid gaps**: `gap-6` for grid layouts
+- **Margins**: `mb-6` for section spacing
+- **Padding**: `p-6` for card content
+
+### 4. **Gradient Patterns**
+```tsx
+// Text gradients
+className="bg-gradient-to-r from-cyan-500 to-violet-500 text-transparent bg-clip-text"
+
+// Button gradients
+className="bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-700 hover:to-violet-600"
+
+// Background gradients
+className="bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/20 dark:to-cyan-950/20"
+```
+
+### 5. **Component Styling**
+```tsx
+// Card styling
+<Card className="hover:bg-muted/50 transition-colors backdrop-blur-sm">
+
+// Button styling
+<Button className="bg-gradient-to-r from-violet-600 to-violet-500">
+
+// Badge styling
+<Badge className="bg-cyan-600 text-white">
+```
+
+## Responsive Design
+
+### 1. **Breakpoint Strategy**
+- **Mobile-first**: Start with mobile styles
+- **Tablet**: `md:` prefix for tablet and up
+- **Desktop**: `lg:` prefix for desktop and up
+
+### 2. **Layout Patterns**
+```tsx
+// Responsive grid
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+// Responsive container
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+// Responsive text
+<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+```
+
+## Dark Mode Support
+
+### 1. **Color Variables**
+Use CSS variables for theming:
+```css
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --primary: 262.1 83.3% 57.8%;
+  --primary-foreground: 210 40% 98%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --primary: 262.1 83.3% 57.8%;
+  --primary-foreground: 210 40% 98%;
+}
+```
+
+### 2. **Component Dark Mode**
+```tsx
+// Use semantic colors
+<div className="bg-background text-foreground">
+
+// Dark mode variants
+<div className="bg-white dark:bg-gray-900">
+```
+
+## Animation Guidelines
+
+### 1. **Framer Motion Usage**
+```tsx
+import { motion } from 'framer-motion'
+
+// Simple fade in
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5 }}
+>
+
+// Stagger animations
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: index * 0.1 }}
+>
+```
+
+### 2. **CSS Animations**
+```css
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+```
+
+## Accessibility
+
+### 1. **Color Contrast**
+- Ensure sufficient contrast ratios
+- Test with color blindness simulators
+- Use semantic colors for better accessibility
+
+### 2. **Focus States**
+```tsx
+// Visible focus indicators
+<button className="focus:ring-2 focus:ring-violet-500 focus:outline-none">
+```
+
+## Performance
+
+### 1. **CSS Optimization**
+- Use Tailwind's purge to remove unused styles
+- Minimize custom CSS
+- Use CSS variables for theming
+
+### 2. **Animation Performance**
+- Use `transform` and `opacity` for animations
+- Avoid animating layout properties
+- Use `will-change` sparingly
+
+## AI-Assisted Styling
+- Use consistent class naming patterns
+- Leverage Tailwind's utility classes
+- Document custom styles clearly
+- Keep styles simple and maintainable
+
+Remember: This project emphasizes beginner-friendliness. Keep styles simple, well-documented, and easy to understand.
+description:
+globs:
+alwaysApply: false
+---

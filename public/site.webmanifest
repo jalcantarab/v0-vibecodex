@@ -1,19 +1,33 @@
 {
   "name": "VibeCodex",
   "short_name": "VibeCodex",
+  "description": "AI Coding Starter Kit – Build real projects with AI assistance.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f3ff",
+  "theme_color": "#7c3aed",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "shortcuts": [
+    {
+      "name": "Start a New Project",
+      "short_name": "New Project",
+      "url": "/start/",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
 }

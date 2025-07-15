@@ -1,7 +1,5 @@
 # 🤝 Contributing to VibeCodex
 
-First off, thank you for considering contributing to VibeCodex! It's people like you that make VibeCodex such a great tool.
-
 ## 📋 Code of Conduct
 
 By participating in this project, you are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md). Please report unacceptable behavior to [contact@zentrik.ai](mailto:contact@zentrik.ai).
@@ -80,18 +78,18 @@ While the prerequisites above must be satisfied prior to having your pull reques
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
 * Consider starting the commit message with an applicable emoji:
-    * 🎨 `:art:` when improving the format/structure of the code
-    * 🐎 `:racehorse:` when improving performance
-    * 🚱 `:non-potable_water:` when plugging memory leaks
-    * 📝 `:memo:` when writing docs
-    * 🐛 `:bug:` when fixing a bug
-    * 🔥 `:fire:` when removing code or files
-    * 💚 `:green_heart:` when fixing the CI build
-    * ✅ `:white_check_mark:` when adding tests
-    * 🔒 `:lock:` when dealing with security
-    * ⬆️ `:arrow_up:` when upgrading dependencies
-    * ⬇️ `:arrow_down:` when downgrading dependencies
-    * 👕 `:shirt:` when removing linter warnings
+   * 🎨 `:art:` when improving the format/structure of the code
+   * 🐎 `:racehorse:` when improving performance
+   * 🚱 `:non-potable_water:` when plugging memory leaks
+   * 📝 `:memo:` when writing docs
+   * 🐛 `:bug:` when fixing a bug
+   * 🔥 `:fire:` when removing code or files
+   * 💚 `:green_heart:` when fixing the CI build
+   * ✅ `:white_check_mark:` when adding tests
+   * 🔒 `:lock:` when dealing with security
+   * ⬆️ `:arrow_up:` when upgrading dependencies
+   * ⬇️ `:arrow_down:` when downgrading dependencies
+   * 👕 `:shirt:` when removing linter warnings
 
 ### JavaScript/TypeScript Styleguide
 
