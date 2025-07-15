@@ -13,6 +13,7 @@ const nextConfig = {
     outputFileTracingExcludes: {
       '*': [
         'public/**',
+        'docs/**',
         '**/*.png',
         '**/*.jpg',
         '**/*.jpeg',

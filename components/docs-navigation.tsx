@@ -68,8 +68,9 @@ function renderTree(nodes: DocsNode[], currentPathString: string, expandedPath: 
 
 export function DocsNavigation({ currentPath, className }: DocsNavigationProps) {
   const currentPathString = `/docs/${currentPath.join('/')}`
-  const tree = getDocsTree()
-  const { section, sectionPath } = getSectionFromPath(tree, currentPath)
+  // Use getDocsTree() to get the docs tree for navigation
+  const docsTree = getDocsTree();
+  const { section, sectionPath } = getSectionFromPath(docsTree, currentPath)
   const sectionName = section ? (section.title || section.name) : "Documentation"
 
   // Breadcrumb logic
@@ -98,7 +99,7 @@ export function DocsNavigation({ currentPath, className }: DocsNavigationProps) 
         <CardContent>
           {/* Show all top-level sections, but only expand the current one */}
           <ul className="space-y-1">
-            {tree.map((node) => {
+            {docsTree.map((node) => {
               if (node.type === "folder") {
                 const isCurrentSection = node.path === sectionPath
                 return (

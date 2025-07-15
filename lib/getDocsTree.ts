@@ -1,85 +1,27 @@
-import fs from 'fs';
+// This module now simply loads the static docs tree JSON generated at build time.
+
 import path from 'path';
-import matter from 'gray-matter';
 
 export interface DocsNode {
   type: 'file' | 'folder';
-  name: string; // fallback name (filename or folder)
-  path: string; // e.g. 'guides/ai-tools-integration'
-  title?: string; // from frontmatter
-  order?: number; // from frontmatter
+  name: string;
+  path: string;
+  title?: string;
+  order?: number;
   children?: DocsNode[];
 }
 
-const EXCLUDED_ROOT_DOCS = ['README.md']; // Exclude README.md from sidebar
-
-export function getDocsTree(dir = 'docs', basePath = '', rootDocNames?: Set<string>): DocsNode[] {
-  const fullDir = path.join(process.cwd(), dir);
-  let docsNodes: DocsNode[] = [];
-
-  // Discover all root-level .md files except excluded ones
-  let rootDocsNodes: DocsNode[] = [];
-  let canonicalRootDocNames: Set<string> = rootDocNames || new Set();
-  if (!basePath) { // Only do this at the top-level call
-    const rootDocsDir = process.cwd();
-    rootDocsNodes = fs.readdirSync(rootDocsDir)
-      .filter((filename) => filename.endsWith('.md') && !EXCLUDED_ROOT_DOCS.includes(filename))
-      .map((filename) => {
-        const filePath = path.join(rootDocsDir, filename);
-        const fileContent = fs.readFileSync(filePath, 'utf8');
-        const { data } = matter(fileContent);
-        const normalized = filename.replace('.md', '').replace(/_/g, '-').toLowerCase();
-        canonicalRootDocNames.add(normalized);
-        return {
-          type: 'file',
-          name: normalized,
-          path: normalized,
-          title: data.title || prettyTitle(filename),
-          order: typeof data.order === 'number' ? data.order : undefined,
-        };
-      });
-  }
-
-  if (fs.existsSync(fullDir)) {
-    docsNodes = fs.readdirSync(fullDir)
-      .filter((item) => !item.startsWith('.'))
-      .map((item) => {
-        const itemPath = path.join(fullDir, item);
-        const relPath = basePath ? `${basePath}/${item}` : item;
-        if (fs.statSync(itemPath).isDirectory()) {
-          const children = getDocsTree(path.join(dir, item), relPath, canonicalRootDocNames);
-          return {
-            type: 'folder',
-            name: item,
-            path: relPath,
-            children: children.sort(sortDocsNodes),
-          };
-        } else if (item.endsWith('.md')) {
-          // Deduplicate: skip if this file's normalized name matches a root doc
-          const normalized = item.replace('.md', '').replace(/_/g, '-').toLowerCase();
-          if (canonicalRootDocNames.has(normalized)) {
-            return null;
-          }
-          const fileContent = fs.readFileSync(itemPath, 'utf8');
-          const { data } = matter(fileContent);
-          return {
-            type: 'file',
-            name: normalized,
-            path: relPath.replace('.md', '').replace(/_/g, '-').toLowerCase(),
-            title: data.title || undefined,
-            order: typeof data.order === 'number' ? data.order : undefined,
-          };
-        }
-        return null;
-      })
-      .filter(Boolean) as DocsNode[];
-  }
-
-  // Combine root docs and docs/ tree, root docs first (only at top-level)
-  if (!basePath) {
-    return [...rootDocsNodes, ...docsNodes].sort(sortDocsNodes);
+// Loads the docs tree from the static JSON file in public/
+export function getDocsTree(): DocsNode[] {
+  // Use dynamic import to ensure compatibility in both Node and browser
+  if (typeof window === 'undefined') {
+    // Node.js (build time)
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    return require('../public/docs-tree.json');
   } else {
-    return docsNodes.sort(sortDocsNodes);
+    // Browser (client side)
+    // This should only be used server-side, but fallback for safety
+    return [];
   }
 }
 
