@@ -109,4 +109,4 @@ function main() {
   console.log('Docs tree written to ' + outPath);
 }
 
-main(); 
+main();

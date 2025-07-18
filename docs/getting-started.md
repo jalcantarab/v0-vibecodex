@@ -15,40 +15,40 @@ Welcome to VibeCodex! This guide will help you get up and running quickly.
 
 ## 1. Clone the Repository
 
-```bash
+\`\`\`bash
 git clone https://github.com/jalcantarab/v0-vibecodex.git
 cd v0-vibecodex
-```
+\`\`\`
 
 ## 2. Install Dependencies
 
-```bash
+\`\`\`bash
 pnpm install
 # or
 npm install
 # or
 yarn install
-```
+\`\`\`
 
 ## 3. Set Up Environment Variables
 
 Copy the example environment file:
 
-```bash
+\`\`\`bash
 cp .env.example .env.local
-```
+\`\`\`
 
 Edit `.env.local` with any necessary values.
 
 ## 4. Start the Development Server
 
-```bash
+\`\`\`bash
 pnpm dev
 # or
 npm run dev
 # or
 yarn dev
-```
+\`\`\`
 
 Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -68,4 +68,4 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-[Back to Docs Index](/docs) 
+[Back to Docs Index](/docs)

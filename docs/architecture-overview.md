@@ -52,4 +52,4 @@ VibeCodex is designed as a modern, beginner-friendly AI coding starter kit. This
 
 ---
 
-[Back to Docs Index](/docs) 
+[Back to Docs Index](/docs)

@@ -20,36 +20,36 @@ Before you begin, ensure you have the following installed:
 
 2. **Clone Your Fork**
 
-   ```bash
+   \`\`\`bash
    git clone https://github.com/YOUR_USERNAME/v0-vibecodex.git
    cd v0-vibecodex
-   ```
+   \`\`\`
 
 3. **Install Dependencies**
 
-   ```bash
+   \`\`\`bash
    npm install
    # or
    yarn install
-   ```
+   \`\`\`
 
 4. **Set Up Environment Variables**
 
    Copy the example environment file:
 
-   ```bash
+   \`\`\`bash
    cp .env.example .env.local
-   ```
+   \`\`\`
 
    Edit `.env.local` with any necessary values.
 
 5. **Start the Development Server**
 
-   ```bash
+   \`\`\`bash
    npm run dev
    # or
    yarn dev
-   ```
+   \`\`\`
 
    The application will be available at [http://localhost:3000](http://localhost:3000).
 
@@ -61,9 +61,9 @@ We follow a feature branch workflow:
 
 1. **Create a Feature Branch**
 
-   ```bash
+   \`\`\`bash
    git checkout -b feature/your-feature-name
-   ```
+   \`\`\`
 
    Use prefixes like:
    - `feature/` for new features
@@ -77,18 +77,18 @@ We follow a feature branch workflow:
 
 3. **Commit Your Changes**
 
-   ```bash
+   \`\`\`bash
    git add .
    git commit -m "feat: add your feature description"
-   ```
+   \`\`\`
 
    We follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
 
 4. **Push Your Changes**
 
-   ```bash
+   \`\`\`bash
    git push origin feature/your-feature-name
-   ```
+   \`\`\`
 
 5. **Create a Pull Request**
 
@@ -100,27 +100,27 @@ Before submitting your pull request, ensure:
 
 1. **Linting Passes**
 
-   ```bash
+   \`\`\`bash
    npm run lint
    # or
    yarn lint
-   ```
+   \`\`\`
 
 2. **TypeScript Compiles**
 
-   ```bash
+   \`\`\`bash
    npm run tsc
    # or
    yarn tsc
-   ```
+   \`\`\`
 
 3. **Tests Pass** (when implemented)
 
-   ```bash
+   \`\`\`bash
    npm run test
    # or
    yarn test
-   ```
+   \`\`\`
 
 ### 🔄 Keeping Your Fork Updated
 
@@ -128,18 +128,18 @@ To keep your fork in sync with the main repository:
 
 1. **Add the Upstream Remote**
 
-   ```bash
+   \`\`\`bash
    git remote add upstream https://github.com/jalcantarab/v0-vibecodex.git
-   ```
+   \`\`\`
 
 2. **Fetch and Merge Changes**
 
-   ```bash
+   \`\`\`bash
    git fetch upstream
    git checkout main
    git merge upstream/main
    git push origin main
-   ```
+   \`\`\`
 
 ## 🚀 Deployment
 

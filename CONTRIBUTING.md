@@ -112,11 +112,11 @@ All JavaScript/TypeScript code is linted with [ESLint](https://eslint.org/) and 
 * Use [Markdown](https://guides.github.com/features/mastering-markdown/) for documentation
 * Reference components, functions, and variables with backticks: `Component`
 * Place code examples in fenced code blocks with the appropriate language:
-  ```tsx
+  \`\`\`tsx
   function Example() {
     return <div>Example</div>;
   }
-  ```
+  \`\`\`
 
 ## 📋 Additional Notes
 

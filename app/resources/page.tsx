@@ -147,4 +147,4 @@ Refactor this component to improve accessibility. Add ARIA labels, ensure keyboa
       </div>
     </div>
   );
-} 
+}

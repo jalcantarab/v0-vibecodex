@@ -19,7 +19,7 @@ VibeCodex is an open-source AI coding starter kit designed to help beginners cre
 - **Package Manager**: pnpm
 
 ## Project Structure
-```
+\`\`\`
 vibecodex/
 ├── app/                    # Next.js App Router pages
 ├── components/             # Reusable React components
@@ -29,7 +29,7 @@ vibecodex/
 ├── public/                 # Static assets
 ├── docs/                   # Documentation
 └── hooks/                  # Custom React hooks
-```
+\`\`\`
 
 ## Key Principles
 1. **Beginner-Friendly**: All code should be accessible to newcomers

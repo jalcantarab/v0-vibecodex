@@ -42,4 +42,4 @@ function prettyTitle(filename: string): string {
     .replace(/_/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())
     .replace('License', 'LICENSE');
-} 
+}

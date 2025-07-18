@@ -11,7 +11,7 @@
 ### 2. **Prompt Structure**
 When creating prompts for AI tools, follow this structure:
 
-```typescript
+\`\`\`typescript
 // Tool-specific prompt template
 const prompt = {
   content: "Create a [component/feature] that [specific requirements]",
@@ -23,10 +23,10 @@ const prompt = {
     }
   ]
 }
-```
+\`\`\`
 
 ### 3. **Component Patterns for AI**
-```tsx
+\`\`\`tsx
 // AI-friendly component structure
 interface ComponentProps {
   // Clear, descriptive prop names
@@ -64,12 +64,12 @@ export function ComponentName({
     </div>
   )
 }
-```
+\`\`\`
 
 ## Code Documentation for AI
 
 ### 1. **Component Comments**
-```tsx
+\`\`\`tsx
 /**
  * ComponentName - Brief description
  * 
@@ -85,10 +85,10 @@ export function ComponentName({
  * - Uses [specific library] for [specific functionality]
  * - Designed for [specific use case]
  */
-```
+\`\`\`
 
 ### 2. **Function Documentation**
-```tsx
+\`\`\`tsx
 /**
  * FunctionName - Clear description of what it does
  * 
@@ -104,12 +104,12 @@ export function ComponentName({
  * - Follows [specific pattern] for consistency
  * - Handles [specific edge cases]
  */
-```
+\`\`\`
 
 ## AI-Optimized Code Structure
 
 ### 1. **Clear Naming Conventions**
-```tsx
+\`\`\`tsx
 // Good: Clear, descriptive names
 const handleUserSubmission = (formData: FormData) => { }
 const isFormValid = (data: FormData) => { }
@@ -119,10 +119,10 @@ const formatUserInput = (input: string) => { }
 const handle = (data: any) => { }
 const isValid = (d: any) => { }
 const format = (i: string) => { }
-```
+\`\`\`
 
 ### 2. **Consistent Patterns**
-```tsx
+\`\`\`tsx
 // Use consistent patterns for similar functionality
 const useDataFetching = <T>(url: string) => {
   const [data, setData] = useState<T | null>(null)
@@ -137,10 +137,10 @@ const useDataFetching = <T>(url: string) => {
 
   return { data, loading, error }
 }
-```
+\`\`\`
 
 ### 3. **Type Safety for AI**
-```tsx
+\`\`\`tsx
 // Comprehensive type definitions
 interface Project {
   id: string
@@ -168,12 +168,12 @@ interface Tooltip {
   explanation: string
   highlightColor: string
 }
-```
+\`\`\`
 
 ## AI Tool Integration Patterns
 
 ### 1. **URL Generation**
-```tsx
+\`\`\`tsx
 const getToolUrl = (tool: Tool, prompt: Prompt) => {
   switch (tool.id) {
     case 'v0':
@@ -184,10 +184,10 @@ const getToolUrl = (tool: Tool, prompt: Prompt) => {
       return tool.linkPattern
   }
 }
-```
+\`\`\`
 
 ### 2. **Prompt Display**
-```tsx
+\`\`\`tsx
 const PromptDisplay = ({ prompt, tool }: { prompt: Prompt, tool: Tool }) => {
   return (
     <div className="space-y-4">
@@ -208,7 +208,7 @@ const PromptDisplay = ({ prompt, tool }: { prompt: Prompt, tool: Tool }) => {
     </div>
   )
 }
-```
+\`\`\`
 
 ## Best Practices for AI Development
 
@@ -225,7 +225,7 @@ const PromptDisplay = ({ prompt, tool }: { prompt: Prompt, tool: Tool }) => {
 - Apply consistent styling patterns
 
 ### 3. **Error Handling**
-```tsx
+\`\`\`tsx
 // Comprehensive error handling
 const handleError = (error: unknown) => {
   if (error instanceof Error) {
@@ -236,10 +236,10 @@ const handleError = (error: unknown) => {
     // Handle unknown errors
   }
 }
-```
+\`\`\`
 
 ### 4. **Testing Considerations**
-```tsx
+\`\`\`tsx
 // AI-friendly test structure
 describe('ComponentName', () => {
   it('should render with basic props', () => {
@@ -253,7 +253,7 @@ describe('ComponentName', () => {
     // Document why edge cases matter
   })
 })
-```
+\`\`\`
 
 ## AI Context Guidelines
 

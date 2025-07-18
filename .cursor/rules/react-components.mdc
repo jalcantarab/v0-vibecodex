@@ -3,7 +3,7 @@
 ## Component Structure
 Always use functional components with hooks. Follow this structure:
 
-```tsx
+\`\`\`tsx
 import { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -18,7 +18,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
     </div>
   )
 }
-```
+\`\`\`
 
 ## Key Patterns
 
@@ -39,7 +39,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
 - Maintain consistent spacing with `space-y-6`, `gap-6`
 
 ### 4. **Layout Patterns**
-```tsx
+\`\`\`tsx
 // Standard page layout
 <div className="flex flex-col min-h-screen">
   <div className="container py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,10 +56,10 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
     {/* Sidebar */}
   </div>
 </div>
-```
+\`\`\`
 
 ### 5. **Card Components**
-```tsx
+\`\`\`tsx
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 <Card className="hover:bg-muted/50 transition-colors">
@@ -70,10 +70,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
     {/* Content */}
   </CardContent>
 </Card>
-```
+\`\`\`
 
 ### 6. **Badge Usage**
-```tsx
+\`\`\`tsx
 // Open source indicator
 <Badge variant="outline" className="px-3 py-1 border-violet-200 bg-violet-100/50 text-violet-800">
   Open Source
@@ -81,10 +81,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 // Difficulty level
 <Badge className="bg-cyan-600">Beginner</Badge>
-```
+\`\`\`
 
 ### 7. **Icon Integration**
-```tsx
+\`\`\`tsx
 import { IconName } from 'lucide-react'
 
 // Inline icons
@@ -92,7 +92,7 @@ import { IconName } from 'lucide-react'
 
 // Feature icons
 <IconName className="h-6 w-6" />
-```
+\`\`\`
 
 ## Accessibility
 - Use semantic HTML elements

@@ -37,4 +37,4 @@ export function DocsBreadcrumb({ slug, className }: DocsBreadcrumbProps) {
       ))}
     </nav>
   )
-} 
+}

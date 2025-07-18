@@ -167,4 +167,4 @@ export function DocsNavigation({ currentPath, className }: DocsNavigationProps) 
       </Card>
     </nav>
   )
-} 
+}

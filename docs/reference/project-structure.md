@@ -4,7 +4,7 @@ This document provides an overview of the VibeCodex project structure to help co
 
 ## 📁 Directory Structure
 
-```
+\`\`\`
 vibecodex/
 ├── app/                    # Next.js App Router pages
 │   ├── contribute/         # Contribution page
@@ -29,7 +29,7 @@ vibecodex/
 │   ├── images/             # Image assets
 │   └── favicon.ico         # Favicon
 └── docs/                   # Documentation
-```
+\`\`\`
 
 ## 🔧 Key Components
 

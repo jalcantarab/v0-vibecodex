@@ -3,12 +3,12 @@
 ## Markdown Formatting
 
 ### 1. **Headers and Structure**
-```markdown
+\`\`\`markdown
 # Main Title (H1)
 ## Section Title (H2)
 ### Subsection (H3)
 #### Detail Section (H4)
-```
+\`\`\`
 
 ### 2. **Icons and Visual Elements**
 Use emoji icons consistently for better navigation:
@@ -22,28 +22,28 @@ Use emoji icons consistently for better navigation:
 - 🎨 **Design**: UI/UX guidelines
 
 ### 3. **Code Blocks**
-```markdown
+\`\`\`markdown
 # Inline code
 Use `backticks` for inline code references.
 
 # Code blocks with language
-```tsx
+\`\`\`tsx
 import React from 'react'
 
 export function Component() {
   return <div>Hello World</div>
 }
-```
+\`\`\`
 
 # Terminal commands
-```bash
+\`\`\`bash
 npm install
 npm run dev
-```
-```
+\`\`\`
+\`\`\`
 
 ### 4. **Lists and Organization**
-```markdown
+\`\`\`markdown
 # Unordered lists
 - Item 1
 - Item 2
@@ -59,12 +59,12 @@ npm run dev
 - [x] Completed task
 - [ ] Pending task
 - [ ] Future task
-```
+\`\`\`
 
 ## Documentation Structure
 
 ### 1. **File Organization**
-```
+\`\`\`
 docs/
 ├── README.md              # Main documentation index
 ├── guides/                # How-to guides
@@ -78,10 +78,10 @@ docs/
 └── examples/              # Code examples
     ├── components.md
     └── patterns.md
-```
+\`\`\`
 
 ### 2. **Page Structure**
-```markdown
+\`\`\`markdown
 # Page Title
 
 Brief description of what this page covers.
@@ -105,7 +105,7 @@ Code examples and use cases.
 ## 🔗 Related Links
 
 Links to related documentation.
-```
+\`\`\`
 
 ## Content Guidelines
 
@@ -116,65 +116,65 @@ Links to related documentation.
 - **Community-oriented**: Reference collaborative aspects
 
 ### 2. **Beginner-Friendly Writing**
-```markdown
+\`\`\`markdown
 # Good: Clear and encouraging
 "Create your first project by following these simple steps..."
 
 # Avoid: Technical jargon without explanation
 "Initialize the project with the requisite dependencies..."
-```
+\`\`\`
 
 ### 3. **Code Examples**
-```markdown
+\`\`\`markdown
 # Always include context
 Here's how to create a simple component:
 
-```tsx
+\`\`\`tsx
 import React from 'react'
 
 export function WelcomeMessage({ name }: { name: string }) {
   return <h1>Welcome, {name}!</h1>
 }
-```
+\`\`\`
 
 # Explain what each part does
 - `import React`: Imports the React library
 - `export function`: Makes the component available to other files
 - `{ name }`: Destructures the name prop from props
 - `{ name: string }`: TypeScript type annotation
-```
+\`\`\`
 
 ## AI-Assisted Documentation
 
 ### 1. **Clear Section Headers**
-```markdown
+\`\`\`markdown
 ## 🚀 Quick Start
 ## 📚 What You'll Learn
 ## 🛠️ Tools You'll Use
 ## 🎯 Next Steps
-```
+\`\`\`
 
 ### 2. **Step-by-Step Instructions**
-```markdown
+\`\`\`markdown
 1. **Open your terminal**
    Navigate to your project directory
 
 2. **Install dependencies**
-   ```bash
+   \`\`\`bash
    npm install
-   ```
+   \`\`\`
 
 3. **Start the development server**
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
 
 4. **Open your browser**
    Visit `http://localhost:3000`
-```
+\`\`\`
 
 ### 3. **Troubleshooting Sections**
-```markdown
+\`\`\`markdown
 ## 🔧 Troubleshooting
 
 ### Common Issues
@@ -184,64 +184,64 @@ export function WelcomeMessage({ name }: { name: string }) {
 
 **Problem**: Port 3000 is already in use
 **Solution**: Use a different port: `npm run dev -- -p 3001`
-```
+\`\`\`
 
 ## Cross-References
 
 ### 1. **Internal Links**
-```markdown
+\`\`\`markdown
 # Link to other documentation
 See our [Getting Started Guide](getting-started.md) for installation instructions.
 
 # Link to specific sections
 Check the [Component Library](../components/README.md#available-components) for UI components.
-```
+\`\`\`
 
 ### 2. **External Links**
-```markdown
+\`\`\`markdown
 # Link to external resources
 Learn more about [Next.js](https://nextjs.org/docs) in the official documentation.
 
 # Link to community resources
 Join our [Slack Community](https://join.slack.com/t/zentrikfriends/shared_invite/zt-39fkemr4h-s4uisVwiRmpAoZ1dZYCJwg) for support.
-```
+\`\`\`
 
 ## Accessibility
 
 ### 1. **Alt Text for Images**
-```markdown
+\`\`\`markdown
 ![VibeCodex Hero Screenshot](public/vibecodex-hero-screenshot.png)
 *The VibeCodex homepage showing project templates and AI tool integrations*
-```
+\`\`\`
 
 ### 2. **Clear Link Text**
-```markdown
+\`\`\`markdown
 # Good: Descriptive link text
 [Read our contributing guidelines](CONTRIBUTING.md)
 
 # Avoid: Generic link text
 [Click here](CONTRIBUTING.md)
-```
+\`\`\`
 
 ## SEO and Metadata
 
 ### 1. **Page Titles**
-```markdown
+\`\`\`markdown
 ---
 title: "Getting Started with VibeCodex"
 description: "Learn how to set up your first AI-assisted project with VibeCodex"
 keywords: ["ai", "coding", "starter-kit", "next.js", "react"]
 ---
-```
+\`\`\`
 
 ### 2. **Structured Content**
-```markdown
+\`\`\`markdown
 # Use clear headings for SEO
 ## What is VibeCodex?
 ## Why Use AI-Assisted Development?
 ## Getting Started
 ## Next Steps
-```
+\`\`\`
 
 ## Maintenance
 

@@ -10,7 +10,7 @@ Use the established color system:
 - **Text**: Use semantic colors (`text-foreground`, `text-muted-foreground`)
 
 ### 2. **Typography**
-```tsx
+\`\`\`tsx
 // Page titles
 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 
@@ -22,7 +22,7 @@ Use the established color system:
 
 // Body text
 <p className="text-muted-foreground">
-```
+\`\`\`
 
 ### 3. **Spacing System**
 - **Vertical spacing**: `space-y-6` for component groups
@@ -31,7 +31,7 @@ Use the established color system:
 - **Padding**: `p-6` for card content
 
 ### 4. **Gradient Patterns**
-```tsx
+\`\`\`tsx
 // Text gradients
 className="bg-gradient-to-r from-cyan-500 to-violet-500 text-transparent bg-clip-text"
 
@@ -40,10 +40,10 @@ className="bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-700 
 
 // Background gradients
 className="bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/20 dark:to-cyan-950/20"
-```
+\`\`\`
 
 ### 5. **Component Styling**
-```tsx
+\`\`\`tsx
 // Card styling
 <Card className="hover:bg-muted/50 transition-colors backdrop-blur-sm">
 
@@ -52,7 +52,7 @@ className="bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/20 d
 
 // Badge styling
 <Badge className="bg-cyan-600 text-white">
-```
+\`\`\`
 
 ## Responsive Design
 
@@ -62,7 +62,7 @@ className="bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/20 d
 - **Desktop**: `lg:` prefix for desktop and up
 
 ### 2. **Layout Patterns**
-```tsx
+\`\`\`tsx
 // Responsive grid
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -71,13 +71,13 @@ className="bg-gradient-to-br from-violet-50 to-cyan-50 dark:from-violet-950/20 d
 
 // Responsive text
 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-```
+\`\`\`
 
 ## Dark Mode Support
 
 ### 1. **Color Variables**
 Use CSS variables for theming:
-```css
+\`\`\`css
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -91,21 +91,21 @@ Use CSS variables for theming:
   --primary: 262.1 83.3% 57.8%;
   --primary-foreground: 210 40% 98%;
 }
-```
+\`\`\`
 
 ### 2. **Component Dark Mode**
-```tsx
+\`\`\`tsx
 // Use semantic colors
 <div className="bg-background text-foreground">
 
 // Dark mode variants
 <div className="bg-white dark:bg-gray-900">
-```
+\`\`\`
 
 ## Animation Guidelines
 
 ### 1. **Framer Motion Usage**
-```tsx
+\`\`\`tsx
 import { motion } from 'framer-motion'
 
 // Simple fade in
@@ -121,10 +121,10 @@ import { motion } from 'framer-motion'
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: index * 0.1 }}
 >
-```
+\`\`\`
 
 ### 2. **CSS Animations**
-```css
+\`\`\`css
 /* Shimmer effect */
 .shimmer {
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
@@ -136,7 +136,7 @@ import { motion } from 'framer-motion'
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
-```
+\`\`\`
 
 ## Accessibility
 
@@ -146,10 +146,10 @@ import { motion } from 'framer-motion'
 - Use semantic colors for better accessibility
 
 ### 2. **Focus States**
-```tsx
+\`\`\`tsx
 // Visible focus indicators
 <button className="focus:ring-2 focus:ring-violet-500 focus:outline-none">
-```
+\`\`\`
 
 ## Performance
 

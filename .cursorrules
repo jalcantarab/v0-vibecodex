@@ -27,7 +27,7 @@ VibeCodex is an open-source AI coding starter kit designed to help beginners cre
 
 ### Component Structure
 Always use functional components with hooks:
-```tsx
+\`\`\`tsx
 import { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -42,7 +42,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
     </div>
   )
 }
-```
+\`\`\`
 
 ### Key Patterns
 - Use PascalCase for component names
@@ -61,7 +61,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
 - **Text**: Use semantic colors (`text-foreground`, `text-muted-foreground`)
 
 ### Layout Patterns
-```tsx
+\`\`\`tsx
 // Standard page layout
 <div className="flex flex-col min-h-screen">
   <div className="container py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +78,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
     {/* Sidebar */}
   </div>
 </div>
-```
+\`\`\`
 
 ### Spacing System
 - **Vertical spacing**: `space-y-6` for component groups
@@ -95,7 +95,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
 - **Replit**: Collaborative coding platform
 
 ### Code Documentation for AI
-```tsx
+\`\`\`tsx
 /**
  * ComponentName - Brief description
  * 
@@ -111,7 +111,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
  * - Uses [specific library] for [specific functionality]
  * - Designed for [specific use case]
  */
-```
+\`\`\`
 
 ### AI-Optimized Code Structure
 - Write clear, descriptive component and function names
@@ -135,7 +135,7 @@ export function ComponentName({ className, ...props }: ComponentNameProps) {
 - **Community-oriented**: Reference collaborative aspects
 
 ## File Organization
-```
+\`\`\`
 vibecodex/
 ├── app/                    # Next.js App Router pages
 ├── components/             # Reusable React components
@@ -145,7 +145,7 @@ vibecodex/
 ├── public/                 # Static assets
 ├── docs/                   # Documentation
 └── hooks/                  # Custom React hooks
-```
+\`\`\`
 
 ## Best Practices
 
@@ -195,4 +195,4 @@ vibecodex/
 - Use clear state update patterns
 
 ## Remember
-This is a beginner-friendly project designed to help people learn AI-assisted development. Keep code simple, well-documented, and easy to understand. Focus on creating educational value while maintaining production-ready quality. 
+This is a beginner-friendly project designed to help people learn AI-assisted development. Keep code simple, well-documented, and easy to understand. Focus on creating educational value while maintaining production-ready quality.

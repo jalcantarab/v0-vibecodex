@@ -18,31 +18,31 @@ This guide explains how to add, update, and organize markdown (`.md`) documentat
 1. **Create a new `.md` file** in the project root or inside the `docs/` directory (or a subfolder).
 2. **Add frontmatter at the top** of the file for sidebar clarity:
 
-   ```markdown
+   \`\`\`markdown
    ---
    title: "Your Doc Title Here"
    description: "(Optional) Short description for SEO and sidebar."
    ---
    # Your Doc Title Here
    ...
-   ```
+   \`\`\`
    - The `title:` is required for a clean sidebar label.
    - The `description:` is optional but recommended for SEO and page metadata.
 
 3. **Write your documentation** using standard Markdown. Use triple backticks and specify the language for all code blocks:
 
-   ```typescript
+   \`\`\`typescript
    // Good code block example
    function hello() {
      console.log("Hello, world!");
    }
-   ```
+   \`\`\`
 
 4. **Add a navigation link at the end** for consistency:
 
-   ```markdown
+   \`\`\`markdown
    ## [Back to Docs Index](/docs)
-   ```
+   \`\`\`
 
 5. **Save the file.**
 
@@ -81,21 +81,21 @@ This guide explains how to add, update, and organize markdown (`.md`) documentat
 
 1. Create a file: `docs/guides/my-new-guide.md`
 2. Add frontmatter:
-   ```markdown
+   \`\`\`markdown
    ---
    title: "My New Guide"
    description: "How to use the new feature."
    ---
    # My New Guide
    ...
-   ```
+   \`\`\`
 3. Write your content and code blocks.
 4. Add:
-   ```markdown
+   \`\`\`markdown
    ## [Back to Docs Index](/docs)
-   ```
+   \`\`\`
 5. Save. Your guide will now appear in the sidebar under "guides".
 
 ---
 
-## [Back to Docs Index](/docs) 
+## [Back to Docs Index](/docs)

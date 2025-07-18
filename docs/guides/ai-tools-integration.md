@@ -24,20 +24,20 @@ The integration with AI tools is primarily handled through:
 
 Each tool is configured with the following properties:
 
-```typescript
+\`\`\`typescript
 {
  id: string;           // Unique identifier for the tool
  name: string;         // Display name
  description: string;  // Short description of the tool's strengths
  linkPattern: string;  // Base URL for the tool
 }
-```
+\`\`\`
 
 ## 📝 Prompt Templates
 
 Each project phase contains tool-specific prompts:
 
-```typescript
+\`\`\`typescript
 prompts: {
  [toolId]: {
    content: string;    // The actual prompt text
@@ -48,13 +48,13 @@ prompts: {
    }[]
  }
 }
-```
+\`\`\`
 
 ## 🔗 URL Handling
 
 The `getToolUrl()` function in `app/projects/[id]/[tool]/page.tsx` handles tool-specific URL generation:
 
-```typescript
+\`\`\`typescript
 const getToolUrl = () => {
  if (tool.id === "v0") {
    // Encode the prompt for v0
@@ -66,7 +66,7 @@ const getToolUrl = () => {
  }
  return tool.linkPattern;
 };
-```
+\`\`\`
 
 ## ➕ Adding a New AI Tool
 
@@ -74,29 +74,29 @@ To add a new AI tool:
 
 1. **Add the tool configuration** to `toolsMockData` in `lib/mock-data.ts`:
 
-```typescript
+\`\`\`typescript
 {
  id: "new-tool-id",
  name: "New Tool Name",
  description: "Description of the new tool",
  linkPattern: "https://new-tool-url.com",
 }
-```
+\`\`\`
 
 2. **Add tool-specific prompts** for each project phase:
 
-```typescript
+\`\`\`typescript
 prompts: {
  "new-tool-id": {
    content: "Prompt for the new tool...",
    tooltips: []
  }
 }
-```
+\`\`\`
 
 3. **Update the `getToolUrl()` function** if the new tool requires special URL handling:
 
-```typescript
+\`\`\`typescript
 const getToolUrl = () => {
  if (tool.id === "v0") {
    // Existing v0 handling
@@ -106,7 +106,7 @@ const getToolUrl = () => {
  }
  return tool.linkPattern;
 };
-```
+\`\`\`
 
 4. **Add the tool logo** to the `public` directory and update the `ToolLogo` component if needed.
 

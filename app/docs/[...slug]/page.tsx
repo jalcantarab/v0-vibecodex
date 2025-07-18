@@ -233,4 +233,4 @@ export default async function DocsPage({ params }: DocsPageProps) {
       </div>
     </div>
   )
-} 
+}
